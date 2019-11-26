@@ -21,7 +21,7 @@ from pages.views import home_view, contact_view, register_view, products_view, l
 urlpatterns = [
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
-    path('product/', products_view, name='products'),
+    path('products/', products_view, name='products'),
     path('cart/', cart_view, name='cart'),
     path('register/', register_view, name='register'),
     path('login/', login_view, name='login'),
