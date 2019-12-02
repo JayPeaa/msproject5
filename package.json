@@ -1,0 +1,22 @@
+{
+  "name": "msproject5",
+  "version": "1.0.0",
+  "description": "Milestone 5 Project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w static/scss/ -o static/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayPeaa/msproject5.git"
+  },
+  "author": "John Hay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JayPeaa/msproject5/issues"
+  },
+  "homepage": "https://github.com/JayPeaa/msproject5#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
