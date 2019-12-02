@@ -1,6 +1,3 @@
-$primary-color: red;
-
-body {
-    background: $primary-color;
-    color: green;
-}
+@import 'config';
+@import 'footer';
+@import 'jumbotron';
