@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One|Varela+Round&display=swap");
+main {
+  padding: 0 20px; }
+
 h1,
 h2,
 h3 {
