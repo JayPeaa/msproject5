@@ -4,13 +4,12 @@ main {
 
 h1,
 h2,
-h3 {
-  font-family: 'Fredoka One', cursive;
-  margin-bottom: 10px; }
+h3,
+a,
+li {
+  font-family: 'Fredoka One', cursive; }
 
-p,
-li,
-a {
+p {
   font-family: 'Varela Round', sans-serif; }
 
 p {
@@ -57,3 +56,7 @@ div {
   background-size: cover;
   background-position: center;
   height: 50vh; }
+
+a.nav-link {
+  font-size: 1.25em;
+  margin: 0 .6em; }
