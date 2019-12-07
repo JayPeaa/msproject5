@@ -55,7 +55,6 @@ div {
   background-size: cover;
   background-position: center;
   background: #fff;
-  width: 100%;
   padding: 0;
   margin: 0; }
 
@@ -72,3 +71,6 @@ a.nav-link {
     color: #066fba !important; }
   a.nav-link-red {
     color: #e93216 !important; }
+
+.current {
+  border-bottom: 3px white solid; }

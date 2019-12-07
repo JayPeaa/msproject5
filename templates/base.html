@@ -29,44 +29,48 @@
     {% if user.is_authenticated %}
 
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link nav-link-green" href="/home">Home <span class="sr-only">(current)</span></a>
+      {% with url_name=request.resolver_match.url_name %}
+      <li class="nav-item {% if url_name == 'home' %}current{% endif %}">
+        <a class="nav-link nav-link-green" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if url_name == 'products' %}current{% endif %}">
         <a class="nav-link nav-link-orange" href="/products">Buy Tickets</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if url_name == 'contact' %}current{% endif %}">
         <a class="nav-link nav-link-red" href="/contact">Contact Us</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if url_name == 'cart' %}current{% endif %}">
         <a class="nav-link nav-link-blue" href="/cart">Cart</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if url_name == 'logout' %}current{% endif %}">
         <a class="nav-link nav-link-yellow" href="/logout">Logout</a>
       </li>
+      {% endwith %}
     </ul>
 
     {% else %}
 
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link nav-link-green" href="/home">Home <span class="sr-only">(current)</span></a>
+      {% with url_name=request.resolver_match.url_name %}
+      <li class="nav-item {% if url_name == 'home' %}current{% endif %}">
+        <a class="nav-link nav-link-green" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link nav-link-orange" href="/products">Buy Tickets</a>
+      <li class="nav-item {% if url_name == 'products' %}current{% endif %}">
+        <a class="nav-link nav-link-orange" href="{% url 'products' %}">Buy Tickets</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link nav-link-yellow" href="/register">Register</a>
+      <li class="nav-item {% if url_name == 'register' %}current{% endif %}">
+        <a class="nav-link nav-link-yellow" href="{% url 'register' %}">Register</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link nav-link-red" href="/login">Log In</a>
+      <li class="nav-item {% if url_name == 'login' %}current{% endif %}">
+        <a class="nav-link nav-link-red" href="{% url 'login' %}">Log In</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link nav-link-blue" href="/contact">Contact Us</a>
+      <li class="nav-item {% if url_name == 'contact' %}current{% endif %}">
+        <a class="nav-link nav-link-blue" href="{% url 'contact' %}">Contact Us</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link nav-link-green" href="/cart">Cart</a>
+      <li class="nav-item {% if url_name == 'cart' %}current{% endif %}">
+        <a class="nav-link nav-link-green" href="{% url 'cart' %}">Cart</a>
       </li>
+      {% endwith %}
     </ul>
 
     {% endif %}
