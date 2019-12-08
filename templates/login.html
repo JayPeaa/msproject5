@@ -5,4 +5,19 @@
 
 <p>This is a template</p>
 
+<form method="POST">
+    {% csrf_token %}
+    {{ login_form }}
+    <button type="submit">Login</button>
+
+</form>
+
+<!-- {% if messages %}
+<div>
+    {% for message in messages %}
+    {{ message }}
+    {% endfor%}
+</div>
+{% endif %} -->
+
 {% endblock %}
