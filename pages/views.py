@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import auth, messages
 
 # Create your views here.
 
@@ -29,4 +30,8 @@ def register_view(request, *args, **kwargs):
 
 
 def logout_view(request, *args, **kwargs):
-    return render(request, "logout.html", {})
+    """Logout User"""
+    auth.logout(request)
+    messages.success(
+        request, "Thank you for visiting.  You are now logged out.")
+    return redirect(reverse('home'))

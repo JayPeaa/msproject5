@@ -5,3 +5,14 @@
     padding: 0;
     margin: 0;
 }
+
+.logout-message {
+    background-color: black;
+    color: $yellow;
+    display: block;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+}
