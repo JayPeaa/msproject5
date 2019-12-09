@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
-from pages.forms import LoginForm
+from django.contrib.auth.decorators import login_required
+from pages.forms import LoginForm, RegistrationForm
 
 # Create your views here.
 
@@ -20,6 +21,8 @@ def contact_view(request, *args, **kwargs):
 
 def login_view(request, *args, **kwargs):
     """Login a User"""
+    if request.user.is_authenticated:
+        return redirect(reverse('home'))
     if request.method == "POST":
         login_form = LoginForm(request.POST)
 
@@ -30,6 +33,7 @@ def login_view(request, *args, **kwargs):
             if user:
                 auth.login(user=user, request=request)
                 messages.success(request, "You are now logged in.")
+                return redirect(reverse('home'))
             else:
                 login_form.add_error(None, "Incorrect username or password!")
     else:
@@ -43,9 +47,12 @@ def products_view(request, *args, **kwargs):
 
 
 def register_view(request, *args, **kwargs):
-    return render(request, "register.html", {})
+    """Registration page rendering"""
+    registration_form = RegistrationForm()
+    return render(request, "register.html", {"registration_form": registration_form})
 
 
+@login_required  # not sure if this is working ceck url patterns.
 def logout_view(request, *args, **kwargs):
     """Logout User"""
     auth.logout(request)
