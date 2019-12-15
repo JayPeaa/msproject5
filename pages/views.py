@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from pages.forms import LoginForm, RegistrationForm
 
 # Create your views here.
@@ -78,3 +79,8 @@ def logout_view(request, *args, **kwargs):
     messages.success(
         request, "Thank you for visiting.  You are now logged out.")
     return redirect(reverse('home'))
+
+def profile_view(request):
+    """User profile page"""
+    user=User.objects.get(email=request.user.email)
+    return render(request, 'profile.html', {"profile": user})
