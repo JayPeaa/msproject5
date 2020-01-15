@@ -150,3 +150,4 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'

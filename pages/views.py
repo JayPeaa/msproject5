@@ -19,17 +19,8 @@ def cart_view(request, *args, **kwargs):
 def contact_view(request, *args, **kwargs):
     return render(request, "contact.html", {})
 
-
-
-
 def products_view(request, *args, **kwargs):
     return render(request, "products.html", {})
-
-
-
-
-
-
 
 def profile_view(request):
     """User profile page"""
