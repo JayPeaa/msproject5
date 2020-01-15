@@ -24,7 +24,7 @@ from django.urls import path
 
 
 
-from pages.views import home_view, contact_view, register_view, products_view, login_view, cart_view, logout_view, password_reset_view, password_reset_done_view, password_reset_confirm_view, profile_view
+from pages.views import home_view, contact_view, products_view, cart_view, password_reset_view, password_reset_done_view, password_reset_confirm_view, profile_view
 from users import views as user_views
 
 urlpatterns = [
