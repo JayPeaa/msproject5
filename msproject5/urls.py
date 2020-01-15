@@ -15,9 +15,11 @@ Including another URLconf
 """
 
 from django.conf import settings
+from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
+
 
 
 
@@ -32,9 +34,11 @@ urlpatterns = [
     path('cart/', cart_view, name='cart'),
     # path('register/', register_view, name='register'),
     path('register/', user_views.register, name='register'), #new approach
-    path('login/', login_view, name='login'),
+    # path('login/', login_view, name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), #new approach
     path('contact/', contact_view, name='contact'),
-    path('logout/', logout_view, name='logout'),
+    # path('logout/', logout_view, name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'), #new approach
     path('password-reset/', password_reset_view, name='password_reset'),
     path('password-reset/done', password_reset_done_view, name='password_reset_done'),
     path('password-reset/confirm/<uidb64>/<token>/', password_reset_confirm_view, name='password_reset_confirm'),
