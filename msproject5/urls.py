@@ -24,7 +24,7 @@ from django.urls import path
 
 
 
-from pages.views import home_view, contact_view, products_view, cart_view, password_reset_view, password_reset_done_view, password_reset_confirm_view, profile_view
+from pages.views import home_view, contact_view, products_view, cart_view
 from users import views as user_views
 
 urlpatterns = [
@@ -37,12 +37,14 @@ urlpatterns = [
     path('contact/', contact_view, name='contact'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'), #new approach
     path('profile/', user_views.profile, name='profile'), #new approach
-    path('password-reset/', password_reset_view, name='password_reset'),
-    path('password-reset/done', password_reset_done_view, name='password_reset_done'),
-    path('password-reset/confirm/<uidb64>/<token>/', password_reset_confirm_view, name='password_reset_confirm'),
-
-    path('profile/', profile_view, name='profile'),
-
-
+    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'), #new approach
+    path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'), #new approach
+    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'), #new approach
+    
+    
+    # path('password-reset/', password_reset_view, name='password_reset'),
+    # path('password-reset/done', password_reset_done_view, name='password_reset_done'),
+    # path('password-reset/confirm/<uidb64>/<token>/', password_reset_confirm_view, name='password_reset_confirm'),
+    
     path('admin/', admin.site.urls),
 ]
