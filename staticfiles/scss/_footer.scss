@@ -1,0 +1,47 @@
+.footer {
+
+    &-container {
+        text-align: center;
+        background-color: #101010;
+        margin-top: auto;
+        margin-bottom: 0;
+        font-size: 1.2em;
+        padding-top: 0.5em;
+        padding-bottom: 1em;
+        border-top: solid;
+        border-color: silver;
+    }
+
+    &-text {
+        color: silver;
+    }
+
+}
+
+.social {
+
+    &-footer {
+        color: silver;
+    }
+
+    &-links {
+        font-size: 2em;
+        text-align: center;
+        background-color: #101010;
+        margin: 0;
+        padding-bottom: .5em;
+    }
+
+}
+
+.fa {
+    color: silver;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.fa:hover {
+    color: #fec606;
+
+}

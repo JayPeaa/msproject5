@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Varela+Round&display=swap");
+main {
+  padding: 0 20px; }
+
+h1,
+h2,
+h3,
+a,
+li {
+  font-family: 'Fredoka One', cursive; }
+
+p {
+  font-family: 'Varela Round', sans-serif; }
+
+p {
+  margin-bottom: 30px; }
+
+div {
+  margin-bottom: 15px; }
+
+.footer-container {
+  text-align: center;
+  background-color: #101010;
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  border-top: solid;
+  border-color: silver; }
+
+.footer-text {
+  color: silver; }
+
+.social-footer {
+  color: silver; }
+
+.social-links {
+  font-size: 2em;
+  text-align: center;
+  background-color: #101010;
+  margin: 0;
+  padding-bottom: .5em; }
+
+.fa {
+  color: silver;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.fa:hover {
+  color: #fec606; }
+
+.jumbotron {
+  background-size: cover;
+  background-position: center;
+  background: #fff;
+  padding: 0;
+  margin: 0; }
+
+.logout-message {
+  background-color: black;
+  color: #ffcc00;
+  display: block;
+  padding: 0;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 1.2em; }
+
+a.nav-link {
+  font-size: 1.25em;
+  margin: 0 .6em; }
+  a.nav-link-green {
+    color: #349436 !important; }
+  a.nav-link-orange {
+    color: #ff8000 !important; }
+  a.nav-link-yellow {
+    color: #ffcc00 !important; }
+  a.nav-link-blue {
+    color: #066fba !important; }
+  a.nav-link-red {
+    color: #e93216 !important; }
+
+.current {
+  border-bottom: 3px white solid; }
