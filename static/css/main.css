@@ -1,16 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,800,900|Roboto:400,500,700,900&display=swap");
 main {
   padding: 0 20px; }
 
-h1,
+h1 {
+  font-family: 'Playfair Display', serif; }
+
 h2,
 h3,
 a,
 li {
-  font-family: 'Fredoka One', cursive; }
+  font-family: "Roboto",Arial,sans-serif; }
 
 p {
-  font-family: 'Varela Round', sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 p {
   margin-bottom: 30px; }
@@ -20,36 +22,36 @@ div {
 
 .footer-container {
   text-align: center;
-  background-color: #101010;
+  background-color: #dfdcd5;
   margin-top: auto;
   margin-bottom: 0;
   font-size: 1.2em;
   padding-top: 0.5em;
   padding-bottom: 1em;
   border-top: solid;
-  border-color: silver; }
+  border-color: #000027; }
 
 .footer-text {
-  color: silver; }
+  color: #000027; }
 
 .social-footer {
-  color: silver; }
+  color: #000027; }
 
 .social-links {
   font-size: 2em;
   text-align: center;
-  background-color: #101010;
+  background-color: #dfdcd5;
   margin: 0;
   padding-bottom: .5em; }
 
 .fa {
-  color: silver;
+  color: #000027;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
 
 .fa:hover {
-  color: #fec606; }
+  color: #566948; }
 
 .jumbotron {
   background-size: cover;
@@ -60,7 +62,7 @@ div {
 
 .logout-message {
   background-color: black;
-  color: #ffcc00;
+  color: #566948;
   display: block;
   padding: 0;
   margin: auto;
@@ -70,17 +72,8 @@ div {
 
 a.nav-link {
   font-size: 1.25em;
-  margin: 0 .6em; }
-  a.nav-link-green {
-    color: #349436 !important; }
-  a.nav-link-orange {
-    color: #ff8000 !important; }
-  a.nav-link-yellow {
-    color: #ffcc00 !important; }
-  a.nav-link-blue {
-    color: #066fba !important; }
-  a.nav-link-red {
-    color: #e93216 !important; }
+  margin: 0 .6em;
+  color: #566948 !important; }
 
 .current {
-  border-bottom: 3px white solid; }
+  border-bottom: 3px #acadaf solid; }

@@ -2,18 +2,18 @@
 
     &-container {
         text-align: center;
-        background-color: #101010;
+        background-color: $greygreen;
         margin-top: auto;
         margin-bottom: 0;
         font-size: 1.2em;
         padding-top: 0.5em;
         padding-bottom: 1em;
         border-top: solid;
-        border-color: silver;
+        border-color: $offblack;
     }
 
     &-text {
-        color: silver;
+        color: $offblack;
     }
 
 }
@@ -21,13 +21,13 @@
 .social {
 
     &-footer {
-        color: silver;
+        color: $offblack;
     }
 
     &-links {
         font-size: 2em;
         text-align: center;
-        background-color: #101010;
+        background-color: $greygreen;
         margin: 0;
         padding-bottom: .5em;
     }
@@ -35,13 +35,13 @@
 }
 
 .fa {
-    color: silver;
+    color: $offblack;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 .fa:hover {
-    color: #fec606;
+    color: $green;
 
 }

@@ -1,30 +1,11 @@
 a.nav-link {
     font-size: 1.25em;
     margin: 0 .6em;
-
-    &-green {
-        color: $green !important;
-    }
-
-    &-orange {
-        color: $orange !important;
-    }
-
-    &-yellow {
-        color: $yellow !important;
-    }
-
-    &-blue {
-        color: $blue !important;
-    }
-
-    &-red {
-        color: $red !important;
-    }
-
+    color: $green !important;   
 }
 
 .current {
-    border-bottom: 3px white solid;
+    border-bottom: 3px $grey solid;
 
 }
+
