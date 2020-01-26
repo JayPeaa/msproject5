@@ -6,19 +6,19 @@
 
 ---
 
-### App Name: Farm Shop
+### App Name: Oakfield Farm Shop
 
 ##### See here for [Deployed App](https://msproject5.herokuapp.com/)
 
-Cook-e is an interactive cooking app which allows users to share recipes online. It enables users to browse recipes uploaded by other users as well as add, edit and delete their own recipes. This app is built using Flask and MongoDB, a NoSQL or document store database but incorporates a number or other technologies.
+Oakfield Farm Shop is a concept for a farm shop ecommerce site which allows users to purchase products online as well as advertising a family attraction. It enables users to browse various categories in the shop as well as research the farm as a place to visit.  Users can contact the farm via a contact form and see the location via the google maps API.  In addition the site has all the functionality you would expect with an ecommerce site such as the ability to add products to a cart and proceed to purchase via the checkout which uses the Strip API. This app is built using Django which utilises an Object Relation Mapper (ORM) to seemlessly integrate an SQL realtional database.  The site also incorporates a number of other technologies.
 
-Having recipes stored online in a system which allows users to filter and quickly reference their own personal recipes at the click of a button is infinitely faster than using traditional cookbooks. In addition, with the advent of tablets and virtual assistants such as google home, more and more users are making use of digital media when preparing meals in the home.
+Having an eyecatching easy to use website acts as a calling card for any business so effort has been concentrated to create a pleasant user experience and user interface which allows users to quickly familiarise themselves with everything Oakfileds Farm has to offer as well as an easy to navigate store.
 
 ## UX
 
-The UX has been designed with the end user in mind and as expectations in terms of front-end design are ever increasing, I opted to utilise Materialize.css for my design and responsive layout. Materialize.css is a library of UI components designed by Google with the aim of providing a unified and consistent user experience.
+The UX has been designed with the end user in mind and as expectations in terms of front-end design are ever increasing, I opted to utilise Bootstrap.css for my design and responsive layout. Bootstrap is a library of UI components which aims of providing a unified and consistent user experience as well as responvive design.
 
-#### User Stories
+#### User Stories  (UPDATE FROM HERE)
 
 - As the app developer I want to build an app which allows users to share recipes in one convenient location.
 - As the app developer I want these recipes to be presented in a user friendly way and secure environment which allows users to only edit or delete their own recipes.
