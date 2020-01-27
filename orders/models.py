@@ -8,13 +8,5 @@ class Order(models.Model):
     order_amount = models.DecimalField(max_digits=10, decimal_places=2)
     order_date = models.DateTimeField(auto_now_add=True)
     order_qty = models.IntegerField(blank=False)
-    order_first_name = models.CharField(max_length=40, blank=False)
-    order_last_name = models.CharField(max_length=40, blank=False)
-    order_phone_number = models.CharField(max_length=20, blank=False)
-    order_city = models.CharField(max_length=40, blank=False)
-    order_street_address_1 = models.CharField(max_length=60, blank=False)
-    order_street_address_2 = models.CharField(max_length=60, blank=False)
-    order_county = models.CharField(max_length=40, blank=False)
-    order_country = models.CharField(max_length=40, blank=False)
-    order_postcode = models.CharField(max_length=20, blank=True)
+  
     
