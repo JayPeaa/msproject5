@@ -15,7 +15,7 @@ class Product(models.Model):
     product_image = models.ImageField(upload_to="static/img", blank=True, null=True)
     product_category_id = models.ForeignKey(ProductCategories, on_delete=models.CASCADE) #check this but think it's correct
     product_update_date = models.DateTimeField(auto_now_add=True)
-    product_stock_qty = models.IntegerField()
+    product_stock_qty = models.IntegerField(blank=False)
     product_live = models.BooleanField(default=True)
 
 
