@@ -1,0 +1,47 @@
+.footer {
+
+    &-container {
+        text-align: center;
+        background-color: $greygreen;
+        margin-top: auto;
+        margin-bottom: 0;
+        font-size: 1.2em;
+        padding-top: 0.5em;
+        padding-bottom: 1em;
+        border-top: solid;
+        border-color: $offblack;
+    }
+
+    &-text {
+        color: $offblack;
+    }
+
+}
+
+.social {
+
+    &-footer {
+        color: $offblack;
+    }
+
+    &-links {
+        font-size: 2em;
+        text-align: center;
+        background-color: $greygreen;
+        margin: 0;
+        padding-bottom: .5em;
+    }
+
+}
+
+.fa {
+    color: $offblack;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.fa:hover {
+    color: $green;
+
+}
