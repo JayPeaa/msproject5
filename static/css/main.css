@@ -77,3 +77,12 @@ a.nav-link {
 
 .current {
   border-bottom: 3px #acadaf solid; }
+
+.header-top {
+  background-color: #566948;
+  color: white; }
+  .header-top__menu {
+    display: flex;
+    justify-content: space-around; }
+    .header-top__menu_link {
+      list-style: none; }

@@ -9,3 +9,17 @@ a.nav-link {
 
 }
 
+.header-top {
+    background-color: $green;
+    color: white;
+
+    &__menu {
+        display: flex;
+        justify-content: space-around;
+
+        &_link {
+                 
+            list-style: none;
+        }
+    }
+}
