@@ -73,13 +73,18 @@ div {
 a.nav-link {
   font-size: 1.25em;
   margin: 0 .6em;
-  color: #566948 !important; }
+  color: white; }
 
 .current {
   border-bottom: 3px #acadaf solid; }
 
 .header-top {
   background-color: #566948;
-  color: white; }
+  color: white;
+  font-size: 0.8em; }
   .header-top__menu {
-    display: flex; }
+    display: flex;
+    list-style: none; }
+
+.navbar {
+  background-color: #97a88b; }

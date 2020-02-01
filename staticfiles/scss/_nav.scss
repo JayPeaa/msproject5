@@ -15,17 +15,17 @@ a.nav-link {
 
     &__menu {
         display: flex;
-        justify-content: space-around;
+        // justify-content: space-around;
 
-        &_link:nth-child(1) {
+        // &_link:nth-child(1) {
                  
-            list-style: none;
-            flex: 1;
+        //     list-style: none;
+        //     flex: 1;
 
-            &_link:nth-last-child(-n + 2) {
+        //     &_link:nth-last-child(-n + 2) {
                  
-                list-style: none;
-            }
-        }
+        //         list-style: none;
+        //     }
+        // }
     }
 }

@@ -17,23 +17,35 @@
 <!--Navigation-->
 <header>
   <div class="header-top">
-      <ul class="header-top__menu">
-        <li class="header-top__menu_link"><a>Tel 01234 654321</a></li>
-        <li class="header-top__menu_link"><a>Account</a></li>
-        <li class="header-top__menu_link"><a>Basket</a></li>
+      <ul class="header-top__menu d-flex justify-content-around text-center">
+        <li class="mr-auto p-2"><a>01234 654321</a></li>
+        <li class="p-2"><a>Account</a></li>
+        <li class="p-2"><a>Basket</a></li>
       </ul>
+  </div>
+  <div class="d-flex justify-content-around text-center">
+    <a class="col-md-4 align-self-center" href="{% url 'home' %}">
+      <img src="/static/img/free_delivery.png" class="img-fluid" style="width: 150px;">
+    </a>
+    <a class="col-md-4" href="{% url 'home' %}">
+      <img src="/static/img/logo.png" class="img-fluid" style="width: 150px;">
+    </a>
+    <form id="nav-search" class="col-md-4 form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
   </div>
 </header>
 
 <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">
-    <img src="/staticfiles/img/logo.png" class="img-fluid" style="width: 150px;">
-  </a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+  <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
 
     {% if user.is_authenticated %}
 
@@ -87,12 +99,7 @@
 
     {% endif %}
 
-    <form id="nav-search" class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
+    
   </div>
 
 </nav>

@@ -1,0 +1,27 @@
+a.nav-link {
+    font-size: 1.25em;
+    margin: 0 .6em;
+    color: white;   
+}
+
+.current {
+    border-bottom: 3px $grey solid;
+
+}
+
+.header-top {
+    background-color: $green;
+    color: white;
+    font-size: 0.8em;
+
+    &__menu {
+        display: flex;
+        list-style: none;
+        
+    }
+}
+
+.navbar {
+    background-color: $lightgreen; 
+}
+
