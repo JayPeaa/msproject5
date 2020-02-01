@@ -84,5 +84,8 @@ a.nav-link {
   .header-top__menu {
     display: flex;
     justify-content: space-around; }
-    .header-top__menu_link {
-      list-style: none; }
+    .header-top__menu_link:nth-child(1) {
+      list-style: none;
+      flex: 1; }
+      .header-top__menu_link:nth-child(1)_link:nth-last-child(-n + 2) {
+        list-style: none; }
