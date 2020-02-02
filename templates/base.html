@@ -39,34 +39,32 @@
   </div>
 </header>
 
-<nav class="navbar navbar-expand-lg">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     {% if user.is_authenticated %}
 
-    <ul class="navbar-nav">
+    <ul class="navbar-nav nav-fill w-100 d-flex">
       {% with url_name=request.resolver_match.url_name %}
-      <li class="nav-item {% if url_name == 'home' %}current{% endif %}">
-        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
-      <li class="nav-item {% if url_name == 'products' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
         <a class="nav-link" href="/products">Buy Tickets</a>
       </li>
-      <li class="nav-item {% if url_name == 'contact' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
         <a class="nav-link" href="/contact">Contact Us</a>
       </li>
-      <li class="nav-item {% if url_name == 'cart' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'cart' %}active{% endif %}">
         <a class="nav-link" href="/cart">Cart</a>
       </li>
-      <li class="nav-item {% if url_name == 'logout' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'logout' %}active{% endif %}">
         <a class="nav-link" href="/logout">Logout</a>
       </li>
-      <li class="nav-item {% if url_name == 'profile' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'profile' %}active{% endif %}">
         <a class="nav-link" href="/profile">Profile</a>
       </li>
       {% endwith %}
@@ -74,24 +72,24 @@
 
     {% else %}
 
-    <ul class="navbar-nav">
+    <ul class="navbar-nav nav-fill w-100 d-flex">
       {% with url_name=request.resolver_match.url_name %}
-      <li class="nav-item {% if url_name == 'home' %}current{% endif %}">
-        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
-      <li class="nav-item {% if url_name == 'products' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
         <a class="nav-link" href="{% url 'products' %}">Buy Tickets</a>
       </li>
-      <li class="nav-item {% if url_name == 'register' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'register' %}active{% endif %}">
         <a class="nav-link" href="{% url 'register' %}">Register</a>
       </li>
-      <li class="nav-item {% if url_name == 'login' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'login' %}active{% endif %}">
         <a class="nav-link" href="{% url 'login' %}">Log In</a>
       </li>
-      <li class="nav-item {% if url_name == 'contact' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
         <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
       </li>
-      <li class="nav-item {% if url_name == 'cart' %}current{% endif %}">
+      <li class="nav-item {% if url_name == 'cart' %}active{% endif %}">
         <a class="nav-link" href="{% url 'cart' %}">Cart</a>
       </li>
       {% endwith %}
