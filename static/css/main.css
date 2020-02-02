@@ -72,7 +72,7 @@ div {
 
 .carousel__img {
   max-height: 60vh;
-  background-size: cover;
+  object-fit: cover;
   background-position: 0 50%; }
 
 .header-top {
