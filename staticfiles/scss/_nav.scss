@@ -1,31 +1,16 @@
-a.nav-link {
-    font-size: 1.25em;
-    margin: 0 .6em;
-    color: $green !important;   
-}
-
-.current {
-    border-bottom: 3px $grey solid;
-
-}
-
 .header-top {
     background-color: $green;
     color: white;
+    font-size: 0.8em;
 
     &__menu {
         display: flex;
-        // justify-content: space-around;
-
-        // &_link:nth-child(1) {
-                 
-        //     list-style: none;
-        //     flex: 1;
-
-        //     &_link:nth-last-child(-n + 2) {
-                 
-        //         list-style: none;
-        //     }
-        // }
+        list-style: none;
+        
     }
 }
+
+.navbar {
+    background-color: $lightgreen; 
+}
+
