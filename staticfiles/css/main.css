@@ -72,8 +72,7 @@ div {
 
 .carousel__img {
   max-height: 60vh;
-  object-fit: cover;
-  background-position: 0 50%; }
+  object-fit: cover; }
 
 .header-top {
   background-color: #566948;
@@ -85,3 +84,9 @@ div {
 
 .navbar {
   background-color: #97a88b; }
+
+.logo {
+  margin-bottom: 20px; }
+
+.free-dev {
+  margin-bottom: 20px; }
