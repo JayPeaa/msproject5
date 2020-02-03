@@ -23,23 +23,25 @@
         <li class="p-2"><a>Basket</a></li>
       </ul>
   </div>
-  <div class="d-flex justify-content-around text-center">
-    <a class="col-md-4 align-self-center" href="{% url 'home' %}">
-      <img src="/static/img/free_delivery.png" class="img-fluid" style="width: 150px;">
-    </a>
-    <a class="col-md-4" href="{% url 'home' %}">
-      <img src="/static/img/logo.png" class="img-fluid" style="width: 150px;">
-    </a>
-    <form id="nav-search" class="col-md-4 form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
+  
+  <div class="container-fluid text-center">
+    <div class="row">
+      <a class="free-dev col-md-4 align-self-center" href="{% url 'home' %}">
+        <img src="/static/img/free_delivery.png" class="img-fluid" style="width: 250px;">
+      </a>
+      <a class="logo col-md-4" href="{% url 'home' %}">
+        <img src="/static/img/logo.png" class="img-fluid" style="width: 180px;">
+      </a>
+      <form id="nav-search" class="form-inline col-sm-12 col-md-4 justify-content-center">
+        <input class="form-control col-sm-8 col-md-8 col-lg-6 mr-sm-1" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success col-sm-2 col-md-2 col-lg-2" type="submit">
+          <i class="fa fa-search "></i>
+        </button>
+      </form>
   </div>
 </header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -50,7 +52,7 @@
     <ul class="navbar-nav nav-fill w-100 d-flex">
       {% with url_name=request.resolver_match.url_name %}
       <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
+        <a class="nav-link align-self-center" href="{% url 'home' %}">Home</a>
       </li>
       <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
         <a class="nav-link" href="/products">Buy Tickets</a>
@@ -75,7 +77,7 @@
     <ul class="navbar-nav nav-fill w-100 d-flex">
       {% with url_name=request.resolver_match.url_name %}
       <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
+        <a class="nav-link align-self-center" href="{% url 'home' %}">Home</a>
       </li>
       <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
         <a class="nav-link" href="{% url 'products' %}">Buy Tickets</a>
