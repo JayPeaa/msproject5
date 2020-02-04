@@ -15,20 +15,20 @@ main {
 }
 
 
-h1 {
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
+    margin-bottom: 50px;
 }
 
-h2,
-h3,
-a,
-li,
-    {
-    font-family: "Roboto",Arial,sans-serif;
-    
 
-p,
-    {
+a,
+li {
+    font-family: "Roboto",Arial,sans-serif;
+}
+
+p {
     font-family: 'Roboto', sans-serif;
 }
 

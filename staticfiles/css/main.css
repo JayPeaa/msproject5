@@ -2,11 +2,12 @@
 main {
   padding: 0 20px; }
 
-h1 {
-  font-family: 'Playfair Display', serif; }
-
+h1,
 h2,
-h3,
+h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 50px; }
+
 a,
 li {
   font-family: "Roboto",Arial,sans-serif; }
