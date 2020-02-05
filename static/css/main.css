@@ -75,29 +75,22 @@ div {
   max-height: 60vh;
   object-fit: cover; }
 
-.pic1 {
-  background-image: url("/static/img/family.jpg");
+.pic-window {
   background-size: cover;
-  min-height: 320px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: solid white 1em; }
+
+.pic1 {
+  background-image: url("/static/img/family.jpg"); }
 
 .pic2 {
-  background-image: url("/static/img/cwtch_corner.jpg");
-  background-size: cover;
-  min-height: 320px;
-  box-sizing: border-box; }
+  background-image: url("/static/img/cwtch_corner.jpg"); }
 
 .pic3 {
-  background-image: url("/static/img/lambs_outdoors.jpg");
-  background-size: cover;
-  min-height: 320px;
-  box-sizing: border-box; }
+  background-image: url("/static/img/lamb.jpg"); }
 
 .pic4 {
-  background-image: url("/static/img/carrots.jpg");
-  background-size: cover;
-  min-height: 320px;
-  box-sizing: border-box; }
+  background-image: url("/static/img/carrots.jpg"); }
 
 .block {
   border-radius: 3px;

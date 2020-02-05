@@ -1,36 +1,26 @@
+.pic-window {
+    background-size: cover;
+    // min-height: 500px;
+    box-sizing: border-box;
+    border: solid white 1em;
+}
+
 .pic1 {
     background-image: url('/static/img/family.jpg');
-    background-size: cover;
-    min-height: 320px;
-    box-sizing: border-box;
-    
-    
+   
 }
 .pic2 {
     background-image: url('/static/img/cwtch_corner.jpg');
-    background-size: cover;
-    min-height: 320px;
-    box-sizing: border-box;
-    
-    
 }
 
 
 .pic3 {
-    background-image: url('/static/img/lambs_outdoors.jpg');
-    background-size: cover;
-    min-height: 320px;
-    box-sizing: border-box;
-    
+    background-image: url('/static/img/lamb.jpg');
 }
 
 
 .pic4 {
     background-image: url('/static/img/carrots.jpg');
-    background-size: cover;
-    min-height: 320px;
-    box-sizing: border-box;
-    
 }
 
 
