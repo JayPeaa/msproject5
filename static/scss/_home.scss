@@ -1,6 +1,6 @@
 .pic-window {
     background-size: cover;
-    // min-height: 500px;
+    height: 320px;
     box-sizing: border-box;
     border: solid white 1em;
 }
@@ -34,8 +34,8 @@
 
 
     &-inner {
-        background: blue;
-        // padding: 1em;
+        background: rgba($color: #000000, $alpha: 0.5);
+        height: 100%;
         border-radius: 3px;
         width: 100%;
         clip-path: circle(10% at 0% 0%);
