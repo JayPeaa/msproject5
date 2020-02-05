@@ -102,10 +102,11 @@ div {
     border-radius: 3px;
     width: 100%;
     clip-path: circle(10% at 0% 0%);
-    transition: clip-path .5s ease-in-out; }
-    .block-inner h1 {
+    transition: clip-path .5s ease-in-out;
+    padding: 1.5em; }
+    .block-inner h2 {
       color: white;
-      margin: 0; }
+      margin-bottom: 1em; }
     .block-inner p {
       color: white;
       font-size: 1em; }
