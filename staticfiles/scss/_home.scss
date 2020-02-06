@@ -1,6 +1,6 @@
 .pic-window {
     background-size: cover;
-    height: 320px;
+    height: 360px;
     box-sizing: border-box;
     border: solid white 1em;
 }
@@ -50,4 +50,19 @@
     &:hover .block-inner {
         clip-path: circle(75%);
     }
+}
+
+.cwtch-corner-block {
+    background-color: rgb(248, 249, 250);
+    padding: 2em;
+    border-bottom: 2em solid  rgb(248, 249, 250);
+    
+}
+
+.farmers-block {
+    background-image: url('/static/img/farm-background.png');
+    height: 800px;
+    background-size: cover;
+    width: 100%;
+    margin-top: -15px;
 }
