@@ -6,21 +6,21 @@
 }
 
 .pic1 {
-    background-image: url('/static/img/family.jpg');
+    background-image: url('../img/family.jpg');
    
 }
 .pic2 {
-    background-image: url('/static/img/cwtch_corner.jpg');
+    background-image: url('../img/cwtch_corner.jpg');
 }
 
 
 .pic3 {
-    background-image: url('/static/img/lamb.jpg');
+    background-image: url('../img/lamb.jpg');
 }
 
 
 .pic4 {
-    background-image: url('/static/img/carrots.jpg');
+    background-image: url('../img/carrots.jpg');
 }
 
 .block {
@@ -52,17 +52,31 @@
     }
 }
 
-.cwtch-corner-block {
+.light-grey-block {
     background-color: rgb(248, 249, 250);
     padding: 2em;
     border-bottom: 2em solid  rgb(248, 249, 250);
+    margin-top: -15px;
     
 }
 
 .farmers-block {
-    background-image: url('/static/img/farm-background.png');
+    background-image: url('../img/farm-background.png');
     height: 800px;
     background-size: cover;
     width: 100%;
     margin-top: -15px;
+}
+
+.about-farm-section {
+    background-color: $lightgreen;
+    border-radius: 5px;
+    border: white solid 4px;
+    color: white;
+    display: block;
+    padding: 2em;
+    text-align: center;
+    vertical-align: middle;
+
+    
 }
