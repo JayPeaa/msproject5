@@ -3,7 +3,7 @@
     &-container {
         text-align: center;
         background-color: $greygreen;
-        margin-top: auto;
+        margin-top: -47px;
         margin-bottom: 0;
         font-size: 1.2em;
         padding-top: 0.5em;
@@ -12,8 +12,11 @@
         border-color: $offblack;
     }
 
-    &-text {
-        color: $offblack;
+    &-footer-text {
+        font-size: 0.8em;
+        color: black;
+        margin: 0;  
+        padding: 0;
     }
 
 }

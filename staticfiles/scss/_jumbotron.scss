@@ -1,9 +1,15 @@
 .jumbotron {
-    background-size: cover;
-    background-position: center;
     background: #fff;
     padding: 0;
     margin: 0;
+    background-position: 0 50%;
+}
+
+.carousel__img {
+    max-height: 60vh;
+    object-fit: cover;
+    max-width: 2300px;
+    margin: auto;
 }
 
 .logout-message {
@@ -17,9 +23,3 @@
     font-size: 1.2em;
 }
 
-.carousel__img {
-    max-height: 60vh;
-    object-fit: cover;
-    max-width: 2300px;
-    margin: auto;
-}

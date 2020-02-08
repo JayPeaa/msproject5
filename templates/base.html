@@ -130,28 +130,20 @@
   
 </main>
 <footer class="footer-container">
-  <p class="social-footer">Our Social</p>
-  <ul class="list-inline social-links ">
-    <li class="list-inline-item">
-      <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-    </li>
-    <li class="list-inline-item">
-      <a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
-    </li>
-  </ul>
-  <p class="footer-text">
+  <div class="container-fluid text-center">
+    <div class="row">
+      
+      <a class="logo offset-md-4 col-md-4" href="{% url 'home' %}">
+        <img src="/static/img/logo.png" class="img-fluid" style="width: 180px;">
+      </a>
+      <div class="col-sm-12">
+        <p>Tel 01234 654321  |  info@oakfieldfarmshop.co.uk</p>
+      </div>
+      
+      <hr>
+  </div>
+  
+  <p class="footer-footer-text">
     Full Stack Development with Django | Milestone Project 5 | © 2019 John Hay
     <a href="https://github.com/JayPeaa" target="_blank"><i class="fa fa-github fa-3x list-inline social-links"></i></a>
   </p>

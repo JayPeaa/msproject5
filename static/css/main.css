@@ -26,7 +26,7 @@ div {
 .footer-container {
   text-align: center;
   background-color: #dfdcd5;
-  margin-top: auto;
+  margin-top: -47px;
   margin-bottom: 0;
   font-size: 1.2em;
   padding-top: 0.5em;
@@ -34,8 +34,11 @@ div {
   border-top: solid;
   border-color: #000027; }
 
-.footer-text {
-  color: #000027; }
+.footer-footer-text {
+  font-size: 0.8em;
+  color: black;
+  margin: 0;
+  padding: 0; }
 
 .social-footer {
   color: #000027; }
@@ -48,11 +51,16 @@ div {
   padding-bottom: .5em; }
 
 .jumbotron {
-  background-size: cover;
-  background-position: center;
   background: #fff;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-position: 0 50%; }
+
+.carousel__img {
+  max-height: 60vh;
+  object-fit: cover;
+  max-width: 2300px;
+  margin: auto; }
 
 .logout-message {
   background-color: black;
@@ -63,12 +71,6 @@ div {
   text-align: center;
   padding-bottom: 1em;
   font-size: 1.2em; }
-
-.carousel__img {
-  max-height: 60vh;
-  object-fit: cover;
-  max-width: 2300px;
-  margin: auto; }
 
 .pic-window {
   background-size: cover;
