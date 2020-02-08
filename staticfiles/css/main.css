@@ -6,7 +6,8 @@ h1,
 h2,
 h3 {
   font-family: 'Playfair Display', serif;
-  margin-bottom: 50px; }
+  margin-top: 15px;
+  margin-bottom: 25px; }
 
 a,
 li {
@@ -106,7 +107,7 @@ div {
     width: 100%;
     clip-path: circle(10% at 0% 0%);
     transition: clip-path .5s ease-in-out;
-    padding: 1.5em; }
+    padding: 2.5em; }
     .block-inner h2 {
       color: white;
       margin-bottom: 1em; }
@@ -120,6 +121,13 @@ div {
   background-color: #f8f9fa;
   padding: 2em;
   border-bottom: 2em solid #f8f9fa;
+  margin-top: -15px; }
+
+.light-green-block {
+  background-color: #97a88b;
+  padding: 2em;
+  border-bottom: 2em solid #f8f9fa;
+  color: white;
   margin-top: -15px; }
 
 .farmers-block {
@@ -136,8 +144,11 @@ div {
   color: white;
   display: block;
   padding: 2em;
-  text-align: center;
-  vertical-align: middle; }
+  text-align: center; }
+
+.subscribe-form {
+  margin-left: auto;
+  margin-right: auto; }
 
 .header-top {
   background-color: #566948;

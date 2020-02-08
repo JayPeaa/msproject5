@@ -34,7 +34,7 @@
         width: 100%;
         clip-path: circle(10% at 0% 0%);
         transition: clip-path .5s ease-in-out;
-        padding: 1.5em;
+        padding: 2.5em;
 
         h2 {
             color: white;
@@ -60,6 +60,14 @@
     
 }
 
+.light-green-block {
+    background-color: $lightgreen;
+    padding: 2em;
+    border-bottom: 2em solid rgb(248, 249, 250);
+    color: white;
+    margin-top: -15px;
+}
+
 .farmers-block {
     background-image: url('../img/farm-background.png');
     height: 800px;
@@ -75,8 +83,14 @@
     color: white;
     display: block;
     padding: 2em;
-    text-align: center;
-    vertical-align: middle;
+    text-align: center;   
+}
 
+.subscribe-form {
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-card {
     
 }
+
