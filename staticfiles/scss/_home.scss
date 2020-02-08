@@ -3,6 +3,7 @@
     height: 360px;
     box-sizing: border-box;
     border: solid white 1em;
+    background-position: center; 
 }
 
 .pic1 {
@@ -21,6 +22,27 @@
 
 .pic4 {
     background-image: url('../img/carrots.jpg');
+}
+
+.food-fruit {
+    background-image: url('../img/food-fruit.jpg');
+}
+.food-veg {
+    background-image: url('../img/food-veg.jpg');
+}
+
+
+.food-lamb {
+    background-image: url('../img/food-lamb.jpg');
+}
+
+
+.food-beef {
+    background-image: url('../img/food-beef.jpg');
+}
+
+.food-pork {
+    background-image: url('../img/food-pork.jpg');
 }
 
 .block {
@@ -86,11 +108,25 @@
     text-align: center;   
 }
 
-.subscribe-form {
-    margin-left: auto;
-    margin-right: auto;
-}
-.product-card {
-    
+.form-inline .form-control {
+    width: 100%;
 }
 
+.socialmedia {
+
+    &-links {
+        font-size: 3em;
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+.fa {
+    color: $offblack;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.fa:hover {
+    color: $duckegggrey;
+}
