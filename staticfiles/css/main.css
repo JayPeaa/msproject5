@@ -186,5 +186,9 @@ div {
 .logo {
   margin-bottom: 20px; }
 
-.free-dev {
-  margin-bottom: 20px; }
+.active {
+  font-weight: bolder; }
+
+.product-filters {
+  background-color: blue;
+  min-height: 1200px; }

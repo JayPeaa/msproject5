@@ -26,7 +26,7 @@
   
   <div class="container-fluid text-center">
     <div class="row">
-      <a class="free-dev col-md-4 align-self-center" href="{% url 'home' %}">
+      <a class="col-md-4 align-self-center" href="{% url 'home' %}">
         <img src="/static/img/quality.svg" class="img-fluid" style="width: 280px;">
       </a>
       <a class="logo col-md-4" href="{% url 'home' %}">
@@ -55,7 +55,7 @@
         <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
       <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
-        <a class="nav-link" href="/products">Buy Tickets</a>
+        <a class="nav-link" href="/products">Farm Shop</a>
       </li>
       <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
         <a class="nav-link" href="/contact">Contact Us</a>
@@ -80,7 +80,7 @@
         <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
       <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'products' %}">Buy Tickets</a>
+        <a class="nav-link" href="{% url 'products' %}">Farm Shop</a>
       </li>
       <li class="nav-item {% if url_name == 'register' %}active{% endif %}">
         <a class="nav-link" href="{% url 'register' %}">Register</a>
@@ -111,23 +111,89 @@
   <body>
     {% if messages %}
       {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
+        <div class="text-center alert alert-{{ message.tags }}">
           {{ message }}
         </div>
       {% endfor %}
     {% endif %}
     {% block content %} replace me {% endblock %}
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-  
+    
+  <!-- Advertorial Section -->
+
+<div class="container-fluid light-grey-block">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-12 col-md-4">
+              <h2 class="text-center">VISIT US</h2>
+              <p class="text-justify">All the fun of the farm. We're moer than just
+                  a shop. Visit us for a great family day out.
+                  Discover what's involved in runnnig a farm and 
+                  meet the animals. Addmission is refunded if you 
+                  spend over £30 in our farm shop.  Tickets can be
+                  purchased on arrival.
+              </p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <h2 class="text-center">SHOP ONLINE</h2>
+              <p class="text-justify">Unlike traditional farm shops you can now purchase
+                  any of our produce online.  We deliver nationally 
+                  for a small fee and locally for free.  Be confident
+                  in your purchases as we offer a quality garauntee. If for 
+                  any reason you are not satisfied with your purchases we will
+                  refund you.
+              </p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <h2 class="text-center">HOME GROWN</h2>
+              <p class="text-justify">All of our produce is home grown and organic. We do not use
+                  any commercial fertilisers at Oakfield farm as the environmental
+                  effects of using such chemicals are well document.  We pride ourselves
+                  on being ethically and environmentally minded.
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Subscribe Section -->
+
+<div class="container-fluid light-green-block">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+              <h2 class="text-center">KEEP IN TOUCH</h2>
+              <p class="text-center">Subscribe to our news letter for the latest news and special offers</p>
+              <form class="form-inline justify-content-center">
+                  <div class="form-group col-md-6">
+                    <input type="email" class="form-control" id="emailsubscribe" placeholder="email">
+                  </div>
+                  <button type="submit" class="btn btn-success">Subscribe</button>
+              </form>
+              <ul class="list-inline socialmedia-links ">
+                  <li class="list-inline-item">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+                  </li>
+                </ul>
+          </div>
+      </div>
+  </div>
+</div>    
 </main>
 <footer class="footer-container">
   <div class="container-fluid text-center">
@@ -148,5 +214,14 @@
     <a href="https://github.com/JayPeaa" target="_blank"><i class="fa fa-github fa-3x list-inline social-links"></i></a>
   </p>
 </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 </html>
