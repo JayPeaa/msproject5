@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,800,900|Roboto:400,500,700,900&display=swap");
+.btn {
+  background-color: #566948;
+  color: white;
+  border: solid #b6c3cc 2px; }
+
+.btn:hover {
+  background-color: #84754e;
+  border: solid #84754e 2px; }
+
 main {
   padding: 0 0; }
 
@@ -28,8 +37,7 @@ div {
   background-color: #dfdcd5;
   margin-top: -47px;
   margin-bottom: 0;
-  font-size: 1.2em;
-  padding-top: 0.5em;
+  font-size: 1em;
   padding-bottom: 1em;
   border-top: solid;
   border-color: #000027; }
@@ -53,11 +61,15 @@ div {
 .jumbotron {
   background: #fff;
   padding: 0;
-  margin: 0;
-  background-position: 0 50%; }
+  margin: 0; }
+
+.jumbo-text {
+  background-color: #97a88b;
+  padding: 1em;
+  border: solid white 3px; }
 
 .carousel__img {
-  max-height: 60vh;
+  max-height: 55vh;
   object-fit: cover;
   max-width: 2300px;
   margin: auto; }
@@ -175,7 +187,7 @@ div {
 .header-top {
   background-color: #566948;
   color: white;
-  font-size: 0.8em; }
+  font-size: 1em; }
   .header-top__menu {
     display: flex;
     list-style: none; }

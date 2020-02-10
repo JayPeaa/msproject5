@@ -1,12 +1,12 @@
 .header-top {
     background-color: $green;
     color: white;
-    font-size: 0.8em;
+    font-size: 1em;
 
     &__menu {
         display: flex;
         list-style: none;
-        
+                
     }
 }
 
@@ -21,3 +21,4 @@
 .active {
     font-weight: bolder;
 }
+

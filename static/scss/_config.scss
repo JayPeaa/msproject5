@@ -10,6 +10,17 @@ $greygreen: #dfdcd5; //footer
 $offblack: #000027; //footer text
 
 
+.btn {
+    background-color: $green;
+    color: white;
+    border: solid $duckegggrey 2px;
+}
+
+.btn:hover {
+    background-color: $earthbrown;
+    border: solid $earthbrown 2px;
+}
+
 main {
     padding: 0 0;
 }
