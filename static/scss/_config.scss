@@ -16,6 +16,13 @@ $offblack: #000027; //footer text
     border: solid $duckegggrey 2px;
 }
 
+.filter-btn {
+    background-color: $green;
+    color: white;
+    border: solid $duckegggrey 2px;
+    width: 200px;
+}
+
 .btn:hover {
     background-color: $earthbrown;
     border: solid $earthbrown 2px;

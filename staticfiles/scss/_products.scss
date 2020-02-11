@@ -1,5 +1,14 @@
-.product-filters {
-    background-color: blue;
-    min-height: 1200px;
-   
+.jumbo-products {
+    background-image: url('../img/food-fruit.jpg');
+    background-size: cover;
+    height: 50vh;
+    box-sizing: border-box;
+    background-position: center; 
+    padding: 1em;
+    color: white;
 }
+
+.jumbotron {
+    margin: 0;
+}
+
