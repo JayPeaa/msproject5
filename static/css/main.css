@@ -251,3 +251,7 @@ div {
 
 .contact-pic {
   background-image: url("../img/farm_house2.jpg"); }
+
+#map {
+  height: 400px;
+  width: 100%; }
