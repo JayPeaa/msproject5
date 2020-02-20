@@ -1,24 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="jumbotron jumbo-products">
-        {% if messages %}
-        <div class="logout-message">
-        {% for message in messages %}
-        {{ message }}
-        {% endfor %}
-        </div>
-        {% endif %}
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-        </div>
+
+<div class="jumbotron jumbo-products">
+    {% if messages %}
+    <div class="logout-message">
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
     </div>
+    {% endif %}
 </div>
 <div class="container">
     <div class="row">
@@ -26,14 +17,6 @@
             <h1>Products</h1>
 
             <p>MESSAGE: You have just added x to your basket</p>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-left">
-            <p>FILTER: Price Low to High</p>
         </div>
     </div>
 </div>
