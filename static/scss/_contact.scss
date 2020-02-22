@@ -1,5 +1,5 @@
 .jumbo-contact {
-    background-image: url('../img/phone.jpg');
+    background-image: url('../img/farm_house2.jpg');
     background-size: cover;
     height: 50vh;
     box-sizing: border-box;
@@ -8,19 +8,21 @@
     color: white;
 }
 
-.block-display {
-    background-size: cover;
-    height: 360px;
-    box-sizing: border-box;
-    border: solid white 1em;
-    background-position: center; 
-}
-
-.contact-pic {
-    background-image: url('../img/farm_house2.jpg');
-}
-
 #map {
-    height: 400px;
+    height: 300px;
     width: 100%;
+}
+
+.contact-info {
+    height: 300px;
+    width: 100%;
+    background-color: $lightgreen;
+    color: white;
+    padding: 1.5em;
+    border: solid 3px silver;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
 }

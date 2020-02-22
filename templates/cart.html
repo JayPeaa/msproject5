@@ -1,8 +1,96 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Cart</h1>
 
-<p>This is a template</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center">Cart</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-2">
+            <img src="../static/img/carrots.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <p><strong>Carrots</strong><br>500g<br>Serves 6</p>
+        </div>
+        <div class="offset-md-3">
+            
+        </div>
+        <div class="col-sm-12 col-md-1">
+            <p class="text-center"><strong>Price</strong></p>
+            <p class="text-center">£2.99</p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+            <p class="text-center"><strong>Quantity</strong></p>
+            <input class="text-center align-items-center" type="number"></input>
+            <div class="text-center">
+                <small class="text-muted "><a class="ml-2" href="#">Remove</a>
+            </small>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-1">
+            <p class="text-center"><strong>Total</strong></p>
+            <p class="text-center">£2.99</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 col-md-2">
+            <img src="../static/img/carrots.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <p><strong>Carrots</strong><br>500g<br>Serves 6</p>
+        </div>
+        <div class="offset-md-3">
+            
+        </div>
+        <div class="col-sm-12 col-md-1">
+            <p class="text-center"><strong>Price</strong></p>
+            <p class="text-center">£2.99</p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+            <p class="text-center"><strong>Quantity</strong></p>
+            <input class="text-center align-items-center" type="number"></input>
+            <div class="text-center">
+                <small class="text-muted "><a class="ml-2" href="#">Remove</a>
+            </small>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-1">
+            <p class="text-center"><strong>Total</strong></p>
+            <p class="text-center">£2.99</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h2>Payment Info</h2>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <p class="text-center">Subtotal</p>
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <p class="text-center">£2.99</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <hr>
+            <p class="text-center"><strong>Total</strong></p>
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <hr>
+            <p class="text-center"><strong>£5.98</strong></p>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}

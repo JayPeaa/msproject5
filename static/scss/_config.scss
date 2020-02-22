@@ -11,21 +11,21 @@ $offblack: #000027; //footer text
 
 
 .btn {
-    background-color: $green;
+    background-color: $lightgreen;
     color: white;
     border: solid $duckegggrey 2px;
 }
 
 .filter-btn {
-    background-color: $green;
+    background-color: $lightgreen;
     color: white;
     border: solid $duckegggrey 2px;
     width: 200px;
 }
 
 .btn:hover {
-    background-color: $earthbrown;
-    border: solid $earthbrown 2px;
+    background-color: $green;
+    color: white;
 }
 
 main {

@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,800,900|Roboto:400,500,700,900&display=swap");
 .btn {
-  background-color: #566948;
+  background-color: #97a88b;
   color: white;
   border: solid #b6c3cc 2px; }
 
 .filter-btn {
-  background-color: #566948;
+  background-color: #97a88b;
   color: white;
   border: solid #b6c3cc 2px;
   width: 200px; }
 
 .btn:hover {
-  background-color: #84754e;
-  border: solid #84754e 2px; }
+  background-color: #566948;
+  color: white; }
 
 main {
   padding: 0 0; }
@@ -72,7 +72,11 @@ div {
 .jumbo-text {
   background-color: #97a88b;
   padding: 1em;
-  border: solid white 3px; }
+  border: solid white 3px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8em; }
 
 .carousel__img {
   max-height: 55vh;
@@ -234,7 +238,7 @@ div {
   font-weight: bolder; }
 
 .jumbo-contact {
-  background-image: url("../img/phone.jpg");
+  background-image: url("../img/farm_house2.jpg");
   background-size: cover;
   height: 50vh;
   box-sizing: border-box;
@@ -242,16 +246,21 @@ div {
   padding: 1em;
   color: white; }
 
-.block-display {
-  background-size: cover;
-  height: 360px;
-  box-sizing: border-box;
-  border: solid white 1em;
-  background-position: center; }
-
-.contact-pic {
-  background-image: url("../img/farm_house2.jpg"); }
-
 #map {
-  height: 400px;
+  height: 300px;
+  width: 100%; }
+
+.contact-info {
+  height: 300px;
+  width: 100%;
+  background-color: #97a88b;
+  color: white;
+  padding: 1.5em;
+  border: solid 3px silver; }
+
+input,
+textarea {
+  margin-bottom: 10px; }
+
+.cart-block {
   width: 100%; }
