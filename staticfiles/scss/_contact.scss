@@ -1,0 +1,28 @@
+.jumbo-contact {
+    background-image: url('../img/farm_house2.jpg');
+    background-size: cover;
+    height: 50vh;
+    box-sizing: border-box;
+    background-position: center; 
+    padding: 1em;
+    color: white;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+.contact-info {
+    height: 300px;
+    width: 100%;
+    background-color: $lightgreen;
+    color: white;
+    padding: 1.5em;
+    border: solid 3px silver;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+}

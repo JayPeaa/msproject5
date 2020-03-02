@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,800,900|Roboto:400,500,700,900&display=swap");
+.btn {
+  background-color: #97a88b;
+  color: white;
+  border: solid #b6c3cc 2px; }
+
+.filter-btn {
+  background-color: #97a88b;
+  color: white;
+  border: solid #b6c3cc 2px;
+  width: 200px; }
+
+.btn:hover {
+  background-color: #566948;
+  color: white; }
+
+main {
+  padding: 0 0; }
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 15px;
+  margin-bottom: 25px; }
+
+a,
+li {
+  font-family: "Roboto",Arial,sans-serif; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em; }
+
+p {
+  margin-bottom: 30px; }
+
+div {
+  margin-bottom: 15px; }
+
+.footer-container {
+  text-align: center;
+  background-color: #dfdcd5;
+  margin-top: -47px;
+  margin-bottom: 0;
+  font-size: 1em;
+  padding-bottom: 1em;
+  border-top: solid;
+  border-color: #000027; }
+
+.footer-footer-text {
+  font-size: 0.8em;
+  color: black;
+  margin: 0;
+  padding: 0; }
+
+.social-footer {
+  color: #000027; }
+
+.social-links {
+  font-size: 2em;
+  text-align: center;
+  background-color: #dfdcd5;
+  margin: 0;
+  padding-bottom: .5em; }
+
+.jumbotron {
+  background: #fff;
+  padding: 0;
+  margin: 0; }
+
+.jumbo-text {
+  background-color: #97a88b;
+  padding: 1em;
+  border: solid white 3px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8em; }
+
+.carousel__img {
+  max-height: 55vh;
+  object-fit: cover;
+  max-width: 2300px;
+  margin: auto; }
+
+.logout-message {
+  background-color: black;
+  color: #566948;
+  display: block;
+  padding: 0;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 1.2em; }
+
+.pic-window {
+  background-size: cover;
+  height: 360px;
+  box-sizing: border-box;
+  border: solid white 1em;
+  background-position: center; }
+
+.pic1 {
+  background-image: url("../img/family.jpg"); }
+
+.pic2 {
+  background-image: url("../img/cwtch_corner.jpg"); }
+
+.pic3 {
+  background-image: url("../img/lamb.jpg"); }
+
+.pic4 {
+  background-image: url("../img/carrots.jpg"); }
+
+.food-fruit {
+  background-image: url("../img/food-fruit.jpg"); }
+
+.food-veg {
+  background-image: url("../img/food-veg.jpg"); }
+
+.food-lamb {
+  background-image: url("../img/food-lamb.jpg"); }
+
+.food-beef {
+  background-image: url("../img/food-beef.jpg"); }
+
+.food-pork {
+  background-image: url("../img/food-pork.jpg"); }
+
+.block {
+  border-radius: 3px;
+  padding: 0 !important; }
+  .block-inner {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    border-radius: 3px;
+    width: 100%;
+    clip-path: circle(10% at 0% 0%);
+    transition: clip-path .5s ease-in-out;
+    padding: 2.5em; }
+    .block-inner h2 {
+      color: white;
+      margin-bottom: 1em; }
+    .block-inner p {
+      color: white;
+      font-size: 1em; }
+  .block:hover .block-inner {
+    clip-path: circle(75%); }
+
+.light-grey-block {
+  background-color: #f8f9fa;
+  padding: 2em;
+  border-bottom: 2em solid #f8f9fa;
+  margin-top: -15px; }
+
+.light-green-block {
+  background-color: #97a88b;
+  padding: 2em;
+  border-bottom: 2em solid #f8f9fa;
+  color: white;
+  margin-top: -15px; }
+
+.farmers-block {
+  background-image: url("../img/farm-background.png");
+  height: 800px;
+  background-size: cover;
+  width: 100%;
+  margin-top: -15px; }
+
+.about-farm-section {
+  background-color: #97a88b;
+  border-radius: 5px;
+  border: white solid 4px;
+  color: white;
+  display: block;
+  padding: 2em;
+  text-align: center; }
+
+.form-inline .form-control {
+  width: 100%; }
+
+.socialmedia-links {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 1em; }
+
+.fa {
+  color: #000027;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.fa:hover {
+  color: #b6c3cc; }
+
+.header-top {
+  background-color: #566948;
+  color: white;
+  font-size: 1em; }
+  .header-top__menu {
+    display: flex;
+    list-style: none; }
+
+.navbar {
+  background-color: #97a88b; }
+
+.logo {
+  margin-bottom: 20px; }
+
+.active {
+  font-weight: bolder; }
+
+.jumbo-products {
+  background-image: url("../img/open_sign.jpg");
+  background-size: cover;
+  height: 50vh;
+  box-sizing: border-box;
+  background-position: center;
+  padding: 1em;
+  color: white; }
+
+.header-top {
+  background-color: #566948;
+  color: white;
+  font-size: 1em; }
+  .header-top__menu {
+    display: flex;
+    list-style: none; }
+
+.navbar {
+  background-color: #97a88b; }
+
+.logo {
+  margin-bottom: 20px; }
+
+.active {
+  font-weight: bolder; }
+
+.jumbo-contact {
+  background-image: url("../img/farm_house2.jpg");
+  background-size: cover;
+  height: 50vh;
+  box-sizing: border-box;
+  background-position: center;
+  padding: 1em;
+  color: white; }
+
+#map {
+  height: 300px;
+  width: 100%; }
+
+.contact-info {
+  height: 300px;
+  width: 100%;
+  background-color: #97a88b;
+  color: white;
+  padding: 1.5em;
+  border: solid 3px silver; }
+
+input,
+textarea {
+  margin-bottom: 10px; }
