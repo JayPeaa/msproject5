@@ -25,24 +25,33 @@
     <div class="row">
         <div class="col-sm-12 col-md-3 product-filters">
             <div class="row">
-               
                 <div class="col-sm-12">
                     <h2>Categories</h2>                    
                 </div>
                 <div class="col-sm-12">
-                    <button class="btn filter-btn">Fruit</button>                    
+                    <form action="{% url 'products_by_category' 'Fruit' %}">
+                        <button class="btn filter-btn" type="submit">Fruit</button> 
+                    </form>                   
                 </div>
                 <div class="col-sm-12">
-                    <button class="btn filter-btn">Vegtables</button>                    
+                    <form action="{% url 'products_by_category' 'Vegetables' %}">
+                        <button class="btn filter-btn" type="submit">Vegetables</button> 
+                    </form>                   
                 </div>
                 <div class="col-sm-12">
-                    <button class="btn filter-btn">Lamb</button>                    
+                    <form action="{% url 'products_by_category' 'Lamb' %}">
+                        <button class="btn filter-btn" type="submit">Lamb</button> 
+                    </form>                   
                 </div>
                 <div class="col-sm-12">
-                    <button class="btn filter-btn">Beef</button>                    
+                    <form action="{% url 'products_by_category' 'Beef' %}">
+                        <button class="btn filter-btn" type="submit">Beef</button> 
+                    </form>                   
                 </div>
                 <div class="col-sm-12">
-                    <button class="btn filter-btn">Pork</button>                    
+                    <form action="{% url 'products_by_category' 'Pork' %}">
+                        <button class="btn filter-btn" type="submit">Pork</button> 
+                    </form>                   
                 </div>
                 
                 <div class="container">

@@ -18,7 +18,7 @@ class Product(models.Model):
     product_serves = models.IntegerField(blank=False)
     product_description = models.TextField(max_length=300)
     product_image = models.ImageField(upload_to="static/img", blank=True, null=True)
-    product_category_id = models.ForeignKey(ProductCategory, on_delete=models.CASCADE) #check this but think it's correct
+    product_category_id = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     product_update_date = models.DateTimeField(auto_now_add=True)
     product_stock_qty = models.IntegerField(blank=False)
     product_live = models.BooleanField(default=True)
