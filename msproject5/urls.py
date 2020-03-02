@@ -25,13 +25,13 @@ from django.urls import path
 
 
 from pages.views import home_view, contact_view, cart_view
-from products.views import products_view
+from django.conf.urls import url, include
 from users import views as user_views
 
 urlpatterns = [
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
-    path('products/', products_view, name='products'),
+    path('products/', include('products.urls')),
     path('cart/', cart_view, name='cart'),
     path('register/', user_views.register, name='register'), #new approach
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), #new approach
@@ -44,9 +44,6 @@ urlpatterns = [
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'), #new approach
 
     
-    # path('password-reset/', password_reset_view, name='password_reset'),
-    # path('password-reset/done', password_reset_done_view, name='password_reset_done'),
-    # path('password-reset/confirm/<uidb64>/<token>/', password_reset_confirm_view, name='password_reset_confirm'),
-    
+        
     path('admin/', admin.site.urls),
 ]

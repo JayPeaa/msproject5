@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from pages.forms import LoginForm, RegistrationForm
 
 # Create your views here.
-
+# For views which don't have their own app, split out as you go.
 
 def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
