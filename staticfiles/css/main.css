@@ -12,7 +12,8 @@
 
 .btn:hover {
   background-color: #566948;
-  color: white; }
+  color: white;
+  border: solid #b6c3cc 2px; }
 
 main {
   padding: 0 0; }
@@ -169,8 +170,7 @@ div {
   margin-top: -15px; }
 
 .about-farm-section {
-  background-color: #97a88b;
-  border-radius: 5px;
+  background-color: rgba(151, 168, 139, 0.8);
   border: white solid 4px;
   color: white;
   display: block;
@@ -197,7 +197,13 @@ div {
 .header-top {
   background-color: #566948;
   color: white;
-  font-size: 1em; }
+  font-size: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 10; }
   .header-top__menu {
     display: flex;
     list-style: none; }
@@ -206,7 +212,8 @@ div {
   background-color: #97a88b; }
 
 .logo {
-  margin-bottom: 20px; }
+  margin-top: 60px;
+  margin-bottom: 10px; }
 
 .active {
   font-weight: bolder; }
@@ -226,7 +233,13 @@ div {
 .header-top {
   background-color: #566948;
   color: white;
-  font-size: 1em; }
+  font-size: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 10; }
   .header-top__menu {
     display: flex;
     list-style: none; }
@@ -235,7 +248,8 @@ div {
   background-color: #97a88b; }
 
 .logo {
-  margin-bottom: 20px; }
+  margin-top: 60px;
+  margin-bottom: 10px; }
 
 .active {
   font-weight: bolder; }

@@ -26,6 +26,7 @@ $offblack: #000027; //footer text
 .btn:hover {
     background-color: $green;
     color: white;
+    border: solid $duckegggrey 2px;
 }
 
 main {
