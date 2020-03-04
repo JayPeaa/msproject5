@@ -8,8 +8,17 @@
     color: white;
 }
 
-.product-card:hover {
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
+.product-card {
+    transition: all 0.3s;
 }
 
+.product-card:hover {
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.4);
+    transform: translateY(-3px);
+
+}
+
+.qty-box {
+    width: 30%;
+}
 

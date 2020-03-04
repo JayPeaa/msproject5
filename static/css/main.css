@@ -2,13 +2,15 @@
 .btn {
   background-color: #97a88b;
   color: white;
-  border: solid #b6c3cc 2px; }
+  border: solid #b6c3cc 2px;
+  transition: all 0.3s; }
 
 .filter-btn {
   background-color: #97a88b;
   color: white;
   border: solid #b6c3cc 2px;
-  width: 200px; }
+  width: 200px;
+  transition: all 0.3s; }
 
 .btn:hover {
   background-color: #566948;
@@ -227,8 +229,15 @@ div {
   padding: 1em;
   color: white; }
 
+.product-card {
+  transition: all 0.3s; }
+
 .product-card:hover {
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px); }
+
+.qty-box {
+  width: 30%; }
 
 .header-top {
   background-color: #566948;
