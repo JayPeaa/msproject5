@@ -20,11 +20,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-
-
-
-
-from pages.views import home_view, contact_view, cart_view
+from cart import urls as urls_cart
+from pages.views import home_view, contact_view
 from django.conf.urls import url, include
 from users import views as user_views
 
@@ -32,7 +29,7 @@ urlpatterns = [
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('products/', include('products.urls')),
-    path('cart/', cart_view, name='cart'),
+    path('view_cart/', include(urls_cart)),
     path('register/', user_views.register, name='register'), #new approach
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), #new approach
     path('contact/', contact_view, name='contact'),

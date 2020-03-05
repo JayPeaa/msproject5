@@ -11,15 +11,8 @@ from pages.forms import LoginForm, RegistrationForm
 def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
 
-
-def cart_view(request, *args, **kwargs):
-    return render(request, "cart.html", {})
-
-
 def contact_view(request, *args, **kwargs):
     return render(request, "contact.html", {})
-
-
 
 def profile_view(request):
     """User profile page"""
