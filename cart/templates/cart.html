@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
 
@@ -9,62 +10,41 @@
             <hr>
         </div>
     </div>
+     {% for item in cart_items %}
     <div class="row">
         <div class="col-sm-12 col-md-2">
-            <img src="../static/img/carrots.jpg" class="img-fluid" alt="">
+            <img src="/{{ item.product.product_image}}" class="img-fluid" alt="">
         </div>
         <div class="col-sm-12 col-md-2 text-center">
-            <p><strong>Carrots</strong><br>500g<br>Serves 6</p>
+            <p><strong>{{ item.product.product_name}}</strong><br>{{ item.product.product_weight }}g<br>Serves {{ item.product.product_serves }}</p>
         </div>
         <div class="offset-md-3">
             
         </div>
         <div class="col-sm-12 col-md-1">
             <p class="text-center"><strong>Price</strong></p>
-            <p class="text-center">£2.99</p>
+            <p class="text-center">£{{ item.product.product_price }}</p>
         </div>
         <div class="col-sm-12 col-md-3 text-center">
             <p class="text-center"><strong>Quantity</strong></p>
-            <input class="text-center align-items-center" type="number"></input>
             <div class="text-center">
-                <small class="text-muted "><a class="ml-2" href="#">Remove</a>
+               <form method="POST" action="{% url 'adjust_cart' item.id %}">
+                    {% csrf_token %}
+                    <input class="text-center align-items-center" type="number" name="quantity" value="{{ item.quantity }}"></input>
+                    <button type="submit" class="btn"><small class="text-muted ">Update Total</button>
+               </form>
             </small>
             </div>
         </div>
         <div class="col-sm-12 col-md-1">
             <p class="text-center"><strong>Total</strong></p>
-            <p class="text-center">{{ product.product_price }}</p>
+            <p class="text-center">£{{ item.item_total }}</p>
         </div>
     </div>
     <hr>
-    <div class="row">
-        <div class="col-sm-12 col-md-2">
-            <img src="../static/img/carrots.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-sm-12 col-md-2 text-center">
-            <p><strong>Carrots</strong><br>500g<br>Serves 6</p>
-        </div>
-        <div class="offset-md-3">
-            
-        </div>
-        <div class="col-sm-12 col-md-1">
-            <p class="text-center"><strong>Price</strong></p>
-            <p class="text-center">£2.99</p>
-        </div>
-        <div class="col-sm-12 col-md-3 text-center">
-            <p class="text-center"><strong>Quantity</strong></p>
-            <input class="qty-box text-center align-items-center" type="number"></input>
-            <div class="text-center">
-                <small class="text-muted "><a class="ml-2" href="#">Remove</a>
-            </small>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-1">
-            <p class="text-center"><strong>Total</strong></p>
-            <p class="text-center">£2.99</p>
-        </div>
-    </div>
-    <hr>
+
+    {% endfor %}
+    
     <div class="row">
         <div class="col-sm-12 col-md-2">
         </div>
@@ -79,7 +59,7 @@
         <div class="col-sm-12 col-md-3 text-center">
         </div>
         <div class="col-sm-12 col-md-1">
-            <p class="text-center">£5.98</p>
+            <p class="text-center">£{{ total }}</p>
         </div>
     </div>
     <div class="row">
@@ -96,10 +76,10 @@
         <div class="col-sm-12 col-md-3 text-center">
         </div>
         <div class="col-sm-12 col-md-1">
-            <p class="text-center">£5.98</p>
+            <p class="text-center">£{{ total }}</p>
+            <a href="/" class="btn" role="button">Checkout</a>
         </div>
     </div>
 </div>
-
 
 {% endblock %}
