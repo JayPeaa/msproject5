@@ -58,11 +58,11 @@
       <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
         <a class="nav-link" href="/products">Farm Shop</a>
       </li>
-      <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
-        <a class="nav-link" href="/contact">Contact Us</a>
-      </li>
       <li class="nav-item {% if url_name == 'cart' %}active{% endif %}">
         <a class="nav-link" href="/view_cart">Cart</a>
+      </li>
+      <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
+        <a class="nav-link" href="/contact">Contact Us</a>
       </li>
       <li class="nav-item {% if url_name == 'logout' %}active{% endif %}">
         <a class="nav-link" href="/logout">Logout</a>
@@ -83,6 +83,9 @@
       <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
         <a class="nav-link" href="{% url 'products' %}">Farm Shop</a>
       </li>
+       <li class="nav-item {% if url_name == 'view_cart' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'view_cart' %}">Cart</a>
+      </li>
       <li class="nav-item {% if url_name == 'register' %}active{% endif %}">
         <a class="nav-link" href="{% url 'register' %}">Register</a>
       </li>
@@ -91,9 +94,6 @@
       </li>
       <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
         <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-      </li>
-      <li class="nav-item {% if url_name == 'view_cart' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'cart' %}">Cart</a>
       </li>
       {% endwith %}
     </ul>

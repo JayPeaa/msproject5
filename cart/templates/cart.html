@@ -30,7 +30,7 @@
             <div class="text-center">
                <form method="POST" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
-                    <input class="text-center align-items-center" type="number" name="quantity" value="{{ item.quantity }}"></input>
+                    <input class="text-center align-items-center qty-input" type="number" name="quantity" value="{{ item.quantity }}"></input>
                     <button type="submit" class="btn"><small class="text-muted ">Update Total</button>
                </form>
             </small>

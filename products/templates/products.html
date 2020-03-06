@@ -74,10 +74,8 @@
                                 <form method="post" action="{% url 'add_to_cart' product.id %}">
                                     {% csrf_token %}
                                 <div class="form-group text-center">
-                                    <input type="number" name="quantity" min="1" max="500" default="1" class="form-control" placeholder="Quantity" required>
-                                    <span class="btn">
-                                        <button class="btn" type="submit">Add to Cart</button>
-                                    </span>
+                                    <input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input" placeholder="Quantity" required>
+                                      <button class="btn" type="submit">Add to Cart</button>
                                 </div>
                                 </form>
                         </div>

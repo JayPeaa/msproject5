@@ -227,8 +227,8 @@ div {
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
   transform: translateY(-3px); }
 
-.qty-box {
-  width: 30%; }
+.qty-input {
+  width: 50%; }
 
 .card-body {
   -ms-flex: 1 1 auto;
