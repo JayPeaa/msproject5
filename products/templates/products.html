@@ -63,7 +63,7 @@
                      {% for product in products %}
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
                     <div class="card product-card">
-                        <img class="card-img-top" src="/{{ product.product_image }}" alt="Card image cap">
+                        <a href="{% url 'product_detail_view' product.id %}"><img class="card-img-top" src="/{{ product.product_image }}" alt="Card image cap"></a>
                         <div class="card-body">
                             <h3> {{ product.product_name }} </h3>
                                 <p class="card-text"></p>
@@ -71,12 +71,10 @@
                                 <p class="card-text"><strong>Weight</strong> {{ product.product_weight }}g <br>
                                 <class="card-text"><strong>Serves</strong> {{ product.product_serves }}<br><br>
                                 </p>
-                                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                <form class="product-page-form" method="post" action="{% url 'add_to_cart' product.id %}">
                                     {% csrf_token %}
-                                <div class="form-group text-center">
-                                    <input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input" placeholder="Quantity" required>
-                                      <button class="btn" type="submit">Add to Cart</button>
-                                </div>
+                                    <input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input text-center" placeholder="Qty" required/>
+                                    <button class="btn" type="submit"><i class="fa fa-cart-plus"></i></button>
                                 </form>
                         </div>
                     </div>

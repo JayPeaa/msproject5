@@ -30,8 +30,8 @@
             <div class="text-center">
                <form method="POST" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
-                    <input class="text-center align-items-center qty-input" type="number" name="quantity" value="{{ item.quantity }}"></input>
-                    <button type="submit" class="btn"><small class="text-muted ">Update Total</button>
+                    <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}"></input>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-repeat"></i></button>
                </form>
             </small>
             </div>
@@ -54,12 +54,12 @@
             
         </div>
         <div class="col-sm-12 col-md-1">
-            <p class="text-center">Subtotal</p>
+            <p class="text-center">VAT @ 20%</p>
         </div>
         <div class="col-sm-12 col-md-3 text-center">
         </div>
         <div class="col-sm-12 col-md-1">
-            <p class="text-center">£{{ total }}</p>
+            <p class="text-center">£{{ vat }}</p>
         </div>
     </div>
     <div class="row">
@@ -76,8 +76,10 @@
         <div class="col-sm-12 col-md-3 text-center">
         </div>
         <div class="col-sm-12 col-md-1">
-            <p class="text-center">£{{ total }}</p>
-            <a href="/" class="btn" role="button">Checkout</a>
+            <p class="text-center">£{{ grand_total }}</p>
+        </div>
+        <div class="col-sm-12 offset-md-9 col-md-3 text-center">
+            <a href="/" class="btn" role="button">Proceed To Checkout</a>
         </div>
     </div>
 </div>

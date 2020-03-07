@@ -5,6 +5,7 @@ from django.dispatch import receiver
 
 
 class Profile(models.Model):
+    """ document here """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     user_phone_number = models.CharField(max_length=20, blank=False)
     user_city = models.CharField(max_length=40, blank=False)

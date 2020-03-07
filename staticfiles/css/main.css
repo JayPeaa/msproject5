@@ -3,6 +3,9 @@
   background-color: #97a88b;
   color: white;
   border: solid #b6c3cc 2px;
+  min-width: 60px;
+  height: 40px;
+  margin-bottom: 4px;
   transition: all 0.3s; }
 
 .filter-btn {
@@ -228,12 +231,29 @@ div {
   transform: translateY(-3px); }
 
 .qty-input {
-  width: 50%; }
+  width: 40%;
+  margin-right: 10px;
+  margin-bottom: 0;
+  height: 40px;
+  display: inline-flex; }
 
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 0 1em; }
+
+.product-detail-card {
+  margin-top: 50px; }
+
+.product-page-form {
+  display: inline-flex;
+  justify-content: center; }
+
+.fa-search,
+.fa-repeat,
+.fa-cart-plus {
+  font-size: 20px;
+  color: white; }
 
 .header-top {
   background-color: #566948;
