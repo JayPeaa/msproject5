@@ -29,3 +29,12 @@
     font-weight: bolder;
 }
 
+.top-nav-links {
+    color: white;
+
+    &:hover {
+        color: $grey;
+        text-decoration: none;
+    }
+}
+

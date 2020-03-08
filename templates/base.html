@@ -21,7 +21,13 @@
       <ul class="header-top__menu d-flex justify-content-around">
         <li class="mr-auto p-2"><a>01234 654321</a></li>
         <li class="p-2"><a>Account</a></li>
-        <li class="p-2"><a>Basket</a></li>
+        <li class="p-2">
+        <a class="top-nav-links" href="{% url 'view_cart' %}">Basket
+            {% if grand_total > 0 %}
+            <label class="badge badge-warning">{{ product_count }}</label>
+            {% endif %}
+        </li>
+        </a>
       </ul>
   </div>
   
@@ -33,8 +39,8 @@
       <a class="logo col-md-4" href="{% url 'home' %}">
         <img src="/static/img/logo.png" class="img-fluid" style="width: 180px;">
       </a>
-      <form id="nav-search" class="form-inline col-sm-12 col-md-4 justify-content-center">
-        <input class="form-control col-sm-8 col-md-8 col-lg-6 mt-1 mr-sm-1" type="search" placeholder="Search" aria-label="Search" />
+      <form id="nav-search" class="form-inline col-sm-12 col-md-4 justify-content-center action={% url 'search' %}" method="get">
+        <input class="form-control col-sm-8 col-md-8 col-lg-6 mt-1 mr-sm-1" type="search" placeholder="Search" aria-label="Search" name="q"/>
         <button class="btn btn btn-success col-sm-2 col-md-2 col-lg-2 mb-2" type="submit">
           <i class="fa fa-search "></i>
         </button>

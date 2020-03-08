@@ -223,6 +223,12 @@ div {
 .active {
   font-weight: bolder; }
 
+.top-nav-links {
+  color: white; }
+  .top-nav-links:hover {
+    color: #acadaf;
+    text-decoration: none; }
+
 .product-card {
   transition: all 0.3s; }
 
@@ -273,6 +279,12 @@ div {
 .active {
   font-weight: bolder; }
 
+.top-nav-links {
+  color: white; }
+  .top-nav-links:hover {
+    color: #acadaf;
+    text-decoration: none; }
+
 .jumbo-contact {
   background-image: url("../img/farm_house2.jpg");
   background-size: cover;
@@ -307,3 +319,9 @@ textarea {
 
 .refresh-delete {
   display: flex; }
+
+.badge {
+  padding: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px; }

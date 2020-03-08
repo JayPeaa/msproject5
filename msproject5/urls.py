@@ -21,6 +21,7 @@ from django.contrib import admin
 from django.urls import path
 
 from cart import urls as urls_cart
+from search import urls as urls_search
 from products import urls as urls_products
 from pages.views import home_view, contact_view
 from django.conf.urls import url, include
@@ -31,6 +32,7 @@ urlpatterns = [
     path('home/', home_view, name='home'),
     path('products/', include(urls_products)),
     path('view_cart/', include(urls_cart)),
+    path('search/', include(urls_search)),
     path('register/', user_views.register, name='register'), #new approach
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), #new approach
     path('contact/', contact_view, name='contact'),
