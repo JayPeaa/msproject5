@@ -228,7 +228,7 @@ div {
 
 .product-card:hover {
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
-  transform: translateY(-3px); }
+  transform: translateY(-5px); }
 
 .qty-input {
   width: 40%;
@@ -248,12 +248,6 @@ div {
 .product-page-form {
   display: inline-flex;
   justify-content: center; }
-
-.fa-search,
-.fa-repeat,
-.fa-cart-plus {
-  font-size: 20px;
-  color: white; }
 
 .header-top {
   background-color: #566948;
@@ -303,3 +297,13 @@ div {
 input,
 textarea {
   margin-bottom: 10px; }
+
+.fa-trash-o,
+.fa-search,
+.fa-repeat,
+.fa-cart-plus {
+  font-size: 20px;
+  color: white; }
+
+.refresh-delete {
+  display: flex; }

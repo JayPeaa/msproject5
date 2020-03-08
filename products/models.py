@@ -12,7 +12,7 @@ class ProductCategory(models.Model):
 class Product(models.Model):
     product_name = models.CharField(max_length=100)
     product_price = models.DecimalField(max_digits=10, decimal_places=2)
-    product_weight = models.DecimalField(max_digits=10, decimal_places=2)
+    product_weight = models.DecimalField(max_digits=10, decimal_places=0)
     product_serves = models.IntegerField(blank=False)
     product_description = models.TextField(max_length=300)
     product_image = models.ImageField(upload_to="static/img", blank=True, null=True)

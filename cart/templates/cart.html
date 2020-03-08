@@ -12,13 +12,13 @@
     </div>
      {% for item in cart_items %}
     <div class="row">
-        <div class="col-sm-12 col-md-2">
+        <div class="col-sm-12 col-md-3">
             <img src="/{{ item.product.product_image}}" class="img-fluid" alt="">
         </div>
         <div class="col-sm-12 col-md-2 text-center">
             <p><strong>{{ item.product.product_name}}</strong><br>{{ item.product.product_weight }}g<br>Serves {{ item.product.product_serves }}</p>
         </div>
-        <div class="offset-md-3">
+        <div class="offset-md-2">
             
         </div>
         <div class="col-sm-12 col-md-1">
@@ -27,13 +27,16 @@
         </div>
         <div class="col-sm-12 col-md-3 text-center">
             <p class="text-center"><strong>Quantity</strong></p>
-            <div class="text-center">
-               <form method="POST" action="{% url 'adjust_cart' item.id %}">
+            <div class="text-center refresh-delete">
+                <form method="POST" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}"></input>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-repeat"></i></button>
+                    <button type="submit" class="btn"><i class="fa fa-repeat"></i></button>
                </form>
-            </small>
+               <form method="POST" action="{% url 'delete_cart_item' item.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn text-center"><i class="fa fa-trash-o"></i></button>
+               </form>
             </div>
         </div>
         <div class="col-sm-12 col-md-1">
@@ -42,8 +45,12 @@
         </div>
     </div>
     <hr>
-
+    
     {% endfor %}
+     
+     {% if grand_total == 0 %}
+     <h2 class="text-center">Your cart is currently empty</h2><br><br>
+     {% else %}
     
     <div class="row">
         <div class="col-sm-12 col-md-2">
@@ -81,6 +88,7 @@
         <div class="col-sm-12 offset-md-9 col-md-3 text-center">
             <a href="/" class="btn" role="button">Proceed To Checkout</a>
         </div>
+        {% endif %}
     </div>
 </div>
 
