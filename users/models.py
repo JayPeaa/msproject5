@@ -14,6 +14,8 @@ class Profile(models.Model):
     user_county = models.CharField(max_length=40, blank=False)
     user_country = models.CharField(max_length=40, blank=False)
     user_postcode = models.CharField(max_length=20, blank=True)
+    def __str__(self):
+        return self.user.username
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
