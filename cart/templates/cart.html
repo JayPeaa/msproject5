@@ -13,7 +13,7 @@
      {% for item in cart_items %}
     <div class="row">
         <div class="col-sm-12 col-md-3">
-            <img src="/{{ item.product.product_image}}" class="img-fluid" alt="">
+            <img src="../static/img/{{ item.product.product_image_name }}" class="img-fluid" alt="">
         </div>
         <div class="col-sm-12 col-md-2 text-center">
             <p><strong>{{ item.product.product_name}}</strong><br>{{ item.product.product_weight }}g<br>Serves {{ item.product.product_serves }}</p>

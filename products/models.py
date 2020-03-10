@@ -15,7 +15,7 @@ class Product(models.Model):
     product_weight = models.DecimalField(max_digits=10, decimal_places=0)
     product_serves = models.IntegerField(blank=False)
     product_description = models.TextField(max_length=300)
-    product_image = models.ImageField(upload_to="static/img", blank=True, null=True)
+    product_image_name = models.TextField(max_length=200)
     product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     product_update_date = models.DateTimeField(auto_now_add=True)
     product_stock_qty = models.IntegerField(blank=False)
