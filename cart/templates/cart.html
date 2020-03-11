@@ -86,7 +86,7 @@
             <p class="text-center">£{{ grand_total }}</p>
         </div>
         <div class="col-sm-12 offset-md-9 col-md-3 text-center">
-            <a href="/" class="btn" role="button">Proceed To Checkout</a>
+            <a href="{% url 'checkout' %}" class="btn" role="button">Proceed To Checkout</a>
         </div>
         {% endif %}
     </div>
