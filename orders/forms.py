@@ -23,7 +23,7 @@ class OrderForm(forms.ModelForm):
         fields = (
             'full_name', 'last_name'
         )
-
+        
     class Meta:
         model = Profile #Order
         fields = (

@@ -2,17 +2,20 @@
 {% load static from staticfiles %}
 
 {% block head_js %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
     //<![CDATA[
         Stripe.publishableKey = '{{ publishable }}';
     //]]>
 </script>
-<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/checkout.js' %}"></script>
 {% endblock head_js %}
 
 {% block content %}
-<div class="row row-flex">
+<!-- <div class="row row-flex">
     {% for item in cart_items %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
 
@@ -29,9 +32,9 @@
 <div class="row">
     <p>Total</p>
     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-</div>
+</div> -->
 
-<form role="form" method="post" id="payment-form" action="{% url 'orders' %}">
+<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
     <legend>Payment Details</legend>
 
     <div id="credit-card-errors" style="display: none;">
@@ -39,7 +42,7 @@
     </div>
 
     <div class="form-group col-md-6">
-        {{ order_form }}
+       <!-- {{ order_form }} --> 
     </div>
 
     <div class="form-group col-md-6">
