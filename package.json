@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JayPeaa/msproject5#readme",
   "dependencies": {
     "heroku": "^7.39.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "stripe": "^8.31.0"
   }
 }
