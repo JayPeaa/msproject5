@@ -26,7 +26,7 @@
         <a class="top-nav-links" href="{% url 'contact' %}">Contact Us
         </li>{% if user.is_authenticated %}
       <li class="p-2 {% if url_name == 'profile' %}active{% endif %}">
-        <a class="top-nav-links" href="/profile">Profile</a>
+        <a class="top-nav-links" href="/profile">My Account</a>
       </li>
     {% endif %}
         <li class="p-2">
@@ -117,7 +117,7 @@
   <body>
     {% if messages %}
       {% for message in messages %}
-        <div class="text-center alert alert-{{ message.tags }}">
+        <div class="text-center alert alert-success">
           {{ message }}
         </div>
       {% endfor %}

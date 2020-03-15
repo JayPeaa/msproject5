@@ -15,7 +15,6 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request):
-    print("anything")
     if request.method=="POST":
        # order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
@@ -37,7 +36,8 @@ def checkout(request):
                 #     )
                 # order_line_item.save()
             
-            #Stripe payment    
+            #Stripe payment   
+             
             try:
                 print(payment_form.cleaned_data['stripe_id'], "Hello")
                 customer = stripe.Charge.create(
