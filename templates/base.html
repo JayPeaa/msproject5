@@ -20,9 +20,15 @@
 <!--Navigation-->
 <header>
   <div class="header-top">
-      <ul class="header-top__menu d-flex justify-content-around">
-        <li class="mr-auto p-2"><a>01234 654321</a></li>
-        <li class="p-2"><a>Account</a></li>
+      <ul class="header-top__menu d-flex justify-content-around pl-0">
+        <li class="p-2"><a>01234 654321</a></li>
+        <li class="mr-auto p-2">
+        <a class="top-nav-links" href="{% url 'contact' %}">Contact Us
+        </li>{% if user.is_authenticated %}
+      <li class="p-2 {% if url_name == 'profile' %}active{% endif %}">
+        <a class="top-nav-links" href="/profile">Profile</a>
+      </li>
+    {% endif %}
         <li class="p-2">
         <a class="top-nav-links" href="{% url 'view_cart' %}">Basket
             {% if grand_total > 0 %}
@@ -69,14 +75,8 @@
       <li class="nav-item {% if url_name == 'view_cart' %}active{% endif %}">
         <a class="nav-link" href="/view_cart">Cart</a>
       </li>
-      <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
-        <a class="nav-link" href="/contact">Contact Us</a>
-      </li>
       <li class="nav-item {% if url_name == 'logout' %}active{% endif %}">
         <a class="nav-link" href="/logout">Logout</a>
-      </li>
-      <li class="nav-item {% if url_name == 'profile' %}active{% endif %}">
-        <a class="nav-link" href="/profile">Profile</a>
       </li>
       {% endwith %}
     </ul>
@@ -99,9 +99,6 @@
       </li>
       <li class="nav-item {% if url_name == 'login' %}active{% endif %}">
         <a class="nav-link" href="{% url 'login' %}">Log In</a>
-      </li>
-      <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
       </li>
       {% endwith %}
     </ul>
@@ -218,7 +215,7 @@
   </div> 
 </footer>
 
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -246,7 +243,7 @@
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOhA5ZRqjF3DTWyEhInzXhlslWOGwvf_Q&callback=initMap">
-    </script> -->
+    </script>
 
 </body>
 </html>
