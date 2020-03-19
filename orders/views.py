@@ -37,7 +37,6 @@ def checkout(request):
                 # order_line_item.save()
             
             #Stripe payment   
-             
             try:
                 print(payment_form.cleaned_data['stripe_id'], "Hello")
                 customer = stripe.Charge.create(
@@ -62,6 +61,7 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
        # order_form = OrderForm()
+    
     return render(request, "orders.html", {'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
                 
 
