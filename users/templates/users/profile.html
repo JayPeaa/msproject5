@@ -2,7 +2,31 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center">My Account</h1>
+            <h2 class="text-center">Welcome back, {{ user.first_name }}!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 offset-md-2 col-md-8">
+             <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4"><h2 class="text-center">Profile Info</h2></legend>
+                    {{ user_form |crispy }}
+                    {{ profile_form |crispy }}
+                </fieldset>
+                <div class="form-group text-center">
+                    <button class="btn btn-success" type="submit">Update</button>
+                </div>
+            </form>
+        </div>  
+    </div>
+</div>
 
-    <h1>{{ user.username }}</h1>
+
+    
 
 {% endblock %}

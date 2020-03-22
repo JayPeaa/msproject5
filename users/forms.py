@@ -29,3 +29,17 @@ class UserProfileForm(forms.ModelForm):
             'user_country' : 'Country',
             'user_postcode' : 'Postal Code'
         }
+
+class UserUpdateForm(forms.ModelForm):
+     email = forms.EmailField()
+     
+     class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email', 'username']
+
+
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['user_street_address_1', 'user_street_address_2', 'user_city',
+        'user_county', 'user_country', 'user_county', 'user_postcode', 'user_phone_number']
