@@ -32,7 +32,6 @@ class UserOrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = [
-            'order_total',
             'order_full_name', 
             'order_email', 
             'order_phone_number', 
@@ -44,7 +43,6 @@ class UserOrderForm(forms.ModelForm):
             'order_postcode' 
         ]
         labels = {
-         'order_total' : 'Order Total',
             'order_full_name' : 'Full Name',  
             'order_email' : 'Email',  
             'order_phone_number' : 'Phone Number',  

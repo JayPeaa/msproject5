@@ -20,7 +20,6 @@ def checkout(request):
         payment_form = MakePaymentForm(request.POST)
         
         if payment_form.is_valid() and order_form.is_valid():
-            print('hello')
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()
@@ -36,7 +35,8 @@ def checkout(request):
                     quantity = quantity
                     )
                 order_line_item.save()
-            
+            order.order_total = total
+            order.save()
             #Stripe payment   
             try:
                 print(payment_form.cleaned_data['stripe_id'], "Hello")
@@ -58,6 +58,7 @@ def checkout(request):
                 messages.error(request, "Unable to take payment")
         else:
             print(payment_form.errors)
+            print(order_form.errors)
             messages.error(request, "We were unable to take a payment with that card!")
     else:
         payment_form = MakePaymentForm()

@@ -5,7 +5,7 @@ from users.models import Profile
 # Create your models here.
 class Order(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.SET_NULL, related_name="orders", null=True, blank=True)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     order_date = models.DateTimeField(auto_now_add=True)
     order_full_name = models.CharField(max_length=50, null=False, blank=False)
     order_email = models.EmailField(max_length=254, null=False, blank=False, default='')
@@ -17,7 +17,7 @@ class Order(models.Model):
     order_country = models.CharField(max_length=40, blank=False)
     order_postcode = models.CharField(max_length=20, blank=False)
     def __str__(self):
-       return f'{self.id}-{self.date}-{self.first_name}-{self.last_name}'
+       return f'{self.order_date} - {self.order_full_name}'
 
 
 class OrderLineItem(models.Model):
@@ -25,4 +25,4 @@ class OrderLineItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=False)
     quantity = models.IntegerField(blank=False)
     def __str__(self):
-        return f'{self.quantity} {self.product_name} @ {self.product_price}'
+        return f'{self.quantity}-{self.product}'
