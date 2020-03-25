@@ -2,6 +2,7 @@ from django import forms
 from .models import Order
 from django.contrib.auth.models import User
 from users.models import Profile, User
+from orders.models import Order, OrderLineItem
 
 
 class MakePaymentForm(forms.Form):
@@ -26,18 +27,40 @@ class MakePaymentForm(forms.Form):
     stripe_id = forms.CharField(widget=forms.HiddenInput)
 
 
-class OrderForm(forms.ModelForm):
+class UserOrderForm(forms.ModelForm):
 
     class Meta:
-        model = User #Order
-        fields = (
-            'full_name', 'last_name'
-        )
-        
+        model = Order
+        fields = [
+            'order_total',
+            'order_full_name', 
+            'order_email', 
+            'order_phone_number', 
+            'order_street_address_1', 
+            'order_street_address_2', 
+            'order_city', 
+            'order_county', 
+            'order_country', 
+            'order_postcode' 
+        ]
+        labels = {
+         'order_total' : 'Order Total',
+            'order_full_name' : 'Full Name',  
+            'order_email' : 'Email',  
+            'order_phone_number' : 'Phone Number',  
+            'order_street_address_1' : 'Street Address Line 1',  
+            'order_street_address_2' : 'Street Address Line 2',  
+            'order_city' : 'City', 
+            'order_county' : 'County',  
+            'order_country' : 'Country', 
+            'order_postcode' : 'Postcode'  
+            
+        }
+
+class ProductOrderForm(forms.ModelForm):
+
     class Meta:
-        model = Profile #Order
-        fields = (
-            'user_phone_number', 'user_country', 'user_postcode',
-            'user_city', 'user_street_address_1', 'user_street_address_2',
-            'user_county'
-        )
+        model = OrderLineItem
+        fields = [
+            'product', 'quantity'
+        ]
