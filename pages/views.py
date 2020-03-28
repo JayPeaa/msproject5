@@ -4,6 +4,7 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from pages.forms import LoginForm, RegistrationForm
 from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Create your views here.
@@ -15,9 +16,9 @@ def home_view(request, *args, **kwargs):
 def contact_view(request):
     if request.method == 'POST':
         send_mail(
-            "New Enquiry",
+            f"New Enquiry from {request.POST['emailaddress']}",
             request.POST['formmessage'],
-            request.POST['emailaddress'],
+            settings.DEFAULT_FROM_EMAIL,
             ['john.paul.hay@outlook.com']
         )
     return render(request, "contact.html", {})
