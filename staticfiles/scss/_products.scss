@@ -2,6 +2,7 @@
     transition: all 0.3s;
 }
 
+
 .product-card:hover {
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.4);
     transform: translateY(-5px);
@@ -30,5 +31,13 @@
     display: inline-flex;
     justify-content: center;
 }
+
+.filter-active {
+    background-color: $green;
+    color: white;
+    border: solid $duckegggrey 2px;
+}
+
+
 
 

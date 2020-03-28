@@ -76,7 +76,7 @@ div {
   margin: 0; }
 
 .jumbo-text {
-  background-color: #97a88b;
+  background: rgba(86, 105, 72, 0.8);
   padding: 1em;
   border: solid white 3px;
   width: 500px;
@@ -175,7 +175,7 @@ div {
   margin-top: -15px; }
 
 .about-farm-section {
-  background-color: rgba(151, 168, 139, 0.8);
+  background: rgba(86, 105, 72, 0.8);
   border: white solid 4px;
   color: white;
   display: block;
@@ -254,6 +254,11 @@ div {
 .product-page-form {
   display: inline-flex;
   justify-content: center; }
+
+.filter-active {
+  background-color: #566948;
+  color: white;
+  border: solid #b6c3cc 2px; }
 
 .header-top {
   background-color: #566948;
