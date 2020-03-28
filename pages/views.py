@@ -14,6 +14,7 @@ def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
 
 def contact_view(request):
+    success = False
     if request.method == 'POST':
         send_mail(
             f"New Enquiry from {request.POST['emailaddress']}",
@@ -21,5 +22,6 @@ def contact_view(request):
             settings.DEFAULT_FROM_EMAIL,
             ['john.paul.hay@outlook.com']
         )
-    return render(request, "contact.html", {})
+        success = True
+    return render(request, "contact.html", {'success': success})
 

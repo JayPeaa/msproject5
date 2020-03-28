@@ -32,6 +32,9 @@
                     <textarea rows="5" name="formmessage" class="form-control" id="formmessage" placeholder="Enter your message here" required></textarea>
                     <button type="submit" class="btn center-block">Send Message</button>
                 </form>
+                {% if success  %}
+                    <p>Your email was sent</p>
+                {% endif %}
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
