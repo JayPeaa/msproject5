@@ -20,7 +20,7 @@ def contact_view(request):
             f"New Enquiry from {request.POST['emailaddress']}",
             request.POST['formmessage'],
             settings.DEFAULT_FROM_EMAIL,
-            ['john.paul.hay.jph@gmail.com']
+            ['john.paul.hay@outlook.com']
         )
         success = True
     return render(request, "contact.html", {'success': success})
