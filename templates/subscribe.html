@@ -1,17 +1,25 @@
  <!-- Subscribe Section -->
 
+{% load crispy_forms_tags %}
+
 <div class="container-fluid light-green-block">
   <div class="container">
       <div class="row">
           <div class="col-sm-12">
               <h2 class="text-center">KEEP IN TOUCH</h2>
               <p class="text-center">Subscribe to our news letter for the latest news and special offers</p>
-              <form class="form-inline justify-content-center">
+              
+              <form class="form-inline justify-content-center" method="post" action="{% url 'subscribe' %}">
+                    {% csrf_token %}
+
+                    {{ newsletter_form | crispy }}
+
                   <div class="form-group col-md-6">
-                    <input type="email" class="form-control" id="emailsubscribe" placeholder="email">
+                    <input type="email" class="form-control" id="emailsubscribe" placeholder="email" requried>
                   </div>
                   <button type="submit" class="btn btn-success mb-2">Subscribe</button>
               </form>
+              
               <ul class="list-inline socialmedia-links ">
                   <li class="list-inline-item">
                     <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>

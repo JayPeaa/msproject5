@@ -24,7 +24,7 @@ from cart import urls as urls_cart
 from search import urls as urls_search
 from orders import urls as urls_orders
 from products import urls as urls_products
-from pages.views import home_view, contact_view
+from pages.views import home_view, contact_view, subscribe_view
 from django.conf.urls import url, include
 from users import views as user_views
 
@@ -38,6 +38,7 @@ urlpatterns = [
     path('register/', user_views.register, name='register'), #new approach
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), #new approach
     path('contact/', contact_view, name='contact'),
+    path('subscribe/', subscribe_view, name='subscribe'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'), #new approach
     path('profile/', user_views.profile, name='profile'), #new approach
     path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'), #new approach
