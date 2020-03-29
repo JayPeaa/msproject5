@@ -25,3 +25,14 @@ def contact_view(request):
         success = True
     return render(request, "contact.html", {'success': success})
 
+# def subscribe_view(request):
+#     submitted = False
+#     if request.method == 'POST':
+#         send_mail(
+#             f"New Enquiry from {request.POST['emailaddress']}",
+#             request.POST['formmessage'],
+#             settings.DEFAULT_FROM_EMAIL,
+#             ['john.paul.hay@outlook.com']
+#         )
+#         submitted = True
+#     return render(request, "contact.html", {'success': success})

@@ -105,7 +105,8 @@ div {
   height: 360px;
   box-sizing: border-box;
   border: solid white 1em;
-  background-position: center; }
+  background-position: center;
+  margin-bottom: 30px; }
 
 .pic1 {
   background-image: url("../img/family.jpg"); }
