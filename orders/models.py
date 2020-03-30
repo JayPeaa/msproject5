@@ -17,7 +17,7 @@ class Order(models.Model):
     order_country = models.CharField(max_length=40, blank=False)
     order_postcode = models.CharField(max_length=20, blank=False)
     def __str__(self):
-       return f'{self.order_date} - {self.order_full_name}'
+       return f'{self.order_full_name} - {self.order_postcode}'
 
 
 class OrderLineItem(models.Model):

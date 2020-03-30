@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect, reverse
-
+from pages.models import Subscriber
+from pages.forms import SubscriberForm
 # Create your views here.
 
 def view_cart(request):
     """
-    See contents of cart
+    See contents of cart also renders the subcribe form in the context
     """
-    return render(request, "cart.html")
+    context = {
+        'newsletter_form' : SubscriberForm()
+    }
+    return render(request, "cart.html", context)
 
 def add_to_cart(request, id):
     """

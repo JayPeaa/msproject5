@@ -7,13 +7,23 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .models import Subscriber
 from .forms import SubscriberForm
+from django.db import models
+from products.models import Product
+from django.db.models import Count
+
 
 
 # Create your views here.
 # For views which don't have their own app, split out as you go.
 
-def home_view(request, *args, **kwargs):
-    return render(request, "home.html", {})
+def home_view(request):
+    bestsellers = Product.objects.annotate(count_ordered=Count('orderlineitem')).order_by('-count_ordered')[:4]
+
+    context = {
+        'newsletter_form' : SubscriberForm(),
+        'bestsellers': bestsellers
+    }
+    return render(request, "home.html", context)
 
 def contact_view(request):
     success = False
@@ -27,19 +37,24 @@ def contact_view(request):
         success = True
         if success:
             messages.info(request, "Your message has been sent")
-    return render(request, "contact.html", {'success': success})
+    context = {
+        'newsletter_form' : SubscriberForm(),
+        'success': success
+    }
+    return render(request, "contact.html", context)
 
 def subscribe_view(request):
     newsletter_form = SubscriberForm(request.POST or None)
     if request.method == "POST":
         if newsletter_form.is_valid():
             subscriber_qs = Subscriber.objects.filter(email=newsletter_form.instance.email)
+            messages.info(request, "Thank you for subscribing")
             if subscriber_qs.exists():
                 messages.info(request, "You are already subscribed")
             else:
                 newsletter_form.save()
 
     context = {
-        'newsletter_form' : newsletter_form
+        'newsletter_form' : SubscriberForm()
     }
     return HttpResponseRedirect(request.META.get("HTTP_REFERER"),context)

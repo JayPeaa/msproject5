@@ -11,9 +11,9 @@
               
               <form class="form-inline justify-content-center" method="post" action="{% url 'subscribe' %}">
                     {% csrf_token %}
-
+                    <p>Somethign</p>
                     {{ newsletter_form | crispy }}
-
+                    <p>Blah</p>
                   <div class="form-group col-md-6">
                     <input type="email" class="form-control" id="emailsubscribe" placeholder="email" requried>
                   </div>
