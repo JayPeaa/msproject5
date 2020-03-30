@@ -332,3 +332,7 @@ textarea {
 
 #stripe-error-message {
   color: red; }
+
+.payment-types {
+  width: 300px;
+  margin-top: 3em; }

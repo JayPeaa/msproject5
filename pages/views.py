@@ -39,7 +39,7 @@ def subscribe_view(request):
             else:
                 newsletter_form.save()
 
-        context = {
-            'newsletter_form' : newsletter_form
-        }
+    context = {
+        'newsletter_form' : newsletter_form
+    }
     return HttpResponseRedirect(request.META.get("HTTP_REFERER"),context)

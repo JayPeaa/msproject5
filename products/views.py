@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product
+from orders.models import Order
 
 # Create your views here.
 # This is the product listing page not the detail view 
@@ -16,4 +17,9 @@ def product_detail_view(request, id):
     product = get_object_or_404(Product, id=id)
 
     return render(request, "product_detail.html", {"product": product})
+
+def product_bestseller_view(request, id):
+    bestsellers = Order.objects.all().order_by('-count_sold')[:4]
+
+    return render(request, "product_detail.html", {"bestsellers": bestsellers})
 

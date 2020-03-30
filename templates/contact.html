@@ -22,12 +22,6 @@
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email address" required/>
                     <textarea rows="5" name="formmessage" class="form-control" id="formmessage" placeholder="Enter your message here" required></textarea>
-                     {% if messages %}
-                    {% for message in messages %}
-                    {{ message }}
-                    {% endfor %}
-                    {% endif %}
-                    
                     <button type="submit" class="btn center-block">Send Message</button>
                 </form>
             </div>
