@@ -2,302 +2,652 @@
 
 #### Full Stack Frameworks
 
+  
+
 #### Design and Build an E-Commerce Site
 
----
+  
 
-### App Name: Oakfield Farm Shop
+
+
+  
+
+### Website Name: Oakfield Farm Shop
+
+  
 
 ##### See here for [Deployed App](https://msproject5.herokuapp.com/)
 
-Oakfield Farm Shop is a concept for a farm shop ecommerce site which allows users to purchase products online as well as advertising a family attraction. It enables users to browse various categories in the shop as well as research the farm as a place to visit.  Users can contact the farm via a contact form and see the location via the google maps API.  In addition the site has all the functionality you would expect with an ecommerce site such as the ability to add products to a cart and proceed to purchase via the checkout which uses the Strip API. This app is built using Django which utilises an Object Relation Mapper (ORM) to seemlessly integrate an SQL realtional database.  The site also incorporates a number of other technologies.
+  
 
-Having an eyecatching easy to use website acts as a calling card for any business so effort has been concentrated to create a pleasant user experience and user interface which allows users to quickly familiarise themselves with everything Oakfileds Farm has to offer as well as an easy to navigate store.
+Oakfield Farm Shop is a concept for an e commerce site which allows users to purchase products online as well as advertising a family attraction. It enables users to browse various categories in the shop as well as research the farm as a place to visit. Users can contact the farm via a contact form and see the location via the google maps API. In addition the site has all the functionality you would expect with an e commerce site such as the ability to add products to a cart and proceed to purchase via the checkout which uses the Strip API. This app is built using Django which utilises an Object Relation Mapper (ORM) to seamlessly integrate an SQL relational database. The site also incorporates a number of other technologies.
+
+  
+
+Having an eye catching easy to use website acts as a calling card for any business so effort has been concentrated to create a pleasant user experience and user interface which allows users to quickly familiarise themselves with everything Oakfield Farm has to offer as well as an easy to navigate store.
+
+  
 
 ## UX
 
-The UX has been designed with the end user in mind and as expectations in terms of front-end design are ever increasing, I opted to utilise Bootstrap.css for my design and responsive layout. Bootstrap is a library of UI components which aims of providing a unified and consistent user experience as well as responvive design.
+  
 
-#### User Stories  (UPDATE FROM HERE)
+The UX has been designed with the end user in mind and as expectations in terms of front-end design are ever increasing, I opted to utilise Bootstrap4 for my design and responsive layout. Bootstrap is a library of UI components which aims of providing a unified and consistent user experience as well as responsive design.
 
-- As the app developer I want to build an app which allows users to share recipes in one convenient location.
-- As the app developer I want these recipes to be presented in a user friendly way and secure environment which allows users to only edit or delete their own recipes.
-- As the app developer I want to create an app which is aesthetically pleasing with quirky animation and a move away from a traditional text-based navigation menu.
-- As a user I want an easy to use online app to upload all my own recipes and learn of new recipes shared by other users.
-- As a user I want to have my own secure area and be able to easily reference any recipes I have personally added.
-- As a user I want to be able to find recipes faster than I would in a traditional cookbook and would like important information regarding allergens to be clearly displayed. I would also like a way to exclude recipes which contain certain allergens.
-- As a user I want to be able to see information such as, difficulty, time required to prepare and number of servings very quickly to enable me to make efficient decisions and I would also like to be able to select by course type. This is very helpful when planning for dinner parties.
+Wire-framing was conducted using [Balsamiq](https://balsamiq.com/) and these are available to [view here](https://github.com/JayPeaa/msproject5/blob/master/Oakfield%20Farm%20Project.pdf)
+  
+
+#### User Stories
+
+  
+
+- As the app developer I want the website to clearly communicate what the business is about. 
+- As the app developer I want to create a visually appealing app with a quality feel.  The feeling of quality and thoughtful design mirrors the products and brand values of the business.
+- As the app developer I want products in the store to be presented in a user friendly way.  
+- As the app developer I want to include tools for user friendly and efficient browsing such as a searches and category filters.  Filters should be clearly highlighted when active.
+- As the app developer I want to create an app which is aesthetically pleasing with simple yet effective animation and well considered use of imagery.
+- As the app developer I want a clear navigation menu with the most used aspects give their own space on an additional menu bar (Contact Page, Account Page and Basket)
+- As the app developer I want the business owners to have a variety of marketing channels such as social media links and the ability to build mailing lists (subscribers).
+- As an app developer I want the business to be able to advertise the bestselling products automatically
+
+- As a user I want an easy to use online app.
+- As a user I want to see important information display in prominent locations.
+- As a user I want to be able to find products fast.
+- As a user I want to be able to purchase any products with ease and purchase any products by bank card.
+- As a user when viewing products in the store I want to be able to see key info at a glance (Servings, Weight, Price etc).
+- As a user I want any payments I make to be safe and secure with reputable software.
+- As a user I want to be able to update my profile information with ease.
+- As a user I want to be able to have good delivered to alternative addresses not just my invoice or home address.
+- As a user I want to be able to subscribe to the latest offers or events.
+- As a user I want to be easily able to locate the business
+
 
 ---
 
-To enhance the user experience a more modern one-page theme has been designed. As recipes are added by users new recipe cards are created in the recipes section and stacked using the materialize responsive grid system. The app makes use of flash messaging to confirm to the user when certain actions have been completed e.g. New Recipe Added, Changes Made and/or Recipe Deleted. Pagination has not been used for this project as it was felt that on this occasion scrolling resulted in a better using experience than pagination. Scrolling is faster and is increasingly becoming second nature as a result of mobile devices. Passive Event Listeners have also been introduced in view of this and are new to chrome 51. Cook-e include a CDN to enhance scroll performance on mobile devices.
+The design was focused around organic farming and nature so earthy colours were used when considering the palette in order to compliment the design and theme.  The site serves a dual purpose in that it advertises Oakfield Farm as a family attraction as well as an online shop.  
 
-The application makes use of icons for the nav bar and various options within the app such as add, edit, delete etc… The icons contain relevant images to make their intended purpose clear to the end user. The use of buttons adds more of an App feel as opposed to a more traditional website. For additional clarity tool tips have be utilised so that as the user hovers over a button text is displayed further explaining the action it performs. Animation has also been added to the navigation menu to add to the user experience. A similar effect has been used in the footer for the social media buttons. In mobile view the app returns to a more traditional navigation menu in line with user expectations.
+Every effort has been made to make the advertorial aspect of the site as engaging as possible with use of well considered images and simple yet effective animations and hover effects.  The e-commerce aspect has a user friendly store which includes filters and a search.  As items are added to the basket the item count is displayed next to the basket menu option in the upper right of the screen.  This provides visual feedback when items are added to the cart.
 
-When a user adds a recipe to the app, they can link to an image of the recipe online. If they decide not to do this then a default image will be displayed automatically. This helps to ensure the apps remains aesthetically pleasing and uniform in the event a user opts out of including a photo.
+In order to provide a secure and safe environment for users all profile information is stored in a secure database.  The site offers full profile functionality as well as the ability to reset forgotten password via an email link.
 
-Certain options are only available to users once logged in, for example users who are not logged in will be unable to view the Add, Edit, Delete and Log out buttons. For the scope of this project this is deemed a suitable way to control user access rights although it is recognised that in the real-world further work would need to be conducted on the back end in order to prevent a potential hacking scenario. That said; however, this project goes a lot further than required as part of the project brief in that there is a login and registration page included which was not actually required. User passwords are also encrypted using bcrypt to hash any passwords for extra security.
+To enhance the user experience a more modern one-page theme has been designed for the products page. As new products are added cards are created in the online store and stacked using Bootstrap4 responsive grid/flex systems. The app makes use of flash messaging to confirm to the user when certain actions have been completed e.g. successful registration, payment or message submission. Pagination has not been used for this project as it was felt that on this occasion scrolling resulted in a better using experience. Scrolling is faster and is increasingly becoming second nature as a result of mobile devices. 
+
+  ---
+  
 
 A user may wish to perform the following actions:
 
-- Browse and Filter recipes in the recipes section
+  
 - Register an account
-- Add or View individual recipes via the recipes section
-- View their own recipes via the recipes section or profile
-- Edit or Delete their own recipes
-- contact us more traditional means (post/phone/email).
-- reach out to us on social media.
+- Log in or log out of their account
+- Reset their password
+- Update their profile information
+- Have goods delivered to an alternate address than the one saved in their profile
+- Browse and Filter products in the store
+- Add items to their cart
+- Pay for items on line in a secure environment
+- Be able to easily contact the business by a variety of channels (Phone/Email/Post/Social Media/Contact Form)
+- Subscribe to a newsletter
+- Have clear instruction on how to locate the business
+
 - The site provides all these options to the end user and is very easy to use and navigate.
 
-See here for [Wireframes](https://github.com/JayPeaa/milestone4/blob/master/static/wireframes_schema/Wireframes%20Milestone%204.pdf)
+  
 
----
+See here for [Wireframes](https://github.com/JayPeaa/msproject5/blob/master/Oakfield%20Farm%20Project.pdf)
+
+
+
+  
 
 ## Database Considerations
 
-Due to the relative simplicity of this app a NoSQL database was selected. The This was the starting point for this data centric project. See here for the [database schema](https://github.com/JayPeaa/milestone4-cook-e/blob/master/static/wireframes_schema/Cook-e%20Schema.pdf)
+  
 
----
+Due to the relative complexity of this app an SQL database was selected.  During the development phase SQLite was utilised as it comes inbuilt with the Django framework.  As the project was nearing completion this DB was migrated to Postgres SQL.  This was done with relative ease due to Django's Object Relational Mapper (ORM).  Developing the models was the starting point for this data centric full stack project. See here for the [database schema](https://github.com/JayPeaa/msproject5/blob/master/Milestone5%20Database%20Schema.pdf)
+
+
+  
 
 ## Features
 
+  
+
 The main features of the App are:
+
+  
 
 - Clear and easy to use navigation
 - Good use of colour and modern design
+- Simple and effective animation techniques 
 - Fully responsive with a mobile first approach
-- An online repository of recipes with Create, Read, Update and Delete functionality
-- A contact section, about page and social media channels
+- An online e-commerce store with integrated Stripe API for payments
+- Relational Postgres SQL database with Create, Read, Update and Delete functionality
+- A contact page with integrated Google Maps API
+- Social media and email subscribe section for marketing
 
----
+
+  
 
 ## Future developments
 
-Connecting this app to virtual home assistants such as Alexa or Google Home would make Cook-e far more accessible and practical for the modern-day user. Whilst the current registration and login pages go some way towards providing security there is some additional work that would be required which was also outside the scope of this milestone project. This includes adding user profile images and a means to update, reset or delete user accounts and profile information.
+  
 
-Using Ajax and jQuery will allow for instant results when filtering without compromising load speeds which would help to improve the user experience when browsing recipes.
+In the future it would be good to add some additional logic to this site to analyse trends and better forecast user demand.  This will help the business owners with managing their stock levels.  Making better use of the order history will obviously provide a myriad of other benefits.
 
-The ability to create a user list of liked recipes as well as the ability to filter by popularity would be a great enhancement to make in the future. In addition to implementing some controls around the like button to only allow registered users to like a recipe and limit the button to one click per user.
+Currently the site forces users to log in to the site at point of purchase so the introduction of a guest checkout is something that must be developed in the future to remove any unnecessary friction from the sales process resulting in loss of revenue.  
+  
+The ability to create a user list of liked or regularly purchased products as well as the ability to filter by popularity would be a welcomed enhancement.
 
-Security would need to be enhanced prior to making an app like this live. Security has not been covered in depth in this course to this point so whilst this milestone goes further than is required there is still more work to be done.
+Security would need to be enhanced prior to making an app like this live.  
 
-Forms have been implemented with HTML with categories on select menus referencing the database. This can lead to some vulnerabilities from a security perspective. Utilising WTForms and hard coding form fields where dynamic updating is not required would help protect the underlying database. Course Category is a field which would be enabled to allow users to add their own categories in a future release.
+The addition of instant messaging would provide another channel for customer to communicate with the business in real time.
 
-Making this app more social with the ability for users to interact with one another would be a must for an app such as this. This could be achieved with the use of a forum or direct messaging capability. Including a user image in the profile would also be required as part of this enhancement.
-
-Ability to upload recipe images would be preferable to hotlinking to images online. This was outside the scope of this project but would be a better solution and provide an enhanced user experience.
+Whilst there is a CMS available via Django it would be beneficial to create an intermediary CMS for superusers of the business as this will limit the potential for serious mistakes to made from having direct access to the inner workings of django.
 
 Data Protections (GDPR) would also need to be given full consideration along with other legalities such as privacy policies, cookie notices and terms of service prior to making such an app available to use.
 
----
+  
+
+
+
+  
 
 ## Technologies
 
+  
+
 The site is built using:
 
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
-- [Node Sass](https://github.com/sass/node-sass)
+  
+
+-  [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+
+-  [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
+
+-  [Node Sass](https://github.com/sass/node-sass)
+
+-  [javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 - [jQuery](https://jquery.com/)
-- [Materialize](https://materializecss.com/)
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-- [Python](https://www.python.org/)
-- [MongoDB](https://www.mongodb.com/)
-- [Jinja2](http://jinja.pocoo.org/docs/2.10/)
+
+-  [Bootstrap4](https://getbootstrap.com/)
+
+-  [Django](https://www.djangoproject.com/)
+
+-  [Python](https://www.python.org/)
+
+-  [PostgreSql](https://www.postgresql.org/)
+
+-  [Jinja2](http://jinja.pocoo.org/docs/2.10/)
+
+  
 
 #### CDNs and Library Usage
 
+  
+
 The following CDNs have been used to create this app.
 
-##### Materialize &amp; Font Awesome
+  
 
-- [https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css](https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css)
-- [https://use.fontawesome.com/releases/v5.8.2/css/all.css](https://use.fontawesome.com/releases/v5.8.2/css/all.css)
+##### Bootstrap &amp; Font Awesome
 
-##### jQuery &amp; Materialize
+  
 
-- [https://code.jquery.com/jquery-3.3.1.min.js](https://code.jquery.com/jquery-3.3.1.min.js)&quot;
-- [https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js](https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js)
+-  [https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css)
 
-##### Passive Event Handlers
+-  [https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css](https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css)
 
-###### For enhanced scroll performance on mobile
+  
 
-- [https://unpkg.com/default-passive-events](https://unpkg.com/default-passive-events)
+##### jQuery &amp; Bootstrap
 
----
+  
+
+-  [https://code.jquery.com/jquery-3.3.1.slim.min.js](https://code.jquery.com/jquery-3.3.1.min.js)&quot;
+
+-  [https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js)
+
+- [https://code.jquery.com/jquery-3.3.1.slim.min.js](https://code.jquery.com/jquery-3.3.1.slim.min.js)
+  
+
+
+
+
+
+  
 
 ## Testing
 
+  
+
 To ensure any database postings were as anticipated it was common practice to print to the console to determine if the outputs and data structures were as expected. This was done prior to allowing user input to be posted directly to the database collections.
 
-Recipes were added manually via the front end as part of the testing process which flagged various issues which could then be rectified. During user acceptance testing it became evident that additional controls were required on form inputs to maintain the visual appeal of the app as well as prevent unusual input. Maxlength, Min, Max and required attributes and classes were used to make the app more robust.
+  
 
-Testing has been conducted using google dev tools. Thorough testing in all the various mobile devices along with general responsiveness (responsive mode) has concluded that this site works well in all modern-day browsers and mobile devices. As part of the testing process each page has been reviewed systematically to ensure all links work as intended and the pages display correctly.
+During user acceptance testing it became evident that additional controls were required on form inputs to maintain the visual appeal of the app as well as prevent unusual input. Maxlength, Min, Max and required attributes and classes were used to make the app more robust.
 
-This testing has confirmed that users will be able to utilise the app as intended on any device (in landscape or portrait mode) to achieve their goals whilst enjoying the experience and customer journey.
+  
+
+Testing has been conducted using Firefox developer dev tools. Thorough testing in all the various mobile devices along with general responsiveness (responsive mode) has concluded that this site works well in all modern-day browsers and mobile devices. As part of the testing process each page has been reviewed systematically to ensure all links work as intended and the pages display correctly.
+
+  
+
+This testing has confirmed that users will be able to utilise the website as intended on any device (in landscape or portrait mode) to achieve their goals whilst enjoying the experience and customer journey.
+
+  
 
 All user forms display correctly and as intended on various displays / devices.
 
+  
+
 All CSS, HTML and JavaScript was run through code validators and flint to ensure any error were remedied. [Flake8](http://flake8.pycqa.org/en/latest/) was used to ensure that any python code was PEP8 compliant.
+
+  
 
 ### Browser Compatibility Testing
 
+  
+
 #### Issues Encountered
 
-Time was invested at the start of the project to ensure HTML code and Materialize Classes were working as anticipated which saved some time on responsiveness testing during the latter stages of the build.
+  
+
+Time was invested at the start of the project to ensure HTML code and Bootstrap Classes were working as anticipated which saved some time on responsiveness testing during the latter stages of the build.
+
+  The project was tested in various browsers including Firefox, Chrome, Opera and Edge.
 
 HTML and CSS Validators were used to clear any errors, however, HTML validation tends to highlight Jinja2 templating as errors when they are not.
-
-Jshint was utilised to check the quality of any jQuery and it revealed certain variables which were not actually being used which were subsequently removed. There were also various warnings for missing semi colons which have been rectified.
+  
 
 Some minor modifications were made to the layout of my design post wireframing which were straightforward to implement. This was done in order to achieve more balance visually.
 
-Materialize appeared to have a bug with select elements on forms which meant that if drop down fields were left empty there was no feedback for the user and the form would simply not submit. The required and validate classes would normally turn such fields red and display a message on screen. In order to remedy this a custom class was applied with custom CSS styling.
+Hardcoded routes were replaced with `{ url_for }`during the development phase to prevent potential hacking of the database. 
 
-```
-.single-selector:required {
-  display: block;
-  padding: 0;
-  position: absolute;
-  background: transparent;
-  color: transparent;
-  border: none;
-  top: 0;
-  outline: none !important; }
-```
 
-During UAT a user successfully hacked the database as a result of a route being hardcoded during the development phase. This vulnerability was subsequently remedied with the use of `{ url_for }`.
-
-During testing it was identified that users were unable to save two recipes with the same name. This was because two indexes had been created in mongo in error. Once the erroneous index was dropped the system worked as expected.
-
-During mobile testing the add and logout buttons did not appear in the menu as a result of a typo in the jinja formatting. This was subsequently fixed but would have been a sever bug had it not been detected as it would have prevented users from being unable to add recipes.
-
----
-
+ 
 ## Deployment
+ 
 
-Throughout the projects regular git commits were made to ensure any working files were backed up. Numerous commits have been logged on the main branch in GitHub. An additional branch was created when working on the login and registration pages. Git checkout was used to switch between branches in the terminal along with push, pull and merge requests to incorporate all change on the main branch following review. Whilst there were no other collaborators on this project it was felt that this represented best practice. It maintained segregation between the registration and login work and the rest of the app. The project has been successfully deployed on [Heroku](https://www.heroku.com/).
+Throughout the projects regular git commits were made to ensure any working files were backed up. Numerous commits have been logged on the main branch in GitHub.  No additional branches were created when working on this project as there were no other collaborators.  Although it may have helped from an organisation point of view had I created additional branches for specific sections of the project.  Using git checkout to switch between branches in the terminal along with push, pull and merge requests to incorporate all change on the main branch following review would have represented best practice had there been multiple collaborators.  The project has been successfully deployed on [Heroku](https://www.heroku.com/).
 
-AWS cloud9 has been used throughout this project as the IDE of choice.
+  
+
+[Gitpod](https://www.gitpod.io/) has been used throughout this project as the IDE of choice.
 
 Issues were encountered when initially deploying the app to Heroku. This was due to Heroku auto detecting Node's package.json file and creating a Node build pack rather than a Python build pack. In order to rectify this issue, the build pack was manually deleted in Heroku and replaced with a python build pack. The package.json file was then removed before pushing the app to Heroku. After the app was successfully deployed to Heroku the package.json file was reinstated.
-
+ 
 In preparation for final deployment to Heroku the following procedure was followed:
+ 
+- First conceal any secret keys by setting environment variable in the `.env` file. [Dotenv](https://pypi.org/project/python-dotenv/) was used for this and can be viewed in settings.py
 
-- First conceal the secret key by setting an environment variable in the `.bashrc` file.
-
-- The secret key was then added to the config vars within Heroku.
-
-- Ensure the debuger in run.py is set to False.
-
+- The secret keys were then added to the config vars within Heroku.
+ 
+- Ensure the DEVELOPMENT variable is set to False in settings.py
+ 
 - Confirm the Procfile and requirements.txt files have been updated.
-
+ 
 - Once the above has been completed use the following commands to push to github.
-
+ 
+```
+python3 manage.py collectstatic
+```
+When prompted to confirm type `YES`
 ```
 git add .
+
 git commit -m "Final Commit"
-git push
-```
 
-- Finally use the following command to push / deploy to Heroku.
+git push origin master
 
 ```
-git push heroku master
-```
+
+- Heroku is linked to the Git Repository and set to Auto Deploy so there is no requirement to push any code to Heroku separately. 
 
 ---
+
+  
 
 ### File Structure
 
+  
+
 The project has been organised as follows:
 
+  
+
 ```
+
 ROOT DIRECTORY
 
-milestone4 (Project Folder)
-node\_modules (folder)
-scss (folder)
-static (folder)
-templates (folder)
-gitignore (file)
-license.md (file)
-package.json (file)
-procfile (file)
-readme.md (file)
-requirements.txt (file)
-run.py (file)
-```
+  
 
-The node_modules file includes a number of dependencies which are required to run node sass. This was included in the gitignore file along with package-lock.json.
+msproject5 (Project folder)
+
+node_modules (folder)
+
+cart (App folder)
+
+orders (App folder)
+
+pages (App folder)
+
+products (App folder)
+
+search (App folder)
+
+static (folder)
+
+staticfiles (folder)
+
+templates (file)
+
+users (App folder)
+
+.env
+
+.gitignore
+
+manage.py
+
+license.md
+
+Milestone5 Database Schema.pdf
+
+Package-lock.json
+
+readme.md
+
+requirements.txt
+
+```
+App folders typically follow the same structure.  A typical example is shown below:
+
+```
+users (App folder)
+__pycache__ (folder)
+migrations (folder)
+templates (foldeer)
+__init__.py
+admin.py
+apps.py
+forms.py
+models.py
+tests.py
+views.py
+urls.py 
+```
+  
+
+
+  
 
 ##### Gitignore
 
+  The node_modules file includes a number of dependencies which are required to run node sass. This was included in the gitignore file along with package-lock.json. In addition a standardised template was used to include other common file types for a python project of this type [gitignore.io](https://www.gitignore.io/api/python)
+
 ```
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+#Enviroment Variables
+.env
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+milestone5venv/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+#node-sass workflow
 node_modules
-package-lock.json
+
 ```
+
+  
 
 The [SCSS](https://sass-lang.com/documentation/syntax) folder includes my main.scss file which compiles my CSS. A script is included within my package.json file to run this using the `run sass` command.
 
+  
+
 `"sass": "node-sass -w scss/ -o static/css/ --recursive"`
+
+  
 
 The static folder structure is as follows:
 
+  
+
 ```
+
 static (folder)
-   CSS (folder)
-      main.css (file)
-   images (folder)
-      (various image files)
-   js (folder)
-      main.js(file)
-   wireframes_schema (folder)
-      Cook-e Schema.pdf
-      Wireframes Milestone 4.pdf (file)
+
+admin (folder)
+
+CSS (folder)
+
+main.css (file)
+
+images (folder)
+
+(various image files)
+
+js (folder)
+
+checkout.js(file)
+
+
+
 ```
 
-The various pages for this app are in the templates folder. This folder contains the following html templates:
+  
+
+Where django apps have dedicate HTML templates these pages are located within the templates folder of the app.  Generic HTML pages or page sections are located in the templates folder in the root:
+
+  
 
 ```
+
 templates (folder)
-   about.html (file)
-   addrecipe.html (file)
-   base.html (file)
-   contact.html (file)
-   editrecipe.html (file)
-   instructions.html (file)
-   login.html (file)
-   profile.html (file)
-   recipes.html (file)
-   register.html (file)
+
+advertorial.html (file)
+
+base.html (file)
+
+contact.html (file)
+
+hero.html (file)
+
+home.html (file)
+
+password_reset_confirm.html (file)
+
+subscribe.html (file)
+
+
+
 ```
 
----
+  
+
+
+
+  
 
 ## Author
 
 - John Hay - Code Institute Student
 
----
+  
+
+
+
+  
 
 ## License
 
+  
+
 Released under the MIT [license](https://github.com/JayPeaa/milestone4-cook-e/blob/master/license.md)
 
----
+  
+
+
+
+  
 
 ## Credits
 
+  
+
 ### Images and Media
 
-All images and media used on this site have been labelled for reuse / non-commercial and are for educational purposes only. Google images licensing tools have been utilised in sourcing content.
+  
+
+All images and media used on this site have been labelled for reuse / non-commercial and are for educational purposes only. Sites included [Pexels] (https://www.pexels.com/) and [Pixabay](https://pixabay.com/)
+
+  
 
 The favicon was generated by a 3rd party site: [https://favicon.io/favicon-generator/](https://favicon.io/favicon-generator/).
 
+  
+
 ### Acknowledgments
+
+  
 
 Special thanks to the Code Institute Slack Community CI Tutors and project mentor Tony Montaro for support and guidance provided during this project.
 
+  
+
 ---
+
+
+
+
+
+
