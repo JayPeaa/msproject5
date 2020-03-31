@@ -63,8 +63,5 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
         order_form = UserOrderForm()
-    
-    # return render(request, "orders.html", {'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
-                
 
     return render(request, "orders.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})

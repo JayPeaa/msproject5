@@ -48,11 +48,11 @@ def subscribe_view(request):
     if request.method == "POST":
         if newsletter_form.is_valid():
             subscriber_qs = Subscriber.objects.filter(email=newsletter_form.instance.email)
-            messages.info(request, "Thank you for subscribing")
             if subscriber_qs.exists():
                 messages.info(request, "You are already subscribed")
             else:
                 newsletter_form.save()
+                messages.info(request, "Thank you for subscribing")
 
     context = {
         'newsletter_form' : SubscriberForm()
