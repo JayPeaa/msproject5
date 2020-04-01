@@ -1,8 +1,9 @@
-{% extends 'base.html' %}
-{% load static from staticfiles %}
+<!--Extend Base.html and include block content-->
 
+{% extends 'base.html' %}
 {% block content %}
 
+<!--Bootstrap grid system and code for cart-->
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -10,16 +11,16 @@
             <hr>
         </div>
     </div>
+<!--Looping through cart items and rendering them in the cart-->
      {% for item in cart_items %}
     <div class="row">
         <div class="col-sm-12 col-md-3">
-            <img src="/static/img/{{ item.product.product_image_name }}" class="img-fluid" alt="">
+            <img src="/static/img/{{ item.product.product_image_name }}" class="img-fluid" alt="product picture">
         </div>
         <div class="col-sm-12 col-md-2 text-center">
             <p><strong>{{ item.product.product_name}}</strong><br>{{ item.product.product_weight }}g<br>Serves {{ item.product.product_serves }}</p>
         </div>
         <div class="offset-md-2">
-            
         </div>
         <div class="col-sm-12 col-md-1">
             <p class="text-center"><strong>Price</strong></p>
@@ -28,9 +29,10 @@
         <div class="col-sm-12 col-md-3 text-center">
             <p class="text-center"><strong>Quantity</strong></p>
             <div class="text-center refresh-delete">
+<!--Forms to adjust or delete cart items-->
                 <form method="POST" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
-                    <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}"></input>
+                    <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}"/>
                     <button type="submit" class="btn"><i class="fa fa-repeat"></i></button>
                </form>
                <form method="POST" action="{% url 'delete_cart_item' item.id %}">
@@ -45,20 +47,17 @@
         </div>
     </div>
     <hr>
-    
     {% endfor %}
-     
+<!--Logic to render message if cart is empty and Bootstrap Grid design for when items are rendered to the screen-->
      {% if grand_total == 0 %}
      <h2 class="text-center">Your cart is currently empty</h2><br><br>
      {% else %}
-    
     <div class="row">
         <div class="col-sm-12 col-md-2">
         </div>
         <div class="col-sm-12 col-md-2">
         </div>
         <div class="offset-md-3">
-            
         </div>
         <div class="col-sm-12 col-md-1">
             <p class="text-center">VAT @ 20%</p>
@@ -75,7 +74,6 @@
         <div class="col-sm-12 col-md-2">
         </div>
         <div class="offset-md-3">
-            
         </div>
         <div class="col-sm-12 col-md-1">
             <p class="text-center"><strong>Total</strong></p>
@@ -91,6 +89,7 @@
         {% endif %}
     </div>
 </div>
+<!--include statement to include specific html sections on desired pages for easy customisation-->
 {% include 'advertorial.html' %}
 {% include 'subscribe.html' %}
 {% endblock %}

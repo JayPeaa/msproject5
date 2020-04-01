@@ -4,18 +4,14 @@ from pages.forms import SubscriberForm
 # Create your views here.
 
 def view_cart(request):
-    """
-    See contents of cart also renders the subcribe form in the context
-    """
+    """See contents of cart also renders the subcribe form in the context"""
     context = {
         'newsletter_form' : SubscriberForm()
     }
     return render(request, "cart.html", context)
 
 def add_to_cart(request, id):
-    """
-    Add a qty to the cart
-    """
+    """Add a qty of product to the cart"""
     quantity=int(request.POST.get('quantity'))
 
     cart = request.session.get('cart', {})
@@ -25,9 +21,7 @@ def add_to_cart(request, id):
     return redirect(reverse('products'))
 
 def adjust_cart(request, id):
-    """
-    Adjust qty of items in cart
-    """
+    """Adjust qty of items in cart"""
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
 
@@ -40,9 +34,7 @@ def adjust_cart(request, id):
     return redirect(reverse('view_cart'))
 
 def delete_cart_item(request, id):
-    """
-    Adjust qty of items in cart
-    """
+    """Delete of remove an item from the cart"""
     cart = request.session.get('cart', {})
 
     cart.pop(id)

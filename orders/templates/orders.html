@@ -1,83 +1,67 @@
+<!--Extending base html and loading staticfiles for formatting also including crisp form tags to utilise crispy forms for form creation-->
 {% extends "base.html" %}
 {% load static from staticfiles %}
-
 {% load crispy_forms_tags %}
-
 {% block head_js %}
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
-    //<![CDATA[
+	//<![CDATA[
         Stripe.publishableKey = '{{ publishable }}';
     //]]>
 </script>
 <script type="text/javascript" src="{% static 'js/checkout.js' %}"></script>
-{% endblock head_js %}
 
+{% endblock head_js %}
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <h2 class="text-center">Amount Due £{{ total }}</h2>
-        </div>
-        <div class="col-sm-12 col-md-6">
-                <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-                    <p class="text-center">Please enter your delivery address and contact details.</p>
-
-                    <div id="credit-card-errors" style="display: block;">
-                        <div class="alert-message block-message error" id="stripe-error-message"></div>
-                    </div>
-
-                    <div class="form-group col-md-12">
-
-                   
-                    {{order_form.order_full_name | as_crispy_field }}
-                    {{order_form.order_email | as_crispy_field }}
-                    {{order_form.order_phone_number| as_crispy_field }}
-                    {{order_form.order_street_address_1 | as_crispy_field }}
-                    {{order_form.order_street_address_2 | as_crispy_field }} 
-                    {{order_form.order_city | as_crispy_field }} 
-                    {{order_form.order_county | as_crispy_field }} 
-                    {{order_form.order_country | as_crispy_field }} 
-                    {{order_form.order_postcode | as_crispy_field }}
-                    
-                    </div>
-
-                    
-                    {% csrf_token %}
-                   
-        </div>
-        <div class="col-sm-12 col-md-6">
-                    <p class="text-center">Please enter you card details below and click submit payment.</p>
-
-                    <div id="credit-card-errors" style="display: block;">
-                        <div class="alert-message block-message error" id="stripe-error-message"></div>
-                    </div>
-
-                    <div class="form-group col-md-12">
-
-                    {{ payment_form }} 
-                    
-                    </div>
-
-                    {% csrf_token %}
-                    <div class="form-group col-md-12 align-items-center auto">
-                        <input class="btn d-block m-auto" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
-                    </div>
-                </form>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2 class="text-center">Amount Due £{{ total }}</h2>
+		</div>
+	</div>
+	<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+		<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<p class="text-center">Please enter your delivery address and contact details.</p>
+				<div class="form-group">
+					{{order_form.order_full_name | as_crispy_field }}
+					{{order_form.order_email | as_crispy_field }}
+					{{order_form.order_phone_number| as_crispy_field }}
+					{{order_form.order_street_address_1 | as_crispy_field }}
+					{{order_form.order_street_address_2 | as_crispy_field }}
+					{{order_form.order_city | as_crispy_field }}
+					{{order_form.order_county | as_crispy_field }}
+					{{order_form.order_country | as_crispy_field }}
+					{{order_form.order_postcode | as_crispy_field }}
+				</div>
+				{% csrf_token %}
+			</div>
+			<div class="col-sm-12 col-md-6">
+				<p class="text-center">Please enter your card details below and click submit.</p>
+				<div id="credit-card-errors" style="display: block;">
+					<div class="alert-message block-message error" id="stripe-error-message"></div>
+				</div>
+				<div class="form-group col-md-12">
+					{{ payment_form }}
+				</div>
+				{% csrf_token %}
+				<div class="col-sm-12 form-group align-items-center">
+					<input class="btn d-block mt-5 mr-auto ml-auto" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment"/>
+                </div>
                 <div class="col-12 d-flex flex-row justify-content-center">
-                    <img class="payment-types" src="/static/img/stripe-payment.svg" alt="payment types">
+                    <img class="payment-types" src="/static/img/stripe-payment.svg" alt="payment types"/>
                 </div>
                 <div class="col-12 d-flex flex-row justify-content-center">
                     <h3 class="text-center">Thank you for shopping with Oakfield</h3>
                 </div>
-        </div>
-    </div>
-
-         
+            </div>
+		</div>
+	</form>
 </div>
 {% include 'advertorial.html' %}
 {% endblock %}
