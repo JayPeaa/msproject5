@@ -73,7 +73,7 @@ div {
 .jumbotron {
   background: #fff;
   padding: 0;
-  margin: 0; }
+  margin: -15px; }
 
 .jumbo-text {
   background: rgba(86, 105, 72, 0.8);
@@ -115,6 +115,19 @@ div {
 
 .pic4 {
   background-image: url("../img/carrots.jpg"); }
+
+.gallery-container {
+  position: relative; }
+
+.transition-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease; }
+
+.transition-image:hover {
+  opacity: 1; }
 
 .food-fruit {
   background-image: url("../img/food-fruit.jpg"); }
