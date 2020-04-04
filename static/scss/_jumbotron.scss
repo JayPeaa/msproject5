@@ -19,6 +19,10 @@
     object-fit: cover;
     max-width: 2300px;
     margin: auto;
+
+     @media (max-width: 600px) {
+         max-height: 20vh;
+    }
 }
 
 .alert-messages {

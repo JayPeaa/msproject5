@@ -3,8 +3,8 @@
   background-color: #97a88b;
   color: white;
   border: solid #b6c3cc 2px;
-  min-width: 60px;
-  height: 40px;
+  min-width: 40px;
+  height: 41px;
   margin-bottom: 4px;
   transition: all 0.3s; }
 
@@ -89,6 +89,9 @@ div {
   object-fit: cover;
   max-width: 2300px;
   margin: auto; }
+  @media (max-width: 600px) {
+    .carousel__img {
+      max-height: 20vh; } }
 
 .alert-messages {
   color: #155724;
@@ -229,6 +232,11 @@ div {
 .logo {
   margin-top: 60px;
   margin-bottom: 10px; }
+  .logo-top {
+    width: 180px; }
+    @media (max-width: 600px) {
+      .logo-top {
+        width: 100px; } }
 
 .active {
   font-weight: bolder; }
@@ -252,6 +260,9 @@ div {
   margin-bottom: 0;
   height: 40px;
   display: inline-flex; }
+  @media (max-width: 600px) {
+    .qty-input {
+      width: 45%; } }
 
 .card-body {
   -ms-flex: 1 1 auto;
@@ -290,6 +301,11 @@ div {
 .logo {
   margin-top: 60px;
   margin-bottom: 10px; }
+  .logo-top {
+    width: 180px; }
+    @media (max-width: 600px) {
+      .logo-top {
+        width: 100px; } }
 
 .active {
   font-weight: bolder; }

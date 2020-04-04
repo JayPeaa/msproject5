@@ -23,7 +23,16 @@
 .logo {
     margin-top: 60px;
     margin-bottom: 10px;
+
+    &-top {
+        width: 180px;
+
+        @media (max-width: 600px) {
+            width: 100px;
+        }
+    }
 }
+
 
 .active {
     font-weight: bolder;

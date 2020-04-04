@@ -22,12 +22,12 @@
 <header>
   <div class="header-top">
       <ul class="header-top__menu d-flex justify-content-around pl-0">
-        <li class="p-2"><a>01234 654321</a></li>
+        <li class="p-2 d-none d-sm-none d-md-block">01234 654321</li>
         <li class="mr-auto p-2">
         <a class="top-nav-links" href="{% url 'contact' %}">Contact Us
         </li>{% if user.is_authenticated %}
       <li class="p-2 {% if url_name == 'profile' %}active{% endif %}">
-        <a class="top-nav-links" href="/profile">My Account</a>
+        <a class="top-nav-links" href="/profile">Account</a>
       </li>
     {% endif %}
         <li class="p-2">
@@ -42,13 +42,13 @@
   
   <div class="container-fluid text-center">
     <div class="row">
-      <a class="col-md-4 align-self-center" href="{% url 'home' %}">
+      <a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
         <img src="/static/img/quality.svg" class="img-fluid" style="width: 380px;">
       </a>
       <a class="logo col-md-4" href="{% url 'home' %}">
-        <img src="/static/img/logo.png" class="img-fluid" style="width: 180px;">
+        <img src="/static/img/logo.png" class="img-fluid logo-top">
       </a>
-      <a class="col-md-4 align-self-center" href="{% url 'home' %}">
+      <a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
         <img src="/static/img/free_del.svg" class="img-fluid" style="width: 280px;">
       </a>
   </div>

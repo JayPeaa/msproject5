@@ -3,37 +3,36 @@
 {% block content %}
 
 <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <div class="card product-detail-card">
-                    <img class="card-img-top" src="/static/img/{{ product.product_image_name }}" alt="Card image cap"/>
-                    <div class="card-body">
-                        <h3>Additional Information</h3>
-                        <p class="card-text">{{ product.product_description }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <div class="product-detail-card">
-                        <h1> {{ product.product_name }} </h1>
-                        <p class="card-text"></p>
-                        <p class="card-text">£{{ product.product_price }}</p>
-                        <p class="card-text"><strong>Weight</strong> {{ product.product_weight }}g <br>
-                        <class="card-text"><strong>Serves</strong> {{ product.product_serves }}<br><br>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-6">
+			<div class="card product-detail-card">
+				<img class="card-img-top" src="/static/img/{{ product.product_image_name }}" alt="Card image cap"/>
+				<div class="card-body">
+					<h3>Additional Information</h3>
+					<p class="card-text">{{ product.product_description }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-6">
+			<div class="product-detail-card">
+				<h1> {{ product.product_name }} </h1>
+				<p class="card-text"></p>
+				<p class="card-text"><strong>Price</strong> £{{ product.product_price }}</p>
+				<p class="card-text"><strong>Weight</strong> {{ product.product_weight }}g <br>
+					<class="card-text"><strong>Serves</strong> {{ product.product_serves }}<br><br>
                         </p>
-                            <form method="post" action="{% url 'add_to_cart' product.id %}">
-                                {% csrf_token %}
-                                <div class="form-group text-center">
-                                    <input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input" placeholder="Quantity" required>
-                                    <button class="btn btn-primary" type="submit"><i class="fa fa-cart-plus"></i></button>
-                                </div>
-                            </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+						<form method="post" action="{% url 'add_to_cart' product.id %}">
+							{% csrf_token %}
+							<div class="form-group text-center">
+								<input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input" placeholder="Quantity" required>
+								<button class="btn btn-primary" type="submit"><i class="fa fa-cart-plus"></i></button>
+							</div>
+						</form>
+			</div>
+		</div>
+	</div>
 </div>
+
 {% include 'advertorial.html' %}
 {% include 'subscribe.html' %}
 

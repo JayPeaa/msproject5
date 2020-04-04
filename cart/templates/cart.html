@@ -14,36 +14,36 @@
 <!--Looping through cart items and rendering them in the cart-->
      {% for item in cart_items %}
     <div class="row">
-        <div class="col-sm-12 col-md-3">
-            <img src="/static/img/{{ item.product.product_image_name }}" class="img-fluid" alt="product picture">
+        <div class="offset-3 col-6 offset-sm-0 col-sm-6 col-md-3">
+            <img src="/static/img/{{ item.product.product_image_name }}" class="img-fluid cart-product-image" alt="product picture">
         </div>
-        <div class="col-sm-12 col-md-2 text-center">
+        <div class="col-6 offset-sm-0 col-sm-6 col-md-2">
             <p><strong>{{ item.product.product_name}}</strong><br>{{ item.product.product_weight }}g<br>Serves {{ item.product.product_serves }}</p>
         </div>
-        <div class="offset-md-2">
+        
+        <div class="col-6 offset-sm-0 col-sm-4 col-md-1">
+            <p class="text-right mr-5"><strong>Price</strong>
+            <p class="text-right mr-5">£{{ item.product.product_price }}</p>
         </div>
-        <div class="col-sm-12 col-md-1">
-            <p class="text-center"><strong>Price</strong></p>
-            <p class="text-center">£{{ item.product.product_price }}</p>
-        </div>
-        <div class="col-sm-12 col-md-3 text-center">
-            <p class="text-center"><strong>Quantity</strong></p>
-            <div class="text-center refresh-delete">
+        <div class="col-6 offset-sm-0 col-sm-4 col-md-3">
+            <p class="text-left"><strong>Quantity</strong></p>
+            <div class="refresh-delete">
 <!--Forms to adjust or delete cart items-->
                 <form method="POST" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}"/>
                     <button type="submit" class="btn"><i class="fa fa-repeat"></i></button>
                </form>
-               <form method="POST" action="{% url 'delete_cart_item' item.id %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn text-center"><i class="fa fa-trash-o"></i></button>
-               </form>
+              
             </div>
         </div>
-        <div class="col-sm-12 col-md-1">
-            <p class="text-center"><strong>Total</strong></p>
-            <p class="text-center">£{{ item.item_total }}</p>
+        <div class="col-6 col-sm-4 col-md-3">
+            <form method="POST" action="{% url 'delete_cart_item' item.id %}">
+                <p class="text-right mr-5"><strong>Total</strong></p>
+                <p class="text-right">£{{ item.item_total }}
+                    {% csrf_token %}
+                    <span><button type="submit" class="btn text-center"><i class="fa fa-trash-o"></i></button></span>
+               </form></p>
         </div>
     </div>
     <hr>
@@ -53,38 +53,26 @@
      <h2 class="text-center">Your cart is currently empty</h2><br><br>
      {% else %}
     <div class="row">
-        <div class="col-sm-12 col-md-2">
+        <div class="col-3 col-sm-4 col-md-8">
         </div>
-        <div class="col-sm-12 col-md-2">
+        <div class="col-5 col-sm-4 col-md-2">
+            <p class="text-left">VAT @ 20%</p>
         </div>
-        <div class="offset-md-3">
-        </div>
-        <div class="col-sm-12 col-md-1">
-            <p class="text-center">VAT @ 20%</p>
-        </div>
-        <div class="col-sm-12 col-md-3 text-center">
-        </div>
-        <div class="col-sm-12 col-md-1">
-            <p class="text-center">£{{ vat }}</p>
+        <div class="col-4 col-sm-4 col-md-2">
+            <p class="text-right  mr-5">£{{ vat }}</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 col-md-2">
+        <div class="col-3 col-sm-4 col-md-8">
         </div>
-        <div class="col-sm-12 col-md-2">
+        <div class="col-5 col-sm-4 col-md-2">
+            <p class="text-left"><strong>Total</strong></p>
         </div>
-        <div class="offset-md-3">
+        <div class="col-4 col-sm-4 col-md-2">
+            <p class="text-right  mr-5">£{{ grand_total }}</p>
         </div>
-        <div class="col-sm-12 col-md-1">
-            <p class="text-center"><strong>Total</strong></p>
-        </div>
-        <div class="col-sm-12 col-md-3 text-center">
-        </div>
-        <div class="col-sm-12 col-md-1">
-            <p class="text-center">£{{ grand_total }}</p>
-        </div>
-        <div class="col-sm-12 offset-md-9 col-md-3 text-center">
-            <a href="{% url 'checkout' %}" class="btn" role="button">Proceed To Checkout</a>
+        <div class="col-sm-12 offset-md-9 col-md-3 text-right">
+            <a href="{% url 'checkout' %}" class="btn mr-4" role="button">Checkout</a>
         </div>
         {% endif %}
     </div>
