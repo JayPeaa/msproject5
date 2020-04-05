@@ -21,8 +21,12 @@ def products_by_category_view(request, category):
 
 def product_detail_view(request, id):
     product = get_object_or_404(Product, id=id)
+    context = {
+        'newsletter_form' : SubscriberForm(),
+        "product": product
+    }
 
-    return render(request, "product_detail.html", {"product": product})
+    return render(request, "product_detail.html", context)
 
 def product_bestseller_view(request, id):
     bestsellers = Product.objects.annotate(count_ordered=Count('orderlineitem')).order_by('-count_ordered')[:4]

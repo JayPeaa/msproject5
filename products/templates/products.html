@@ -22,32 +22,32 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12 col-md-2">
+		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Fruit' %}">
 				<button class="btn filter-btn {% if '/products/category/Fruit' == request.path %}filter-active{% endif %}" type="submit">Fruit</button>
 			</form>
 		</div>
-		<div class="col-xs-12 col-md-2">
+		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Vegetables' %}">
 				<button class="btn filter-btn {% if '/products/category/Vegetables' == request.path %}filter-active{% endif %} " type="submit">Vegetables</button>
 			</form>
 		</div>
-		<div class="col-xs-12 col-md-2">
+		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Lamb' %}">
 				<button class="btn filter-btn {% if '/products/category/Lamb' == request.path %}filter-active{% endif %}" type="submit">Lamb</button>
 			</form>
 		</div>
-		<div class="col-xs-12 col-md-2">
+		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Beef' %}">
 				<button class="btn filter-btn {% if '/products/category/Beef' == request.path %}filter-active{% endif %}" type="submit">Beef</button>
 			</form>
 		</div>
-		<div class="col-xs-12 col-md-2">
+		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Pork' %}">
 				<button class="btn filter-btn {% if '/products/category/Pork' == request.path %}filter-active{% endif %}" type="submit">Pork</button>
 			</form>
 		</div>
-		<div class="col-xs-12 col-md-2">
+		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products' %}">
 				<button class="btn filter-btn" type="submit">Clear Filter</button>
 			</form>
@@ -62,7 +62,7 @@
 		</div>
 		{% else %}
 		{% for product in products %}
-		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+		<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 			<div class="card product-card">
 				<a href="{% url 'product_detail_view' product.id %}"><img class="card-img-top" src="/static/img/{{ product.product_image_name }}" alt="Card image cap"></a>
 					<div class="card-body">
@@ -73,7 +73,7 @@
 						</p>
 						<form class="product-page-form d-flex" method="post" action="{% url 'add_to_cart' product.id %}">
 							{% csrf_token %}
-							<input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input text-center" placeholder="Qty" required/>
+							<input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input" placeholder="Qty" required/>
 							<button class="btn" type="submit"><i class="fa fa-cart-plus"></i></button>
 						</form>
 					</div>
