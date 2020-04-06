@@ -1,163 +1,153 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    type="text/css" />
-  {% load static %}
-  <link rel="stylesheet" href="{% static '/css/main.css' %}" type="text/css" />
-  <title>Oakfield Farm Shop</title>
-  <link rel="shortcut icon" type="image/png" href="{% static 'img/logo.png' %}">
-  {% load crispy_forms_tags %}
-  {% block head_js %}
-  {% endblock head_js %}
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Oakfield Farm Shop</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		type="text/css" />
+	{% load static %}
+	<link rel="stylesheet" href="{% static '/css/main.css' %}" type="text/css" />
+	<link rel="shortcut icon" type="image/png" href="{% static 'img/logo.png' %}" />
+	{% load crispy_forms_tags %}
+	{% block head_js %}
+	{% endblock head_js %}
 </head>
 
-<!--Navigation-->
+<!--Nav Bar Upper / contact us, Account and Basket Notifications-->
 <header>
-  <div class="header-top">
-      <ul class="header-top__menu d-flex justify-content-around pl-0">
-        <li class="p-2 d-none d-sm-none d-md-block">01234 654321</li>
-        <li class="mr-auto p-2">
-        <a class="top-nav-links" href="{% url 'contact' %}">Contact Us
-        </li>{% if user.is_authenticated %}
-      <li class="p-2 {% if url_name == 'profile' %}active{% endif %}">
-        <a class="top-nav-links" href="/profile">Account</a>
-      </li>
-    {% endif %}
-        <li class="p-2">
-        <a class="top-nav-links" href="{% url 'view_cart' %}">Basket
-            {% if grand_total > 0 %}
-            <label class="badge badge-warning text-center">{{ product_count }}</label>
-            {% endif %}
-        </li>
-        </a>
-      </ul>
-  </div>
-  
-  <div class="container-fluid text-center">
-    <div class="row">
-      <a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
-        <img src="/static/img/quality.svg" class="img-fluid" style="width: 380px;">
-      </a>
-      <a class="logo col-md-4" href="{% url 'home' %}">
-        <img src="/static/img/logo.png" class="img-fluid logo-top">
-      </a>
-      <a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
-        <img src="/static/img/free_del.svg" class="img-fluid" style="width: 280px;">
-      </a>
-  </div>
+	<div class="container-fluid header-top">
+		<ul class="header-top__menu d-flex justify-content-around pl-0">
+			<li class="p-2 d-none d-sm-none d-md-block">01234 654321</li>
+			<li class="mr-auto p-2">
+				<a class="top-nav-links" href="{% url 'contact' %}">Contact Us</a>
+			</li>
+			{% if user.is_authenticated %}
+			<li class="p-2 {% if url_name == 'profile' %}active{% endif %}">
+				<a class="top-nav-links" href="/profile">Account</a>
+			</li>
+			{% endif %}
+			<li class="p-2"><a class="top-nav-links" href="{% url 'view_cart' %}">Basket
+					{% if grand_total > 0 %}
+					<label class="badge badge-warning text-center">{{ product_count }}</label>
+					{% endif %}
+				</a>
+			</li>
+		</ul>
+	</div>
+
+<!--Logo and Advertorials-->
+	<div class="container-fluid text-center">
+		<div class="row">
+			<a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
+				<img src="/static/img/quality.svg" class="img-fluid" style="width: 380px;" alt="promotional advert">
+            </a>
+				<a class="logo col-md-4" href="{% url 'home' %}">
+					<img src="/static/img/logo.png" class="img-fluid logo-top" alt="logo">
+            </a>
+					<a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
+						<img src="/static/img/free_del.svg" class="img-fluid" style="width: 280px;" alt="promotional advert">
+            </a>
+		</div>
+	</div>
 </header>
 
+<!--Main Navigation Bar and control flow for logged in status Logic-->
 <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse my-auto" id="navbarSupportedContent">
+	<div class="collapse navbar-collapse my-auto" id="navbarSupportedContent">
+		{% if user.is_authenticated %}
+		<ul class="navbar-nav nav-fill w-100 d-flex">
+			{% with url_name=request.resolver_match.url_name %}
+			<li class="nav-item {% if url_name == 'home' %}active{% endif %}">
+				<a class="nav-link" href="{% url 'home' %}">Home</a>
+			</li>
+			<li class="nav-item {% if url_name == 'products' %}active{% endif %}">
+				<a class="nav-link" href="/products">Farm Shop</a>
+			</li>
+			<li class="nav-item {% if url_name == 'view_cart' %}active{% endif %}">
+				<a class="nav-link" href="/view_cart">Cart</a>
+			</li>
+			<li class="nav-item {% if url_name == 'logout' %}active{% endif %}">
+				<a class="nav-link" href="/logout">Logout</a>
+			</li>
+			{% endwith %}
+		</ul>
 
-    {% if user.is_authenticated %}
+		{% else %}
 
-    <ul class="navbar-nav nav-fill w-100 d-flex">
-      {% with url_name=request.resolver_match.url_name %}
-      <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
-      </li>
-      <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
-        <a class="nav-link" href="/products">Farm Shop</a>
-      </li>
-      <li class="nav-item {% if url_name == 'view_cart' %}active{% endif %}">
-        <a class="nav-link" href="/view_cart">Cart</a>
-      </li>
-      <li class="nav-item {% if url_name == 'logout' %}active{% endif %}">
-        <a class="nav-link" href="/logout">Logout</a>
-      </li>
-      {% endwith %}
-    </ul>
-
-    {% else %}
-
-    <ul class="navbar-nav nav-fill w-100 d-flex">
-      {% with url_name=request.resolver_match.url_name %}
-      <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
-      </li>
-      <li class="nav-item {% if url_name == 'products' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'products' %}">Farm Shop</a>
-      </li>
-       <li class="nav-item {% if url_name == 'view_cart' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'view_cart' %}">Cart</a>
-      </li>
-      <li class="nav-item {% if url_name == 'register' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'register' %}">Register</a>
-      </li>
-      <li class="nav-item {% if url_name == 'login' %}active{% endif %}">
-        <a class="nav-link" href="{% url 'login' %}">Log In</a>
-      </li>
-      {% endwith %}
-    </ul>
-
-    {% endif %}
-
-    
-  </div>
-
+		<ul class="navbar-nav nav-fill w-100 d-flex">
+			{% with url_name=request.resolver_match.url_name %}
+			<li class="nav-item {% if url_name == 'home' %}active{% endif %}">
+				<a class="nav-link" href="{% url 'home' %}">Home</a>
+			</li>
+			<li class="nav-item {% if url_name == 'products' %}active{% endif %}">
+				<a class="nav-link" href="{% url 'products' %}">Farm Shop</a>
+			</li>
+			<li class="nav-item {% if url_name == 'view_cart' %}active{% endif %}">
+				<a class="nav-link" href="{% url 'view_cart' %}">Cart</a>
+			</li>
+			<li class="nav-item {% if url_name == 'register' %}active{% endif %}">
+				<a class="nav-link" href="{% url 'register' %}">Register</a>
+			</li>
+			<li class="nav-item {% if url_name == 'login' %}active{% endif %}">
+				<a class="nav-link" href="{% url 'login' %}">Log In</a>
+			</li>
+			{% endwith %}
+		</ul>
+		{% endif %}
+	</div>
 </nav>
+<!--Templating for main body and alert messages-->
+<body>
+	{% if messages %}
+	{% for message in messages %}
+	<div class="text-center alert alert-messages">
+		{{ message }}
+	</div>
+	{% endfor %}
+	{% endif %}
+	{% block content %}
+	{% endblock %}
+
+<!--Bottom Footer other sections can be stacked on top of this such as advertorial.html and subscribe.html-->
+	<footer class="footer-container container-fluid text-center">
+		<div class="row">
+			<a class="logo offset-md-4 col-md-4 mt-3" href="{% url 'home' %}">
+				<img src="/static/img/logo.png" class="img-fluid" style="width: 150px;" alt="logo"/>
+            </a>
+				<div class="col-sm-12">
+					<p>Tel 01234 654321 | info@oakfieldfarmshop.co.uk</p>
+					<p class="footer-footer-text text-center">
+						Full Stack Development with Django | Milestone Project 5 | © 2019 John Hay
+						<a href="https://github.com/JayPeaa"
+							target="_blank"><i class="fa fa-github fa-3x list-inline social-links"></i></a>
+					</p>
+				</div>
+		</div>
+	</footer>
+
+<!--script tags for Jquery, cloudflare CDN and Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
 
 
-
-<main>
-
-  <body>
-    {% if messages %}
-      {% for message in messages %}
-        <div class="text-center alert alert-messages">
-          {{ message }}
-        </div>
-      {% endfor %}
-    {% endif %}
-    {% block content %} replace me {% endblock %}
-
-    
- 
- 
-
-
-
-
-
-
-
-</main>
-<footer class="footer-container container-fluid text-center">
-  <div class="row">
-      <a class="logo offset-md-4 col-md-4 mt-3" href="{% url 'home' %}">
-        <img src="/static/img/logo.png" class="img-fluid" style="width: 150px;">
-      </a>
-  <div class="col-sm-12">
-        <p>Tel 01234 654321  |  info@oakfieldfarmshop.co.uk</p>
-        <p class="footer-footer-text text-center">
-          Full Stack Development with Django | Milestone Project 5 | © 2019 John Hay
-          <a href="https://github.com/JayPeaa" target="_blank"><i class="fa fa-github fa-3x list-inline social-links"></i></a>
-        </p>
-  </div> 
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script>
-      function initMap() {
+<!--script tags for Google Maps API on contact page-->
+	<script>
+		function initMap() {
         // Map set up
         var options = {
           zoom:8,
@@ -172,9 +162,9 @@
           map:map
         });
       }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOhA5ZRqjF3DTWyEhInzXhlslWOGwvf_Q&callback=initMap">
-    </script>
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOhA5ZRqjF3DTWyEhInzXhlslWOGwvf_Q&callback=initMap">
+	</script>
 </body>
 </html>

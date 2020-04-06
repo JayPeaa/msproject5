@@ -1,11 +1,15 @@
+<!--Extending base.html-->
 {% extends 'base.html' %}
+<!--Opening Block-->
 {% block content %}
+<!--Including Hero Carousel-->
 {% include 'hero.html' %}
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
 			<h2 class="text-center">Welcome to Oakfield Farm & Shop</h2>
-			<p class="col-sm-12 text-justify">We're a family run business with years of experience of producing the finest produce which we sell in our
+			<p class="col-sm-12 text-justify">We're a family run business with years of experience of producing the
+				finest produce which we sell in our
 				shop both on site
 				and online. We are much more than your ordinary farm shop and offer fun days out for all the family.
 				Come and visit us in person, meet
@@ -18,11 +22,7 @@
 	</div>
 </div>
 
-<!--Activity Section-->
-
-
-
-<!-- grid system for clip path elements -->
+<!-- Activity Section - grid system for clip path elements -->
 <div class="container">
 	<div class="row">
 		<div class="pic-window pic1 block col-sm-12 col-md-6">
@@ -64,170 +64,182 @@
 	</div>
 </div>
 
-<!--Family fun for everyone - cwtch corner section -->
-
-
+<!--Meet the Animals section and gallery with stacked image transition hence 2 images per div-->
 <div class="container-fluid light-grey-block">
 	<div class="container">
-		<h2 class="col-xs-12 text-center">Meet the Animals</h2>
-		<p>Spring is an especially exciting time here at Oakfield farm. This is your chance to meet the animals and get
-			involved. In addition to our rabbits and guinea pigs, we have newborn lambs to bottle feed.  We have so many animals here on the 
-            farm it's an ideal opportunity to learn about a variety of different breads.  We give daily talks so be sure to check out our time table on
-            arrival.
-		</p>
 		<div class="row">
-			<div class="col-12 col-sm-6 col-lg-4">
-				<div class="card gallery-container">
-					<img class="card-img-top" src="/static/img/piglets.jpg" alt="Card image cap">
-                    <img class="card-img-top transition-image" src="/static/img/squirrel.jpg" alt="Card image cap">
+			<h2 class="col-12 text-center">Meet the Animals</h2>
+			<p class="col-12 text-justify">Spring is an especially exciting time here at Oakfield farm. This is your chance to meet the animals and
+				get
+				involved. In addition to our rabbits and guinea pigs, we have newborn lambs to bottle feed. We have so
+				many
+				animals here on the
+				farm it's an ideal opportunity to learn about a variety of different breads. We give daily talks so be
+				sure
+				to check out our time table on
+				arrival.
+			</p>
+		</div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card gallery-container">
+                    <img class="card-img-top" src="/static/img/piglets.jpg" alt="piglets">
+                    <img class="card-img-top transition-image" src="/static/img/squirrel.jpg" alt="squirrel"/>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card">
-                    <img class="card-img-top" src="/static/img/donkey.jpg" alt="Card image cap">
-                    <img class="card-img-top transition-image" src="/static/img/cow.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="/static/img/donkey.jpg" alt="donkey"/>
+                    <img class="card-img-top transition-image" src="/static/img/cow.jpg" alt="cow"/>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card">
-                    <img class="card-img-top" src="/static/img/puppy.jpg" alt="Card image cap">
-                    <img class="card-img-top transition-image" src="/static/img/chick.jpg" alt="Card image cap">
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-				<div class="card">
-					<img class="card-img-top" src="/static/img/lamb-cwtch.jpg" alt="Card image cap">
-                    <img class="card-img-top transition-image" src="/static/img/pups.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="/static/img/puppy.jpg" alt="puppy"/>
+                    <img class="card-img-top transition-image" src="/static/img/chick.jpg" alt="chick"/>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card">
-                    <img class="card-img-top" src="/static/img/ducklings.jpg" alt="Card image cap">
-                    <img class="card-img-top transition-image" src="/static/img/kitten.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="/static/img/lamb-cwtch.jpg" alt="lambs"/>
+                    <img class="card-img-top transition-image" src="/static/img/pups.jpg" alt="puppies"/>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card">
-                    <img class="card-img-top" src="/static/img/foal.jpg" alt="Card image cap">
-                    <img class="card-img-top transition-image" src="/static/img/birds.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="/static/img/ducklings.jpg" alt="ducklings"/>
+                    <img class="card-img-top transition-image" src="/static/img/kitten.jpg" alt="kitten"/>
                 </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top" src="/static/img/foal.jpg" alt="foal"/>
+                    <img class="card-img-top transition-image" src="/static/img/birds.jpg" alt="birds"/>
+                </div>  
             </div>
         </div>
     </div>
 </div>
 
-
+<!--Farmers for Generations Section with drawing and about text, the Our Story button is for illustration purposes only, currently not linked-->
 <div class="container-fluid farmers-block d-flex align-items-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 offset-md-3 col-md-6 about-farm-section">
-				<h2 class="text-center">Farmers for Generations</h2>
-				<p class="text-justify">Oakfield farm has been in our family for generations. Everyday on the farm is
-					a joy
-					for us and no two days are the same. We love tending to our animals and
-					producing
-					the highest quality produce any farm shop has to offer. Our love of farming
-					has
-					led to us opening our farm to anyone who wants to visit.
-				</p>
-				<button type="button" class="btn mb-2">Our Story</button>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 offset-md-3 col-md-6 about-farm-section">
+                <h2 class="text-center">Farmers for Generations</h2>
+                <p class="text-justify">Oakfield farm has been in our family for generations.
+                    Everyday on the farm is
+                    a joy
+                    for us and no two days are the same. We love tending to our animals and
+                    producing
+                    the highest quality produce any farm shop has to offer. Our love of farming
+                    has
+                    led to us opening our farm to anyone who wants to visit.
+                </p>
+                <button type="button" class="btn mb-2">Our Story</button>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-<!-- Best Sellers -->
-
+<!-- Best Sellers section which updated dynamically based on most sold items recorded in orders table-->
 <div class="container-fluid light-grey-block">
-	<div class="container">
+    <div class="container">
         <div class="row">
-            <h2 class="col-sm-12 text-center">Bestsellers</h2>
-            <p class="col-sm-12 text-justify">Some of our best sellers below. Remember we pride ourselves on quality produce. If you're not completely satisfied
-                we offer a money back gaurantee! All of our produce is home grown and organic. We do not use any commercial fertilisers at Oakfield farm as the 
-                environmental effects of using such chemicals are well documented. We pride ourselves on being ethically and environmentally minded. 
+            <h2 class="col-12 text-center">Bestsellers</h2>
+            <p class="col-12 text-justify">Some of our best sellers below. Remember we pride
+                ourselves on quality produce. If you're not completely satisfied
+                we offer a money back gaurantee! All of our produce is home grown and organic.
+                We do not use any commercial fertilisers at Oakfield farm as the
+                environmental effects of using such chemicals are well documented. We pride
+                ourselves on being ethically and environmentally minded.
             </p>
         </div>
-	</div>
-		<div class="row">
-			{% for product in bestsellers %}
-			<div class="col-xs-12 col-sm-6 col-lg-3">
-				<div class="card product-card">
-					<a href="{% url 'product_detail_view' product.id %}"><img class="card-img-top" src="/static/img/{{ product.product_image_name }}" alt="Card image cap"></a>
-						<div class="card-body">
-							<h3> {{ product.product_name }} </h3>
-							<p class="card-text"></p>
-							<p class="card-text"><strong>Price</strong> £{{ product.product_price }}</p>
-							<p class="card-text"><strong>Weight</strong> {{ product.product_weight }}g <br><class="card-text"><strong>Serves</strong>{{ product.product_serves }}<br>
-                                </p>
-                            <form class="product-page-form" method="post"
-                                action="{% url 'add_to_cart' product.id %}">
-                                {% csrf_token %}
-                                <input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input text-center" placeholder="Qty" required/>
-                                <button class="btn" type="submit"><i class="fa fa-cart-plus"></i></button>
-                            </form>
-						</div>
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
+    </div>
+    <div class="row">
+        {% for product in bestsellers %}
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card product-card">
+                <a href="{% url 'product_detail_view' product.id %}"><img class="card-img-top" src="/static/img/{{ product.product_image_name }}" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h3> {{ product.product_name }} </h3>
+                        <p class="card-text"></p>
+                        <p class="card-text"><strong>Price</strong> £{{ product.product_price }}</p>
+                        <p class="card-text"><strong>Weight</strong>
+                            {{ product.product_weight }}g <br />
+                            <strong>Serves</strong> {{ product.product_serves }}<br /></p>
+                        <form class="product-page-form" method="post"
+                            action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            <input type="number" name="quantity" min="1" max="500" class="form-control qty-input text-center" placeholder="Qty" required/>
+                            <button class="btn" type="submit"><i class="fa fa-cart-plus"></i></button>
+                        </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
+
+
+<!--Farm Shop Category Sections and grid system for clip path elements -->
 <div class="container">
-	<div class="row">
-		<h2 class="col text-center">Farm Shop</h2>
-	</div>
+    <div class="row">
+        <h2 class="col text-center">Farm Shop</h2>
+    </div>
 </div>
-
-<!--Farm Shop-->
-<!-- grid system for clip path elements -->
 <div class="container">
-	<div class="row">
-		<div class="pic-window food-fruit block col-12 col-sm-6 col-md-3">
-			<a class="home-categories" href="{% url 'products_by_category' 'Fruit' %}" style="text-decoration: none;">
-				<div class="block-inner">
-					<h2>Fruit</h2>
-				</div>
-			</a>
-			<p class="text-center d-md-none">Fruit</p>
-		</div>
-		<div class="pic-window food-veg block col-12 col-sm-6 col-md-3">
-			<a class="home-categories" href="{% url 'products_by_category' 'Vegetables' %}"
-				style="text-decoration: none;">
-				<div class="block-inner">
-					<h2>Vegetables</h2>
-				</div>
-			</a>
-			<p class="text-center d-md-none">Vegetables</p>
-		</div>
-		<div class="pic-window food-lamb block col-12 col-sm-6 col-md-6">
-			<a class="home-categories" href="{% url 'products_by_category' 'Lamb' %}" style="text-decoration: none;">
-				<div class="block-inner">
-					<h2>Lamb</h2>
-				</div>
-			</a>
-			<p class="text-center d-md-none">Lamb</p>
-		</div>
-		<div class="pic-window food-beef block col-12 col-sm-6 col-md-8">
-			<a class="home-categories" href="{% url 'products_by_category' 'Beef' %}" style="text-decoration: none;">
-				<div class="block-inner">
-					<h2>Beef</h2>
-				</div>
-			</a>
-			<p class="text-center d-md-none">Beef</p>
-		</div>
-		<div class="pic-window food-pork block col-12 col-md-4">
-			<a class="home-categories" href="{% url 'products_by_category' 'Pork' %}" style="text-decoration: none;">
-				<div class="block-inner">
-					<h2>Pork</h2>
-				</div>
-			</a>
-			<p class="text-center d-md-none">Pork</p>
-		</div>
-	</div>
+    <div class="row">
+        <div class="pic-window food-fruit block col-12 col-sm-6 col-md-3">
+            <a class="home-categories" href="{% url 'products_by_category' 'Fruit' %}"
+                style="text-decoration: none;">
+                <div class="block-inner">
+                    <h2>Fruit</h2>
+                </div>
+            </a>
+            <p class="text-center d-md-none">Fruit</p>
+        </div>
+        <div class="pic-window food-veg block col-12 col-sm-6 col-md-3">
+            <a class="home-categories" href="{% url 'products_by_category' 'Vegetables' %}"
+                style="text-decoration: none;">
+                <div class="block-inner">
+                    <h2>Vegetables</h2>
+                </div>
+            </a>
+            <p class="text-center d-md-none">Vegetables</p>
+        </div>
+        <div class="pic-window food-lamb block col-12 col-sm-6 col-md-6">
+            <a class="home-categories" href="{% url 'products_by_category' 'Lamb' %}"
+                style="text-decoration: none;">
+                <div class="block-inner">
+                    <h2>Lamb</h2>
+                </div>
+            </a>
+            <p class="text-center d-md-none">Lamb</p>
+        </div>
+        <div class="pic-window food-beef block col-12 col-sm-6 col-md-8">
+            <a class="home-categories" href="{% url 'products_by_category' 'Beef' %}"
+                style="text-decoration: none;">
+                <div class="block-inner">
+                    <h2>Beef</h2>
+                </div>
+            </a>
+            <p class="text-center d-md-none">Beef</p>
+        </div>
+        <div class="pic-window food-pork block col-12 col-md-4">
+            <a class="home-categories" href="{% url 'products_by_category' 'Pork' %}"
+                style="text-decoration: none;">
+                <div class="block-inner">
+                    <h2>Pork</h2>
+                </div>
+            </a>
+            <p class="text-center d-md-none">Pork</p>
+        </div>
+    </div>
 </div>
-
+<!--Stacking advertorial and subscribe blocks on top of base footer-->
 {% include 'advertorial.html' %}
 {% include 'subscribe.html' %}
+<!--End block-->
 {% endblock %}

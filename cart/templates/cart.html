@@ -5,36 +5,35 @@
 
 <!--Bootstrap grid system and code for cart-->
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <h1 class="text-center">Cart</h1>
-            <hr>
-        </div>
-    </div>
-<!--Looping through cart items and rendering them in the cart-->
-     {% for item in cart_items %}
-    <div class="row">
-        <div class="offset-3 col-6 offset-sm-0 col-sm-6 col-md-3">
-            <img src="/static/img/{{ item.product.product_image_name }}" class="img-fluid cart-product-image" alt="product picture">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="text-center">Cart</h1>
+			<hr>
+		</div>
+	</div>
+	<!--Looping through cart items and rendering them in the cart-->
+	{% for item in cart_items %}
+	<div class="row">
+		<div class="offset-3 col-6 offset-sm-0 col-sm-6 col-md-3">
+			<img src="/static/img/{{ item.product.product_image_name }}" class="img-fluid cart-product-image" alt="product picture">
         </div>
         <div class="col-6 offset-sm-0 col-sm-6 col-md-2">
             <p><strong>{{ item.product.product_name}}</strong><br>{{ item.product.product_weight }}g<br>Serves {{ item.product.product_serves }}</p>
         </div>
-        
+
         <div class="col-6 offset-sm-0 col-sm-4 col-md-1">
             <p class="text-right mr-5"><strong>Price</strong>
-            <p class="text-right mr-5">£{{ item.product.product_price }}</p>
+                <p class="text-right mr-5">£{{ item.product.product_price }}</p>
         </div>
         <div class="col-6 offset-sm-0 col-sm-4 col-md-3">
             <p class="text-left"><strong>Quantity</strong></p>
             <div class="refresh-delete">
-<!--Forms to adjust or delete cart items-->
+                <!--Forms to adjust or delete cart items-->
                 <form method="POST" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}"/>
                     <button type="submit" class="btn"><i class="fa fa-repeat"></i></button>
-               </form>
-              
+                </form>
             </div>
         </div>
         <div class="col-6 col-sm-4 col-md-3">
@@ -43,15 +42,16 @@
                 <p class="text-right">£{{ item.item_total }}
                     {% csrf_token %}
                     <span><button type="submit" class="btn text-center"><i class="fa fa-trash-o"></i></button></span>
-               </form></p>
+                </p>
+            </form>
         </div>
     </div>
     <hr>
     {% endfor %}
-<!--Logic to render message if cart is empty and Bootstrap Grid design for when items are rendered to the screen-->
-     {% if grand_total == 0 %}
-     <h2 class="text-center">Your cart is currently empty</h2><br><br>
-     {% else %}
+    <!--Logic to render message if cart is empty and Bootstrap Grid design for when items are rendered to the screen-->
+    {% if grand_total == 0 %}
+    <h2 class="text-center">Your cart is currently empty</h2><br><br>
+    {% else %}
     <div class="row">
         <div class="col-3 col-sm-4 col-md-8">
         </div>

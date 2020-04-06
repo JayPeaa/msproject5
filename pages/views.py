@@ -12,18 +12,19 @@ from products.models import Product
 from django.db.models import Count
 
 
-
 # Create your views here.
 # For views which don't have their own app, split out as you go.
 
-def home_view(request):
-    bestsellers = Product.objects.annotate(count_ordered=Count('orderlineitem')).order_by('-count_ordered')[:4]
 
+def home_view(request):
+    bestsellers = Product.objects.annotate(
+        count_ordered=Count('orderlineitem')).order_by('-count_ordered')[:4]
     context = {
-        'newsletter_form' : SubscriberForm(),
+        'newsletter_form': SubscriberForm(),
         'bestsellers': bestsellers
     }
     return render(request, "home.html", context)
+
 
 def contact_view(request):
     success = False
@@ -38,16 +39,18 @@ def contact_view(request):
         if success:
             messages.info(request, "Your message has been sent")
     context = {
-        'newsletter_form' : SubscriberForm(),
+        'newsletter_form': SubscriberForm(),
         'success': success
     }
     return render(request, "contact.html", context)
+
 
 def subscribe_view(request):
     newsletter_form = SubscriberForm(request.POST or None)
     if request.method == "POST":
         if newsletter_form.is_valid():
-            subscriber_qs = Subscriber.objects.filter(email=newsletter_form.instance.email)
+            subscriber_qs = Subscriber.objects.filter(
+                email=newsletter_form.instance.email)
             if subscriber_qs.exists():
                 messages.info(request, "You are already subscribed")
             else:
@@ -55,6 +58,6 @@ def subscribe_view(request):
                 messages.info(request, "Thank you for subscribing")
 
     context = {
-        'newsletter_form' : SubscriberForm()
+        'newsletter_form': SubscriberForm()
     }
-    return HttpResponseRedirect(request.META.get("HTTP_REFERER"),context)
+    return HttpResponseRedirect(request.META.get("HTTP_REFERER"), context)

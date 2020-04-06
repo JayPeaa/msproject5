@@ -1,16 +1,21 @@
+<!--Extends base.html-->
 {% extends 'base.html' %}
+<!--Load Crispy Forms-->
 {% load crispy_forms_tags %}
+<!--Open Content Block-->
 {% block content %}
 
+<!--Profile Sections-->
 <div class="container">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-12">
             <h1 class="text-center">Your Account</h1>
             <h2 class="text-center">Welcome back, {{ user.first_name }}!</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 offset-md-2 col-md-8">
+        <div class="col-12 offset-md-2 col-md-8">
+<!--Update Profile Form-->
              <form method="POST">
                 {% csrf_token %}
                 <fieldset class="form-group">
@@ -25,8 +30,5 @@
         </div>  
     </div>
 </div>
-
-
-    
-
+<!--End Content Block-->
 {% endblock %}

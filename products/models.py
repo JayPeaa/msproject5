@@ -2,11 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+
 class ProductCategory(models.Model):
     category_name = models.TextField(max_length=30)
+
     def __str__(self):
         return self.category_name
-
 
 
 class Product(models.Model):
@@ -16,12 +17,11 @@ class Product(models.Model):
     product_serves = models.IntegerField(blank=False)
     product_description = models.TextField(max_length=300)
     product_image_name = models.TextField(max_length=200)
-    product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+    product_category = models.ForeignKey(ProductCategory,
+                                         on_delete=models.CASCADE)
     product_update_date = models.DateTimeField(auto_now_add=True)
     product_stock_qty = models.IntegerField(blank=False)
     product_live = models.BooleanField(default=True)
+
     def __str__(self):
         return self.product_name
-
-
-

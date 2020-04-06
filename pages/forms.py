@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from .models import Subscriber
 
+
 class LoginForm (forms.Form):
     """Form to log users in"""
     username = forms.CharField()
@@ -39,10 +40,11 @@ class RegistrationForm(UserCreationForm):
 
         return password2
 
+
 class SubscriberForm(forms.ModelForm):
     class Meta:
         model = Subscriber
         fields = ('email',)
         labels = {
-            'email' : False,  
+            'email': False,
         }
