@@ -17,6 +17,8 @@ from django.db.models import Count
 
 
 def home_view(request):
+    """Bestsellers logic and context for home view function runs
+    on home page"""
     bestsellers = Product.objects.annotate(
         count_ordered=Count('orderlineitem')).order_by('-count_ordered')[:4]
     context = {
@@ -27,6 +29,7 @@ def home_view(request):
 
 
 def contact_view(request):
+    """Logic for contact form also returns newsletter context"""
     success = False
     if request.method == 'POST':
         send_mail(
@@ -46,6 +49,7 @@ def contact_view(request):
 
 
 def subscribe_view(request):
+    """Logic for subscribe form returns newsletter context"""
     newsletter_form = SubscriberForm(request.POST or None)
     if request.method == "POST":
         if newsletter_form.is_valid():

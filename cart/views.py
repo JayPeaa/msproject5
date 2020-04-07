@@ -4,7 +4,8 @@ from pages.forms import SubscriberForm
 
 
 def view_cart(request):
-    """See contents of cart also renders the subcribe form in the context"""
+    """See contents of cart also renders the subcribe 
+    form in the context"""
     context = {
         'newsletter_form': SubscriberForm()
     }

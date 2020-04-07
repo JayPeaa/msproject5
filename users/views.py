@@ -10,6 +10,7 @@ from .forms import ProfileUpdateForm
 
 
 def register(request):
+    """Aditional fields for user form linked to profile object to register"""
     if request.method == 'POST':
 
         user_form_data = {
@@ -53,6 +54,7 @@ def register(request):
 
 @login_required
 def profile(request):
+    """Update profile information when logged in"""
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST,

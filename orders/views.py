@@ -17,6 +17,7 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request):
+    """Stripe payment logic for checkout and order table update"""
     if request.method == "POST":
         order_form = UserOrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
