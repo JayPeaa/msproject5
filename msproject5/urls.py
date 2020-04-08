@@ -35,18 +35,15 @@ urlpatterns = [
     path('view_cart/', include(urls_cart)),
     path('search/', include(urls_search)),
     path('orders/', include(urls_orders)),
-    path('register/', user_views.register, name='register'), #new approach
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), #new approach
+    path('register/', user_views.register, name='register'), 
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'), 
     path('contact/', contact_view, name='contact'),
     path('subscribe/', subscribe_view, name='subscribe'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'), #new approach
-    path('profile/', user_views.profile, name='profile'), #new approach
-    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'), #new approach
-    path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'), #new approach
-    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'), #new approach
-    path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'), #new approach
-
-    
-        
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('profile/', user_views.profile, name='profile'),
+    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
+    path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+    path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'),
     path('admin/', admin.site.urls),
 ]
