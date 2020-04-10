@@ -46,11 +46,39 @@
 		</div>
 <!--Google Maps API - Map renders in this the map ID-->
 		<div class="col-12 col-md-6">
-			<div id="map">
-			</div>
+			<div id="map">maps error</div>
 		</div>
 	</div>
 </div>
+
+<!--script tags for Jquery-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+<!--script tags for Google Maps API on contact page-->
+	<script>
+		function initMap() {
+        // Map set up
+        var options = {
+          zoom:8,
+          center:{lat:51.9974, lng:-3.7975}
+        }
+        //New Map
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+        //Add Marker
+        var marker = new google.maps.Marker({
+          position:{lat:51.9974, lng:-3.7975},
+          map:map
+        });
+      }
+    $(document).ready(function() {
+        initMap();
+    });
+	</script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOhA5ZRqjF3DTWyEhInzXhlslWOGwvf_Q">
+	</script>
 
 <!--Stacing advertorial and subcribe templates on top of base footer-->
 {% include 'advertorial.html' %}

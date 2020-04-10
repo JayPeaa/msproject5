@@ -1152,7 +1152,14 @@ Released under the MIT [license](https://github.com/JayPeaa/milestone4-cook-e/bl
 
 ## Credits
 
-  
+The following code snippet was provided by slack user czk8780 to solve an issue regarding formatting telephone numbers on forms.
+
+```
+def __init__(self, *args, **kwargs):
+    super().__init__(*args, **kwargs)
+    self.fields['order_phone_number'].widget.attrs['pattern'] = "[0-9]{1,15}"
+        
+```
 
   
 

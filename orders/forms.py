@@ -61,6 +61,10 @@ class UserOrderForm(forms.ModelForm):
             'order_postcode': 'Postcode'
         }
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['order_phone_number'].widget.attrs['pattern'] = "[0-9]{1,15}"
+
 
 class ProductOrderForm(forms.ModelForm):
 
