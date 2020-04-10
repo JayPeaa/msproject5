@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'phonenumber_field',
     'django.contrib.postgres',
 
     # my apps
@@ -167,3 +168,5 @@ DEFAULT_FROM_EMAIL = 'john.paul.hay.jph@gmail.com'
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+
+PHONENUMBER_DEFAULT_REGION = 'GB'

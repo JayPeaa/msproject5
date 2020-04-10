@@ -1,6 +1,7 @@
 from django.db import models
 from products.models import Product
 from users.models import Profile
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 # Create your models here.
@@ -14,7 +15,7 @@ class Order(models.Model):
     order_full_name = models.CharField(max_length=50, null=False, blank=False)
     order_email = models.EmailField(max_length=254, null=False,
                                     blank=False, default='')
-    order_phone_number = models.CharField(max_length=20,
+    order_phone_number = PhoneNumberField(unique=False,
                                           null=False, blank=False)
     order_street_address_1 = models.CharField(max_length=60, blank=False)
     order_street_address_2 = models.CharField(max_length=60, blank=False)

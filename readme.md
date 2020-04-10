@@ -254,7 +254,7 @@ The site provides all these options to the end user and is very easy to use and 
 
   
 
-See here for [Wireframes](https://github.com/JayPeaa/msproject5/blob/master/Oakfield%20Farm%20Project.pdf)
+See here for [Wireframes](https://github.com/JayPeaa/msproject5/blob/master/wireframes_and_db_schema/Oakfield%20Farm%20Project.pdf)
 
   
 
@@ -270,7 +270,7 @@ See here for [Wireframes](https://github.com/JayPeaa/msproject5/blob/master/Oakf
 
   
 
-Due to the relative complexity of this app an SQL database was selected. During the development phase SQLite was utilised as it comes inbuilt with the Django framework. As the project was nearing completion this DB was migrated to PostgreSQL. This was done with relative ease due to Django's Object Relational Mapper (ORM). Developing the models was the starting point for this data centric full stack project. See here for the [database schema](https://github.com/JayPeaa/msproject5/blob/master/Milestone5%20Database%20Schema.pdf)
+Due to the relative complexity of this app an SQL database was selected. During the development phase SQLite was utilised as it comes inbuilt with the Django framework. As the project was nearing completion this DB was migrated to PostgreSQL. This was done with relative ease due to Django's Object Relational Mapper (ORM). Developing the models was the starting point for this data centric full stack project. See here for the [database schema](https://github.com/JayPeaa/msproject5/blob/master/wireframes_and_db_schema/Milestone%205%20Database%20Schema.pdf)
 
   
 
