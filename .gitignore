@@ -134,3 +134,8 @@ dmypy.json
 
 #node-sass workflow
 node_modules
+
+#gitpod
+.gitpod.Dockerfile
+.gitpod.yml
+.bash_profile

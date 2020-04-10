@@ -4,6 +4,7 @@ from .views import do_search
 
 # Create your tests here.
 
+
 class test_url(TestCase):
     """Test urls are resolved"""
 

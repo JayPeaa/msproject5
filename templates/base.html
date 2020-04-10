@@ -43,14 +43,14 @@
 <!--Logo and Advertorials-->
 	<div class="container-fluid text-center">
 		<div class="row">
-			<a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
-				<img src="/static/img/quality.svg" class="img-fluid" style="width: 380px;" alt="promotional advert">
+            <a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
+                <img src="/static/img/quality.svg" class="img-fluid" style="width: 380px;" alt="promotional advert">
             </a>
-				<a class="logo col-md-4" href="{% url 'home' %}">
-					<img src="/static/img/logo.png" class="img-fluid logo-top" alt="logo">
+            <a class="logo col-md-4" href="{% url 'home' %}">
+                <img src="/static/img/logo.png" class="img-fluid logo-top" alt="logo">
             </a>
-					<a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
-						<img src="/static/img/free_del.svg" class="img-fluid" style="width: 280px;" alt="promotional advert">
+            <a class="col-md-4 d-none d-sm-none d-md-block align-self-center" href="{% url 'home' %}">
+                <img src="/static/img/free_del.svg" class="img-fluid" style="width: 280px;" alt="promotional advert">
             </a>
 		</div>
 	</div>
@@ -162,9 +162,12 @@
           map:map
         });
       }
+    $( document ).ready(function() {
+        initMap();
+    });
 	</script>
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOhA5ZRqjF3DTWyEhInzXhlslWOGwvf_Q&callback=initMap">
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOhA5ZRqjF3DTWyEhInzXhlslWOGwvf_Q">
 	</script>
 </body>
 </html>
