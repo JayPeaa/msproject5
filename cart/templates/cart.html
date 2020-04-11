@@ -32,7 +32,7 @@
                 <form method="POST" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}"/>
-                    <button type="submit" class="btn"><i class="fa fa-repeat"></i></button>
+                    <button type="submit" aria-label="Update Cart" class="btn"><i class="fa fa-repeat"></i></button>
                 </form>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 <p class="text-right mr-5"><strong>Total</strong></p>
                 <p class="text-right">£{{ item.item_total }}
                     {% csrf_token %}
-                    <span><button type="submit" class="btn text-center"><i class="fa fa-trash-o"></i></button></span>
+                    <span><button type="submit" class="btn text-center" aria-label="Remove From Cart"><i class="fa fa-trash-o"></i></button></span>
                 </p>
             </form>
         </div>

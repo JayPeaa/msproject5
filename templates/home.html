@@ -157,6 +157,7 @@
         </div>
     </div>
     <div class="row">
+<!-- Best Sellers add to cart section-->
         {% for product in bestsellers %}
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="card product-card">
@@ -168,11 +169,10 @@
                         <p class="card-text"><strong>Weight</strong>
                             {{ product.product_weight }}g <br />
                             <strong>Serves</strong> {{ product.product_serves }}<br /></p>
-                        <form class="product-page-form" method="post"
-                            action="{% url 'add_to_cart' product.id %}">
+                        <form class="product-page-form" method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
                             <input type="number" name="quantity" min="1" max="500" class="form-control qty-input text-center" placeholder="Qty" required/>
-                            <button class="btn" type="submit"><i class="fa fa-cart-plus"></i></button>
+                            <button class="btn" aria-label="Add To Cart" type="submit"><i class="fa fa-cart-plus"></i></button>
                         </form>
                 </div>
             </div>

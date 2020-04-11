@@ -533,6 +533,9 @@ The following CDNs have been used to create this app.
 To ensure any database postings were as anticipated it is common practice to print to the console to determine if the outputs and data structures were as expected. This was done prior to allowing user input to be posted directly to the database collections.
 
 Unit tests were set up for each of the apps in a test.py to test certain aspects of the Models, Forms, URLs and views.  These tests ensured that Models correctly posted to the DB, required fields worked in the forms as expected and URLs resolved correctly among other things.
+
+[![Build Status](https://travis-ci.org/JayPeaa/msproject5.svg?branch=master)](https://travis-ci.org/JayPeaa/msproject5)
+
   
 
   

@@ -56,7 +56,9 @@
 				</div>
 				{% csrf_token %}
 				<div class="col-sm-12 form-group align-items-center">
-					<input class="btn d-block mt-5 mr-auto ml-auto" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment"/>
+                    <label>
+					    <input class="btn d-block mt-5 mr-auto ml-auto" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment"/>
+                    </label>
                 </div>
                 <div class="col-12 d-flex flex-row justify-content-center">
                     <img class="payment-types" src="/static/img/stripe-payment.svg" alt="payment types"/>

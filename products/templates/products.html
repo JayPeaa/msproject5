@@ -9,9 +9,9 @@
 			<h1>Products</h1>
 <!--Search form-->
         	<form id="nav-search" class="form-inline justify-content-center" action="{% url 'search' %}" method="get">
-				<input class="form-control col-sm-8 col-md-4 mt-1 mr-sm-1" type="search" placeholder="Search" aria-label="Search" name="q"/>
-				<button class="btn btn btn-success col-sm-2 col-md-1 mb-2" type="submit">
-                <i class="fa fa-search "></i>
+				<input class="form-control col-8 col-md-4 mt-1 mr-sm-1" type="search" placeholder="Search" aria-label="Search" name="q"/>
+				<button class="btn col-2 col-md-1 mb-2" aria-label="Search Products" type="submit">
+                <i class="fa fa-search"></i>
                 </button>
 			</form>
 		</div>
@@ -22,32 +22,32 @@
 	<div class="row">
 		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Fruit' %}">
-				<button class="btn filter-btn {% if '/products/category/Fruit' == request.path %}filter-active{% endif %}" type="submit">Fruit</button>
+				<button class="btn filter-btn {% if '/products/category/Fruit' == request.path %}filter-active{% endif %}" aria-label="Filter Fruit" type="submit">Fruit</button>
 			</form>
 		</div>
 		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Vegetables' %}">
-				<button class="btn filter-btn {% if '/products/category/Vegetables' == request.path %}filter-active{% endif %} " type="submit">Vegetables</button>
+				<button class="btn filter-btn {% if '/products/category/Vegetables' == request.path %}filter-active{% endif %}" aria-label="Filter Vegetables" type="submit">Vegetables</button>
 			</form>
 		</div>
 		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Lamb' %}">
-				<button class="btn filter-btn {% if '/products/category/Lamb' == request.path %}filter-active{% endif %}" type="submit">Lamb</button>
+				<button class="btn filter-btn {% if '/products/category/Lamb' == request.path %}filter-active{% endif %}" aria-label="Filter Lamb" type="submit">Lamb</button>
 			</form>
 		</div>
 		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Beef' %}">
-				<button class="btn filter-btn {% if '/products/category/Beef' == request.path %}filter-active{% endif %}" type="submit">Beef</button>
+				<button class="btn filter-btn {% if '/products/category/Beef' == request.path %}filter-active{% endif %}" aria-label="Filter Beef" type="submit">Beef</button>
 			</form>
 		</div>
 		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products_by_category' 'Pork' %}">
-				<button class="btn filter-btn {% if '/products/category/Pork' == request.path %}filter-active{% endif %}" type="submit">Pork</button>
+				<button class="btn filter-btn {% if '/products/category/Pork' == request.path %}filter-active{% endif %}" aria-label="Filter Pork" type="submit">Pork</button>
 			</form>
 		</div>
 		<div class="col-12 col-sm-6 col-md-4">
 			<form action="{% url 'products' %}">
-				<button class="btn filter-btn" type="submit">Clear Filter</button>
+				<button class="btn filter-btn" aria-label="Clear Filters" type="submit">Clear Filter</button>
 			</form>
 		</div>
 	</div>
@@ -73,8 +73,8 @@
                     </p>
                     <form class="product-page-form d-flex" method="post" action="{% url 'add_to_cart' product.id %}">
                         {% csrf_token %}
-                        <input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input" placeholder="Qty" required/>
-                        <button class="btn" type="submit"><i class="fa fa-cart-plus"></i></button>
+                    <input type="number" name="quantity" min="1" max="500" default="1" class="form-control qty-input" placeholder="Qty" required/>
+                    <button class="btn" aria-label="Add To Cart" type="submit"><i class="fa fa-cart-plus"></i></button>
                     </form>
                 </div>
 			</div>
