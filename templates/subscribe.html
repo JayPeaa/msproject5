@@ -6,35 +6,35 @@
   <div class="container">
       <div class="row">
           <div class="col-sm-12">
-              <h2 class="text-center">KEEP IN TOUCH</h2>
-              <p class="text-center">Subscribe to our news letter for the latest news and special offers</p>
+              <h2 class="text-center newsletter-text">KEEP IN TOUCH</h2>
+              <p class="text-center newsletter-text">Subscribe to our news letter for the latest news and special offers</p>
               
               <form class="form-inline justify-content-center" method="post" action="{% url 'subscribe' %}">
                     {% csrf_token %}
 
                     {{ newsletter_form | crispy }}
 
-                  <button type="submit" aria-label="Subscribe To Newsletter" class="btn mx-3 mb-4 ">Subscribe</button>
+                  <button type="submit" aria-label="Subscribe To Newsletter" class="subscribe-btn mx-3 mb-4 ">Subscribe</button>
               </form>
               
               <ul class="list-inline socialmedia-links ">
                   <li class="list-inline-item">
-                    <a href="https://www.facebook.com/" rel="noopener" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/" rel="noopener" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://twitter.com/" rel="noopener" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://twitter.com/" rel="noopener" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://linkedin.com" rel="noopener" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://linkedin.com" rel="noopener" target="_blank" title="linkedin"><i class="fa fa-linkedin"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://pinterest.com" rel="noopener" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a href="https://pinterest.com" rel="noopener" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://instagram.com" rel="noopener" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://instagram.com" rel="noopener" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="https://youtube.com" rel="noopener" target="_blank"><i class="fa fa-youtube"></i></a>
+                    <a href="https://youtube.com" rel="noopener" target="_blank" title="youtube"><i class="fa fa-youtube"></i></a>
                   </li>
                 </ul>
           </div>

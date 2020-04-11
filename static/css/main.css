@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,800,900|Roboto:400,500,700,900&display=swap");
 .btn {
-  background-color: #97a88b;
+  background-color: #566948;
   color: white;
   border: solid #b6c3cc 2px;
   min-width: 40px;
@@ -9,15 +9,35 @@
   transition: all 0.3s; }
 
 .filter-btn {
-  background-color: #97a88b;
+  background-color: #566948;
   color: white;
   border: solid #b6c3cc 2px;
   width: 100%;
   transition: all 0.3s; }
 
-.btn:hover {
+.subscribe-btn {
+  background-color: #565656;
+  color: white;
+  border: solid #b6c3cc 2px;
+  border-radius: 5px;
+  min-width: 40px;
+  height: 41px;
+  margin-bottom: 4px;
+  transition: all 0.3s; }
+
+.subscribe-btn:hover {
   background-color: #566948;
   color: white;
+  border: solid #b6c3cc 2px;
+  border-radius: 5px;
+  min-width: 40px;
+  height: 41px;
+  margin-bottom: 4px;
+  transition: all 0.3s; }
+
+.btn:hover {
+  background-color: #acadaf;
+  color: black;
   border: solid #b6c3cc 2px; }
 
 main {
@@ -59,6 +79,9 @@ div {
   color: black;
   margin: 0;
   padding: 0; }
+
+.newsletter-text {
+  color: black; }
 
 .social-footer {
   color: #000027; }
@@ -174,7 +197,7 @@ div {
   margin-top: -15px; }
 
 .light-green-block {
-  background-color: #97a88b;
+  background-color: #748866;
   padding: 2em;
   border-bottom: 2em solid #f8f9fa;
   color: white;
@@ -227,7 +250,7 @@ div {
     list-style: none; }
 
 .navbar {
-  background-color: #97a88b; }
+  background-color: #748866; }
 
 .logo {
   margin-top: 60px;
@@ -277,9 +300,9 @@ div {
   justify-content: center; }
 
 .filter-active {
-  background-color: #566948;
-  color: white;
-  border: solid #b6c3cc 2px; }
+  background-color: #acadaf;
+  color: black;
+  border: solid #566948 2px; }
 
 .header-top {
   background-color: #566948;
@@ -296,7 +319,7 @@ div {
     list-style: none; }
 
 .navbar {
-  background-color: #97a88b; }
+  background-color: #748866; }
 
 .logo {
   margin-top: 60px;
@@ -332,7 +355,7 @@ div {
 .contact-info {
   height: 300px;
   width: 100%;
-  background-color: #97a88b;
+  background-color: #748866;
   color: white;
   padding: 1.5em;
   border: solid 3px silver; }
