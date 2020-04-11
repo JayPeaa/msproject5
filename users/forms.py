@@ -32,6 +32,10 @@ class UserProfileForm(forms.ModelForm):
             'user_postcode': 'Postal Code'
         }
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['user_phone_number'].widget.attrs['pattern'] = "[0-9]{1,15}"
+
 
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
@@ -47,3 +51,7 @@ class ProfileUpdateForm(forms.ModelForm):
         fields = ['user_street_address_1', 'user_street_address_2',
                   'user_city', 'user_county', 'user_country',
                   'user_county', 'user_postcode', 'user_phone_number']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['user_phone_number'].widget.attrs['pattern'] = "[0-9]{1,15}"
