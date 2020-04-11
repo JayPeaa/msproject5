@@ -20,12 +20,8 @@
 			<div class="contact-us-form text-center">
 				<form id="contact-form" class="contact-us-form" action="{% url 'contact' %}" method="POST">
 					{% csrf_token %}
-                    <label>
-					    <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-					</label>
-                    <label>
-                        <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email address" required/>
-                    </label>
+                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email address" required/>
 					<textarea rows="5" name="formmessage" class="form-control" id="formmessage" placeholder="Enter your message here" required></textarea>
 					<button type="submit" class="btn center-block" aria-label="Send Message">Send Message</button>
 				</form>
