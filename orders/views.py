@@ -42,14 +42,12 @@ def checkout(request):
             order.save()
             # Stripe payment
             try:
-                print(payment_form.cleaned_data['stripe_id'], "Hello")
                 customer = stripe.Charge.create(
                     amount=int(total * 100),
                     currency="GBP",
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id'],
                 )
-                print("payment successful")
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
 
@@ -60,8 +58,6 @@ def checkout(request):
             else:
                 messages.error(request, "Unable to take payment")
         else:
-            print(payment_form.errors)
-            print(order_form.errors)
             messages.error(request,
                            "We were unable to take a payment with that card!")
     else:
