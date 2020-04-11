@@ -507,7 +507,7 @@ Whilst there is a CMS available via Django it would be beneficial to create an i
 
   
 
-The newsletter section currently contains logic which checks if a user is already subscribed and stores new email address in the database. It is not currently hooked up to any mail service. As a future development this will be connected to the mail chimp API in order to automate any social media campagnes.
+The newsletter section currently contains logic which checks if a user is already subscribed and stores new email address in the database. It is not currently hooked up to any mail service. As a future development this will be connected to the mail chimp API in order to automate any social media campaigns.
 
   
 
@@ -515,7 +515,10 @@ The newsletter section currently contains logic which checks if a user is alread
 
 Data Protections (GDPR) would also need to be given full consideration along with other legalities such as privacy policies, cookie notices and terms of service prior to making such an app available to use.
 
-  
+The site scored reasonably well during audit although some additional tweaks could be made relatively easily to bring the overall site performance up to 100%.
+
+![Audit Result](https://github.com/JayPeaa/msproject5/blob/master/wireframes_and_db_schema/projectaudit.jpg)
+
 
   
 
